@@ -1,0 +1,50 @@
+<?php
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php
+        switch($this->result):
+            case 'UNKNOWN_EMAIL_VERIFICATION_CODE':
+                echo '<p>';
+
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        echo $this->result; ?>
+    </div>
+<?php
+elseif ( isset($this->error) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Email successfully verified. Please login again.'); ?><br />
+            <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'login')); ?>"><?php echo $this->translate('Login'); ?></a>
+        </p>
+    </div>
+<?php
+endif;
+
+if(isset($this->form)) {
+    echo $this->form()->openTag($this->form);
+?>
+    <div class='width70'>
+        <div class="formRow">
+            <label>
+                <span>Email Verification Code:</span>
+                <?php echo $this->formRow($this->form->get('email_verification_code')); ?>
+            </label>
+        </div>
+
+        <div class="captcha">
+            <label>
+                <span>Captcha:</span><br />
+                <?php echo $this->formRow($this->form->get('captcha')); ?>
+            </label>
+        </div>
+
+        <?php echo $this->formRow($this->form->get('submit')); ?>
+    </div>
+<?php
+    echo $this->form()->closeTag();
+}

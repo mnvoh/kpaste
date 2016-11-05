@@ -1,0 +1,81 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-paste-stats.phtml
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('View paste statistics');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->paste) && isset($this->pasteViews)):
+?>
+<h3 class="center-align"><?php echo sprintf($this->translate('Statistics for "%s"'), $this->paste->title); ?></h3>
+<div class="center-align">
+    <?php if($this->graph): ?>
+        <img src="<?php echo $this->graph; ?>" alt="Statistics"/>
+    <?php endif; ?>
+</div>
+<table cellspacing="0" class='table' id='pasteStatsTable'>
+    <thead>
+        <tr>
+            <th>View Date</th>
+            <th>Viewer IP Address</th>
+            <th>User Agent</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($this->pasteViews as $pasteView): ?>
+    <tr>
+        <td>
+            <?php 
+            echo KpasteCore\KDateTime\KDateTime::PrefDate($pasteView->view_datetime); 
+            ?>
+        </td>
+        <td>
+            <?php
+            $this->ipInfo->setIp($pasteView->viewer_ip);
+            ?>
+            <img src='<?php echo $this->ipInfo->getFlagPath(); ?>' 
+                 alt='<?php echo $this->ipInfo->getLongName(); ?>'
+                 title='<?php echo $this->ipInfo->getLongName(); ?>' />
+            <?php
+            echo $pasteView->viewer_ip; 
+            ?>
+        </td>
+        <td><?php echo $pasteView->user_agent; ?></td>
+    </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<?php
+endif;

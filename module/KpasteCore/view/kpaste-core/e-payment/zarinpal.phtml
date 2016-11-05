@@ -1,0 +1,81 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    zarinpal.php
+ * @createdat   Oct 21, 2013 11:40:22 AM
+ */
+$title = $this->translate('E-Payment');
+$this->headTitle($title);
+$continueurl = $this->url( 'advertiser', array(
+            'lang'      => substr($this->layout()->language, 0, 2),
+            'action'    => 'AccountBalance',
+        ) );
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'NO_DATA_SENT':
+                echo '<p>';
+                echo $this->translate('No data has been sent. Maybe you have opened this page directly.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'AMOUNT_TOO_LOW':
+                echo '<p>';
+                echo $this->translate('The amount is too low.');
+                echo '<br />';
+                echo '<a href="' . $continueurl . '">' . $this->translate('Continue') . '</a>';
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'TRANSACTION_ALREADY_COMPLETED':
+                echo '<p>';
+                echo $this->translate('This transaction has already been completed.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'GATEWAY_ERROR':
+                echo '<p>';
+                echo $this->translate('There was an error during the transaction.');
+                echo '<br />';
+                echo $this->translate('Error Description: ');
+                echo $this->errorCode;
+                echo '<br />';
+                echo '<a href="' . $continueurl . '">' . $this->translate('Continue') . '</a>';
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->error) && !$this->error):
+?>
+<div class="notification">
+    <p>
+        <?php echo $this->translate('Transaction was successful.'); ?>
+        <a href="<?php echo $continueurl; ?>"><?php echo $this->translate('Continue'); ?></a>
+    </p>
+</div>
+<?php
+endif;

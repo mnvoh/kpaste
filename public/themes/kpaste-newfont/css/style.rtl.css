@@ -1,0 +1,99 @@
+/* 
+    Document   : style.rtl
+    Created on : Sep 4, 2013, 9:16:33 PM
+    Author     : mnvoh
+    Description:
+        contains rtl specific styles.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, button,
+fieldset, form, label, legend, select, option,
+table, caption, tbody, tfoot, thead, tr, th, td, input, textarea { 
+    direction: rtl;
+    text-align: right;
+}
+ol, ul {
+    padding: 0 20px 0 0;
+}
+table.table td {
+    border-right: 0 none !important;
+    border-left: 1px solid #ddd !important;
+}
+table.table td:last-child {
+    border-right: 0 none !important;
+    border-left: 0 none !important;
+}
+nav#header-nav>ul li {
+    float: right !important;
+}
+div#header a.headerlogo {
+    left: 10px;
+    right: auto !important;
+}
+div.pagination {
+    direction: ltr !important;
+}
+div.pagination * {
+    direction: ltr !important;
+    text-align: left !important;
+}
+div.formRow>label>span { 
+    border-radius: 0 3px 3px 0;
+    float: right; 
+}
+div.formRow input,
+div.formRow select {
+    border-radius: 3px 0 0 3px !important;
+    float: right;
+}
+div.anonComposePaste {
+    padding-left: 310px !important;
+    padding-right: 0 !important;
+}
+div.latestPastes {
+    float: left !important;
+}
+footer#footer ul li {
+    float: right !important;
+}
+input[type='button'],
+input[type='submit'],
+button {
+    text-align: center !important;
+}
+div#adsLayout td.adsLayoutAdTypes {
+    direction: rtl !important;
+}
+#NewPasteForm textarea {
+    direction: ltr !important;
+    text-align: left !important;
+}
+table#myAccountTable td:nth-child(even) { text-align: right !important; }
+div.user-panel-items { float: right !important; }
+#PastePasswordForm div.formRow input {
+    border-radius: 0 !important;
+}
+#PastePasswordForm div.formRow button,
+#PastePasswordForm div.formRow input[type='submit'] {
+    border-radius: 4px 0 0 4px !important;
+    float: right;
+}
+#PastePasswordForm div.formRow button:hover,
+#PastePasswordForm div.formRow input[type='submit']:hover {
+    background: rgb(1, 164, 229);
+    box-shadow: none;
+}
+div.tabbed-panel-wrapper > ul.tabs {
+    margin-right: -1px;
+}
+div.tabbed-panel-wrapper > ul.tabs > li {
+    float: right;
+}
+div.tabbed-panel-wrapper > div.tabs-contents-wrapper {
+    border-radius: 4px 0 4px 4px;
+}

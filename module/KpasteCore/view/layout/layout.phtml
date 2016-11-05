@@ -1,0 +1,224 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ */
+
+$sessionSettings = new Zend\Session\Container('settings');
+$settings = $sessionSettings->settings;
+
+$sessionAcl = new Zend\Session\Container('acl');
+$acl = $sessionAcl->acl;
+
+$auth = new Zend\Authentication\AuthenticationService();
+$authStorage = $auth->getStorage();
+$authData = unserialize($authStorage->read());
+$request = new Zend\Http\PhpEnvironment\Request();
+
+//check to see if there are valid login cookies and no active session
+if(!$authData)
+{
+    $cipher = new KpasteCore\Cipher\Cipher();
+    
+    $__c = (isset($request->getHeaders()->get('Cookie')->__c) ? $request->getHeaders()->get('Cookie')->__c : null);
+    if($__c && trim($cipher->decrypt($__c)) == $request->getServer('REMOTE_ADDR'))
+    {
+        if(!preg_match('/login/', $request->getRequestUri()))
+        {
+            $url = $this->url('user', array(
+                'lang'      => substr($this->language, 0, 2),
+                'action'    => 'login',
+                'continue'  => urlencode($request->getRequestUri()),
+            ));
+            echo "<script> document.location.href='$url'; </script>";
+        }
+    }
+    else
+    {
+        setcookie('__a', null, time() - 1, '/');
+        setcookie('__b', null, time() - 1, '/');
+        setcookie('__c', null, time() - 1, '/');
+    }
+}
+
+echo $this->doctype();
+?>
+<html lang="<?php echo substr($this->language, 0, 2); ?>">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($settings['site-name']. ' - ' . $this->translate('Share Paste Easily'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <meta name="author" content="MNVOH@kCoder">
+        <meta name="description" content="<?php echo $this->translate('Earn easy money by sharing your pastes - Advertise on the internet at the lowest price'); ?>">
+        <meta name="keywords" content="<?php echo $this->translate('share paste, earn money by sharing paste, earn easy money, advertise, advertise on the internet, advertise at the lowest price'); ?>">
+        
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <?php 
+        
+        $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . "/themes/{$settings['theme']}/images/favicon.png"));
+        
+        //Load all css files in the theme directory
+        $themeDir = ROOT_NAME . '/themes/'.$settings['theme'].'/';
+        $cssdir = opendir($themeDir . 'css/');
+        while($item = readdir($cssdir)) {   
+            if(strlen($item) > 4 && substr($item, strlen($item) - 3) == 'css' && substr($item, 0, 1) == '_') {
+                $this->headLink()->appendStylesheet($this->basePath() . '/themes/'.$settings['theme'].'/css/' . $item);
+            }
+        }
+        $this->headLink()->appendStylesheet($this->basePath() . '/themes/'.$settings['theme'].
+                '/css/' . "style.css");
+        if( 'rtl' == $this->direction )
+        $this->headLink()->appendStylesheet($this->basePath() . '/themes/'.$settings['theme'].
+            '/css/' . "style.rtl.css");
+        echo $this->headLink();
+        ?>
+
+        <!-- Scripts -->
+        <?php $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+                                        ->prependFile($this->basePath() . '/js/jquery.js')
+                                        ->appendFile($this->basePath() . '/js/common.js'); 
+        
+        
+        //include all theme javascript files
+        $jsdir = opendir($themeDir . 'js/');
+        while($item = readdir($jsdir)) {   
+            if(strlen($item) > 4 && substr($item, strlen($item) - 2) == 'js') {
+                $this->headScript()->appendFile($this->basePath() . '/themes/'.$settings['theme'].'/js/' . $item);
+            }
+        }
+        echo $this->headScript();
+        
+        ?>
+
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <!--    HEADER      -->
+            <?php echo $this->partial('partial/header.phtml', array(
+                'authData'      => $authData,
+                'settings'      => $settings,
+                'language'      => $this->language,
+                'request'       => $request,
+                'routename'     => $this->routename,
+                'currentController'=> $this->currentController,
+                'currentAction' => $this->currentAction,
+                'currentParam1' => $this->currentParam1,
+            ));?>
+
+            <!--    USERBAR     -->
+            <?php echo $this->partial('partial/userbar.phtml', array(
+                'userType'  => ($authData && $authData->userid) ? $authData->user_type : 'guest',
+                'acl'       => $acl,
+                'username'  => ($authData && $authData->userid) ? $authData->username : null,
+                'userid'    => ($authData && $authData->userid) ? $authData->userid : null,
+                'unreadMsgs'=> $this->unreadMsgs,
+                'settings'  => $settings,
+            ));?>
+            
+            <?php
+            if(preg_match('/(?i)msie [1-9]/',$_SERVER['HTTP_USER_AGENT'])):
+            ?>
+            <div class="error">
+                <p>
+                    <?php echo $this->translate('Warning! You are using and old and incompatible Browser.'); ?>
+                </p>
+            </div>
+            <?php
+            endif;
+            ?>
+                        
+            <div id="contents-wrapper">
+                <?php echo $this->content; ?>             
+            </div>
+
+            <div class="clear"></div>
+            
+            <footer id="footer">
+                <div class="footerlinks">
+                    <span>
+                        <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->language, 0, 2))); ?>">
+                            <?php echo $this->translate('Home'); ?>
+                        </a>
+                    </span>
+                    <?php if(!$authData): ?>
+                    <span>
+                        <a href="<?php echo $this->url('user', array('lang' => substr($this->language, 0, 2), 'action' => 'login')); ?>">
+                            <?php echo $this->translate('Login'); ?>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="<?php echo $this->url('user', array('lang' => substr($this->language, 0, 2), 'action' => 'signup')); ?>">
+                            <?php echo $this->translate('Register'); ?>
+                        </a>
+                    </span>
+                    <?php endif; ?>
+                    <span>
+                        <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->language, 0, 2), 'action' => 'terms')); ?>">
+                            <?php echo $this->translate('Terms of Service'); ?>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->language, 0, 2), 'action' => 'privacy')); ?>">
+                            <?php echo $this->translate('Privacy Policy'); ?>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->language, 0, 2), 'action' => 'announcements')); ?>">
+                            <?php echo $this->translate('Announcements'); ?>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="<?php echo $this->url('support', array('lang' => substr($this->language, 0, 2), 'action' => 'SubmitTicket')); ?>">
+                            <?php echo $this->translate('Report Bugs'); ?>
+                        </a>
+                    </span>
+                </div>
+                <p class="center-align">
+                    <?php
+                    $cpYears = date('Y');
+                    if($cpYears <= 2013)
+                        $cpYears = "2013 ";
+                    else 
+                        $cpYears = "2013-$cpYears ";
+
+                    $cpLink = ' <a href="http://kcoder.ir" title="kCoder">' .
+                            $this->translate('kCoder') . '</a> ';
+                    
+                    echo '&copy; ' . $cpYears;
+                    echo sprintf($this->translate('%s All rights reserved.'), $cpLink);
+                    ?>
+                </ p>
+                
+                <p style="font-size: 0.8em; direction: ltr; text-align: center;">
+                    version <?php echo file_get_contents('kpastever'); ?>
+                </p>
+            </footer>
+            <?php $ticketUrl = $this->url('support', array(
+                'lang'      => substr($this->language, 0, 2),
+                'action'    => 'SubmitTicket',
+                )); ?>            
+            <?php echo $this->inlineScript(); ?>
+        </div>
+        
+        <div id="iframead">
+            <div id="iframeCloseButton" onclick="closeIframe();"><span>7</span></div>
+            <div id="iframeOpenLink"><a target="_blank"><span class="sprite sprite-light icn-link"></span></a></div>
+            <div id="iframeWrapper"></div>
+        </div>
+        
+        <!-- GOOGLE ANALYTICS -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-44004150-1', 'kpaste.ir');
+            ga('send', 'pageview');
+ 
+        </script>
+    </body>
+</html>

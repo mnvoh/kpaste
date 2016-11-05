@@ -1,0 +1,109 @@
+<?php 
+
+$title = $this->translate('Login');
+$this->headTitle($title);
+$auth = new Zend\Authentication\AuthenticationService();
+$storage = $auth->getStorage();
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCOUNT_SUSPENDED':
+                echo '<p>';
+                echo $this->translate('Sorry, you can not login. Your account has been suspended by one of our administrators.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_PASSWORD':
+                echo '<p>';
+                echo sprintf($this->translate('Invalid password provided! %s attempts remaining.'), $this->remainingAttempts);
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_USERNAME':
+                echo '<p>';
+                echo sprintf($this->translate('Invalid username provided! %s attempts remaining.'), $this->remainingAttempts);
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'UNKNOWN_LOGIN_ERROR':
+                echo '<p>';
+                echo $this->translate('An unknown error occured during login. Apologies');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'TOO_MANY_WRONG_LOGIN_ATTEMPTS':
+                echo '<p>';
+                echo sprintf($this->translate('You have entered wrong login credentials for more than %s times. You can try again in %s.'), $this->maxAttempts, $this->remainingDelay);
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch; 
+        ?>
+    </div>
+<?php
+endif;
+
+$userdata = unserialize($storage->read());
+if($userdata):
+    echo "<h2>" . $this->translate('You are already logged in ') . $userdata->username . "!</h2>";
+else:
+    if(isset($this->loginForm) && !(isset($this->error) && $this->error && $this->result=='TOO_MANY_WRONG_LOGIN_ATTEMPTS')):
+        $loginForm = $this->loginForm;
+        if(strlen($this->returnurl)) 
+        {
+            $loginForm->setAttribute('action', $this->url('user', array(
+                'lang'          => substr($this->layout()->language, 0, 2),
+                'action' => 'login',
+                'returnurl' => urlencode($this->returnurl),
+            )));
+        } 
+        else 
+        {
+            $loginForm->setAttribute('action', $this->url('user', array(
+                'lang'          => substr($this->layout()->language, 0, 2),
+                'action' => 'login',
+            )));
+        }
+        $loginForm->prepare();
+
+        echo $this->form()->openTag($loginForm);
+?>
+        <div class="width400p auto-margin">
+            <div class="formRow">
+                <label>
+                    <span><?php echo $this->translate('Username'); ?>:</span>
+                    <?php echo $this->formRow($loginForm->get('username')); ?>
+                </label>
+            </div>
+            <div class="formRow">
+                <label>
+                    <span><?php echo $this->translate('Password'); ?>:</span>
+                    <?php echo $this->formRow($loginForm->get('password')); ?>
+                </label>
+            </div>
+
+            <table class='width100'>
+                <tr style="background: transparent;">
+                    <td class='width50'>
+                        <label>
+                            <span><?php echo $this->translate('Remember Me'); ?>:</span>
+                            <?php echo $this->formRow($loginForm->get('keepMeSignedIn')); ?>
+                        </label>
+                    </td>
+                    <td class='width50'>
+                        <button type="submit" value="Login" class="padding5 width100">
+                            <span class="sprite icn-login"></span>
+                            <?php echo $this->translate('Login'); ?>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+<?php
+        echo $this->form()->closeTag();
+    endif;
+endif;
+?>

@@ -1,0 +1,508 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view.php
+ * @createdat    Jul 16, 2013 11:40:22 AM
+ */
+
+$title = $this->pasteTitle;
+$this->headTitle($title);
+$settings = $this->settings;
+?>
+<div id='center-wrapper'>
+    <div class="pasteViewContainer" style="border: 0 none;">
+        <?php
+        if(isset($this->error) && $this->error):
+        ?>
+            <div class="error">
+                <?php 
+                switch($this->result):
+                    case 'INCORRECT_PASSWORD':
+                        echo '<p>';
+                        echo $this->translate('The provided password is incorrect!');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                    case 'INVALID_DATA_PROVIDED':
+                        echo '<p>';
+                        echo $this->translate('You have provided incorrect data!');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                    case 'PASTE_NOT_FOUND':
+                        echo '<p>';
+                        echo $this->translate('Paste not found! Either this paste doesn\'t exist or it has been removed');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                    case 'PASTE_IS_CLOSED':
+                        echo '<p>';
+                        echo $this->translate('This paste has been closed due to violation of our terms.');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                    case 'PASTE_IS_PRIVATE':
+                        echo '<p>';
+                        echo $this->translate('This paste is private. If this is your paste, you have to login to your account to view it.');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                    default:
+                        echo '<p>';
+                        echo $this->translate('An unknown error has occured!');
+                        echo '</p>';
+                        echo '<footer class="error-code">' . $this->result . '</footer>';
+                        break;
+                endswitch;
+                ?>
+            </div>
+        <?php
+        endif;
+
+        if($this->passwordForm):
+            $form = $this->passwordForm;
+            $form->setAttribute('action', $this->url('kpastecore', array(
+                'lang'              => substr($this->layout()->language, 0, 2),
+                'controller'        => 'ViewPaste',
+                'action'            => 'view',
+                'param1'            => $this->pasteid,
+            )));
+            $form->prepare();
+            echo $this->form()->openTag($form);
+        ?>
+            <div class='formRow'>
+                <label>
+                    <span><?php echo $this->translate('Password'); ?>:</span>
+                    <?php echo $this->formRow($form->get('password')); ?>
+                </label>
+                <?php
+                echo $this->formRow($form->get('csrf')); 
+                echo $this->formRow($form->get('submit'));
+                ?>
+            </div>
+        <?php
+            echo $this->form()->closeTag();
+        elseif($this->pasteTitle):
+        ?>
+        <div class="pasteWrapper">
+            <div class="pasteHeader">
+                <div class="pasteinfo">
+                    <?php $pasteUrl = $this->url('kpastecore', array(
+                            'lang'      => substr($this->layout()->language, 0, 2),
+                            'controller'=> 'ViewPaste',
+                            'action'    => 'view',
+                            'param1'    => $this->pasteid
+                        ), array('force_canonical'=> true));
+                    
+                        $userUrl = $this->pasteUserId 
+                                ?
+                                $this->url('kpastecore', array(
+                                    'lang'      => substr($this->layout()->language, 0, 2),
+                                    'controller'=> 'ViewPaste',
+                                    'action'    => 'user',
+                                    'param1'    => $this->pasteUserId
+                                ))
+                                :
+                                null;
+                        $user = ($this->pasteUserId)
+                                ? 
+                                "<a href='$userUrl'>{$this->pasteOwner}</a>"
+                                : 
+                                $this->translate('Anonymous');
+                    ?>
+                    <h2 class="center-align">
+                        <a href="<?php echo $pasteUrl; ?>" title="<?php echo $this->pasteTitle; ?>">
+                            <?php echo $this->pasteTitle; ?>
+                        </a>
+                    </h2>
+                    <div class="padding10">
+                        <?php
+                        echo (
+                            sprintf(
+                                $this->translate('Pasted On %s By %s'),
+                                $this->pastedOn, $user
+                            )
+                        );
+                        ?>
+
+                        |
+
+                        <?php echo $this->translate('Size'); ?>:
+                        <?php 
+                        $size = strlen($this->paste);
+                        echo number_format($size/(1<<10),2).' '."KB";
+                        ?>
+
+                        |
+
+                        <?php echo $this->translate('Syntax'); ?>:
+                        <?php echo ($this->syntax == 'plain') ? $this->translate('Plain') : $this->syntax; ?>
+
+                    </div>
+                </div>
+
+                <div id="pasteToolbar">
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Share on Facebook'); ?>"
+                            onclick="
+                              window.open(
+                                'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+                                'facebook-share-dialog', 
+                                'width=626,height=436'); 
+                              return false;" >
+                        <span class="sprite icn-facebook"></span>
+                    </button>
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Share on Twitter'); ?>"
+                            onclick="
+                              window.open(
+                                'https://twitter.com/intent/tweet?original_referer='+encodeURIComponent(location.href)+
+                                '&text=' + document.title+
+                                '&tw_p=tweetbutton&url='+encodeURIComponent(location.href), 
+                                'Tweet Link', 
+                                'width=626,height=436'); 
+                              return false;">
+                        <span class="sprite icn-tweeter"></span>
+                    </button>
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Share on Google+'); ?>"
+                            onclick="
+                              window.open(
+                                'https://plus.google.com/share?url='+encodeURIComponent(location.href),
+                                '', 
+                                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); 
+                              return false;">
+                        <span class="sprite icn-gplus"></span>
+                    </button>
+                    
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Share on LinkedIn'); ?>"
+                            onclick="
+                              window.open(
+                                'http://www.linkedin.com/shareArticle?mini=true&' + 
+                                'url='+encodeURIComponent(location.href) +
+                                '&title=' + encodeURIComponent(document.title) + '&source=kPaste=',
+                                '', 
+                                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); 
+                              return false;">
+                        <span class="sprite icn-linkedin"></span>
+                    </button>
+                    
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Email Using Gmail'); ?>"
+                            onclick="
+                              window.open(
+                                'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' +
+                                encodeURIComponent(document.title) +
+                                '&body='+encodeURIComponent(location.href),
+                                '', 
+                                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); 
+                              return false;">
+                        <span class="sprite icn-gmail"></span>
+                    </button>
+                    
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Email Using Yahoo Mail'); ?>"
+                            onclick="
+                              window.open(
+                                'http://compose.mail.yahoo.com/?to=&subject=' +
+                                encodeURIComponent(document.title) + 
+                                '&body='+encodeURIComponent(location.href),
+                                '', 
+                                'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=900'); 
+                              return false;">
+                        <span class="sprite icn-yahoo"></span>
+                    </button>
+                    
+                    &nbsp;
+
+                    <button type="button" class="padding5 slideopen" title="<?php echo $this->translate('Select All'); 
+                    ?>" onclick="selectPaste();">
+                        <span class="sprite icn-select-all"></span>
+                    </button>
+                    
+                    <?php
+                        $downloadLink = $this->url('kpastecore', array(
+                            'lang'      => substr($this->layout()->language, 0, 2),
+                            'controller'=> 'ViewPaste',
+                            'action'    => 'download',
+                            'param1'    => $this->pasteid
+                        ));
+                    ?>
+                    <button type="button" class="padding5 slideopen" onclick="document.location.href='<?php echo $downloadLink; ?>';"
+                            title='<?php echo $this->translate('Download Paste'); ?>'>
+                        <span class="sprite icn-download"></span>
+                    </button>
+                    
+                    <button type="button" class="padding5 slideopen" 
+                            onclick="$('#pasteCode-link').show(0);
+                            $('#pasteCode-link').animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500)
+                            .animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500)
+                            .animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500);
+                            selectText('pasteLink');"
+                            title='<?php echo $this->translate('View Paste Link'); ?>'>
+                        <span class="sprite icn-link"></span>
+                    </button>
+                    <button type="button" class="padding5 slideopen" 
+                            onclick="$('#pasteCode-embed').show(0);
+                            $('#pasteCode-embed').animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500)
+                            .animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500)
+                            .animate({opacity: 0.4}, 500)
+                            .animate({opacity: 1}, 500);
+                            selectText('pasteEmbedCode');"
+                            title='<?php echo $this->translate('Embed Paste In Site Or Blog'); ?>'>
+                        <span class="sprite icn-embed"></span>
+                    </button>
+                    <button type="button" id="reportbutton" class="padding5 slideopen" 
+                            onclick="reportPaste(<?php echo $this->pasteid; ?>, 
+                                        '<?php echo substr($this->layout()->language, 0, 2); ?>'); 
+                            stopPropagationOnEvent(event);"
+                            title='<?php echo $this->translate('Report Abuse'); ?>'>
+                        <span class="sprite icn-report-paste"></span>
+                        <img src="/images/loading.gif" style="display: none;"/>
+                    </button>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+
+                    <?php if($this->isOwner): ?>
+                        <button class="padding5 slideopen" title="<?php echo $this->translate('Edit Paste'); ?>"
+                                onclick="document.location.href='<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'editPaste', 'param1' => $this->pasteid)); ?>';">
+                            <span class="sprite icn-edit"></span>
+                        </button>
+
+                        <button class="padding5 slideopen" title="<?php echo $this->translate('Delete Paste'); ?>"
+                                onclick="document.location.href='<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'deletePaste', 'param1' => $this->pasteid)); ?>';">
+                            <span class="sprite icn-trash"></span>
+                        </button>
+                    <?php endif; ?>
+                </div>
+                
+                <?php
+                $embedMessage = $this->translate('In order to embed this paste place '.
+                        'the following code in your site or blog code. But you won\'t have '.
+                        'any income from embeded pastes.');
+                $embedCode = "&lt;iframe src='$pasteUrl' width='700' height='400'>&lt;/iframe>";
+                ?>
+                <div class="pasteCode" id="pasteCode-embed">
+                    <div class="closebutton" onclick="$(this).parent().fadeOut(300);"></div>
+                    <?php echo $embedMessage; ?>
+                    <br /><br />
+                    <span id="pasteEmbedCode"><?php echo $embedCode; ?></span>
+                </div>
+                <br />
+ 
+                <div class="pasteCode" id="pasteCode-link">
+                    <div class="closebutton" onclick="$(this).parent().fadeOut(300);"></div>
+                    <?php echo $this->translate('The link is selected. Just press Ctrl+C to copy it.'); ?>
+                    <br /><br />
+                    <span id="pasteLink"><?php echo $pasteUrl; ?></span>
+                </div>
+                
+            </div>
+            
+            <div id="thumbs">
+                <?php
+                if( $this->thumbsDownCount <= 0 && $this->thumbsUpCount <= 0 )
+                {
+                    $ups = 0;
+                    $downs = 0;
+                }
+                else if($this->thumbsDownCount <= 0)
+                {
+                    $ups = 100;
+                    $downs = 0;
+                }
+                else if( $this->thumbsUpCount <= 0 )
+                {
+                    $ups = 0;
+                    $downs = 100;
+                }
+                else
+                {
+                    $totalThumbs = $this->thumbsUpCount + $this->thumbsDownCount;
+                    $ups = (int)($this->thumbsUpCount / $totalThumbs * 100);
+                    $downs = (int)($this->thumbsDownCount / $totalThumbs * 100);
+                }
+                ?>
+                <div class="thumbsUpButton ltr"  style="font-size: 1.5em;"
+                     title="<?php echo $this->thumbsUpCount; ?>" 
+                     onclick="upVote(<?php echo $this->pasteid; ?>, '<?php echo substr($this->layout()->language, 0, 2); ?>');">
+                    <span id='upVoteButtonAndText'>
+                        <span class="sprite sprite-light icn-thumbs-up"></span>
+                        <span id="thumbsUpCount"><?php echo $this->thumbsUpCount; ?></span>
+                    </span>
+                    <img src='/images/loading.gif' alt='loading' id='upVoteAjaxLoader' style='display: none;' />
+                </div>
+                
+                <div class="thumbsDownButton ltr" style="font-size: 1.5em;"
+                     title="<?php echo $this->thumbsDownCount; ?>" onclick="downVote(<?php echo $this->pasteid; ?>, '<?php echo substr($this->layout()->language, 0, 2); ?>');">
+                    <span id='downVoteButtonAndText'>
+                        <span id="thumbsDownCount" style="color: #f00;">
+                        <?php echo $this->thumbsDownCount;?>
+                        </span>
+                        <span class="sprite sprite-light icn-thumbs-down"></span>
+                    </span>
+                    <img src='/images/loading.gif' alt='loading' id='downVoteAjaxLoader' style='display: none;' />
+                </div>
+                
+                <div class="thumbsbar">
+                    <div class="thumbsUpBar" style="width: <?php echo $ups; ?>%; z-index=-1;"
+                         title="<?php echo $this->thumbsUpCount; ?>">
+                    </div>
+                </div>
+            </div>
+            
+            <?php if($this->syntax == 'plain'):
+                $direction = '';
+                if(strlen($this->paste) == strlen(utf8_decode($this->paste)))
+                    $direction = 'direction: ltr; text-align: left;';
+                else
+                    $direction = 'direction: rtl; text-align: right;';
+                function makeClickableLinks($text)
+                {
+                    $rexProtocol = '(https?://)?';
+                    $rexDomain   = '((?:[-a-zA-Z0-9]{1,63}\.)+[-a-zA-Z0-9]{2,63}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})';
+                    $rexPort     = '(:[0-9]{1,5})?';
+                    $rexPath     = '(/[!$-/0-9:;=@_\':;!a-zA-Z\x7f-\xff]*?)?';
+                    $rexQuery    = '(\?[!$-/0-9:;=@_\':;!a-zA-Z\x7f-\xff]+?)?';
+                    $rexFragment = '(#[!$-/0-9:;=@_\':;!a-zA-Z\x7f-\xff]+?)?';
+                    $retval      = "";
+                    
+                    $validTlds = array_fill_keys(explode(" ", ".aero .asia .biz .cat .com .coop .edu .gov .info .int .jobs .mil .mobi .museum .name .net .org .pro .tel .travel .ac .ad .ae .af .ag .ai .al .am .an .ao .aq .ar .as .at .au .aw .ax .az .ba .bb .bd .be .bf .bg .bh .bi .bj .bm .bn .bo .br .bs .bt .bv .bw .by .bz .ca .cc .cd .cf .cg .ch .ci .ck .cl .cm .cn .co .cr .cu .cv .cx .cy .cz .de .dj .dk .dm .do .dz .ec .ee .eg .er .es .et .eu .fi .fj .fk .fm .fo .fr .ga .gb .gd .ge .gf .gg .gh .gi .gl .gm .gn .gp .gq .gr .gs .gt .gu .gw .gy .hk .hm .hn .hr .ht .hu .id .ie .il .im .in .io .iq .ir .is .it .je .jm .jo .jp .ke .kg .kh .ki .km .kn .kp .kr .kw .ky .kz .la .lb .lc .li .lk .lr .ls .lt .lu .lv .ly .ma .mc .md .me .mg .mh .mk .ml .mm .mn .mo .mp .mq .mr .ms .mt .mu .mv .mw .mx .my .mz .na .nc .ne .nf .ng .ni .nl .no .np .nr .nu .nz .om .pa .pe .pf .pg .ph .pk .pl .pm .pn .pr .ps .pt .pw .py .qa .re .ro .rs .ru .rw .sa .sb .sc .sd .se .sg .sh .si .sj .sk .sl .sm .sn .so .sr .st .su .sv .sy .sz .tc .td .tf .tg .th .tj .tk .tl .tm .tn .to .tp .tr .tt .tv .tw .tz .ua .ug .uk .us .uy .uz .va .vc .ve .vg .vi .vn .vu .wf .ws .ye .yt .yu .za .zm .zw .xn--0zwm56d .xn--11b5bs3a9aj6g .xn--80akhbyknj4f .xn--9t4b11yi5a .xn--deba0ad .xn--g6w251d .xn--hgbk6aj7f53bba .xn--hlcj6aya9esc7a .xn--jxalpdlp .xn--kgbechtv .xn--zckzah .arpa"), true);
+
+                    $position = 0;
+                    while (preg_match("{\\b$rexProtocol$rexDomain$rexPort$rexPath$rexQuery$rexFragment(?=[?.!,;:\"]?(\s|$))}", $text, $match, PREG_OFFSET_CAPTURE, $position))
+                    {
+                        list($url, $urlPosition) = $match[0];
+
+                        // Print the text leading up to the URL.
+                        $retval .= htmlspecialchars(substr($text, $position, $urlPosition - $position));
+
+                        $domain = $match[2][0];
+                        $port   = $match[3][0];
+                        $path   = $match[4][0];
+
+                        // Check if the TLD is valid - or that $domain is an IP address.
+                        $tld = strtolower(strrchr($domain, '.'));
+                        if (preg_match('{\.[0-9]{1,3}}', $tld) || isset($validTlds[$tld]))
+                        {
+                            // Prepend http:// if no protocol specified
+                            $completeUrl = $match[1][0] ? $url : "http://$url";
+
+                            // Print the hyperlink.
+                            $retval .= sprintf('<a href="%s">%s</a>', htmlspecialchars($completeUrl), htmlspecialchars("$domain$port$path"));
+                        }
+                        else
+                        {
+                            // Not a valid URL.
+                            $retval .= htmlspecialchars($url);
+                        }
+
+                        // Continue text parsing from after the URL.
+                        $position = $urlPosition + strlen($url);
+                    }
+
+                    // Print the remainder of the text.
+                    $retval .= htmlspecialchars(substr($text, $position));
+                    
+                    return $retval;
+                }
+                $paste = trim($this->paste);
+                $paste = makeClickableLinks($paste);
+                //$paste = nl2br($paste);
+            ?>
+<div id="paste" class="plainpaste">
+    <div class="container" style="<?php echo $direction; ?>"><?php echo $paste; ?></div>
+</div>
+            <?php else: ?>
+            <pre id="paste" class="brush: <?php echo $this->syntax; ?>; toolbar: false;"><?php echo preg_replace('/</', '&lt;', $this->paste); ?>
+            </pre>
+            <?php endif; ?>
+        </div>
+        <script type="text/javascript" src="/synhl/scripts/shCore.js"></script>
+        <?php switch($this->syntax):
+            case 'as3': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushAS3.js'></script>
+        <?php break; ?>
+        <?php case 'bash': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushBash.js'></script>
+        <?php break; ?>
+        <?php case 'cf': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushColdFusion.js'></script>
+        <?php break; ?>
+        <?php case 'csharp': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCSharp.js'></script>
+        <?php break; ?>
+        <?php case 'cpp': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCpp.js'></script>
+        <?php break; ?>
+        <?php case 'css': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCss.js'></script>
+        <?php break; ?>
+        <?php case 'delphi': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushDelphi.js'></script>
+        <?php break; ?>
+        <?php case 'diff': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushDiff.js'></script>
+        <?php break; ?>
+        <?php case 'erl': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushErlang.js'></script>
+        <?php break; ?>
+        <?php case 'groovy': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushGroovy.js'></script>
+        <?php break; ?>
+        <?php case 'js': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJScript.js'></script>
+        <?php break; ?>
+        <?php case 'java': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJava.js'></script>
+        <?php break; ?>
+        <?php case 'jfx': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJavaFX.js'></script>
+        <?php break; ?>
+        <?php case 'perl': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPerl.js'></script>
+        <?php break; ?>
+        <?php case 'php': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPhp.js'></script>
+        <?php break; ?>
+        <?php case 'ps': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPowerShell.js'></script>
+        <?php break; ?>
+        <?php case 'python': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPython.js'></script>
+        <?php break; ?>
+        <?php case 'ruby': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushRuby.js'></script>
+        <?php break; ?>
+        <?php case 'scala': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushScala.js'></script>
+        <?php break; ?>
+        <?php case 'sql': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushSql.js'></script>
+        <?php break; ?>
+        <?php case 'vb': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushVb.js'></script>
+        <?php break; ?>
+        <?php case 'xml': ?>
+        <script type="text/javascript" src='/synhl/scripts/shBrushXml.js'></script>
+        <?php break; ?>
+        <?php endswitch; ?>
+
+        <?php if($this->syntax != 'plain'): ?>
+        <script type="text/javascript">
+            SyntaxHighlighter.all();
+        </script>
+        <link href="/synhl/styles/shCore.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/synhl/styles/shThemeDefault.css" media="screen" rel="stylesheet" type="text/css">
+        <?php
+            endif;
+        endif;
+        ?>
+    </div> <!-- /container -->
+</div>

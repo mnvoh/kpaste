@@ -1,0 +1,120 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-my-pastes.phtml
+ * @createdat    Jul 16, 2013 7:28:58 PM
+ */
+
+$title = $this->translate('View My Pastes');
+$this->headTitle($title);
+
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->myPastes)):
+    
+?>
+<h3><?php echo $this->translate('My Pastes'); ?></h3>
+<table cellspacing="0" border="0" class="table" id="myPasteViewsTable">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Title'); ?></th>
+            <th><?php echo $this->translate('Exposure'); ?></th>
+            <th><?php echo $this->translate('Syntax'); ?></th>
+            <th><?php echo $this->translate('Status'); ?></th>
+            <th><?php echo $this->translate('Password'); ?></th>
+            <th><?php echo $this->translate('Pasted At'); ?></th>
+            <th><?php echo $this->translate('Viewed'); ?></th>
+            <th><?php echo $this->translate('View Stats'); ?></th>
+            <th><?php echo $this->translate('Edit'); ?></th>
+            <th><?php echo $this->translate('Delete'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($this->myPastes as $myPaste): ?>
+        <tr>
+            <td>
+                <a href="<?php echo $this->url('kpastecore', array(
+                            'lang'          => substr($this->layout()->language, 0, 2),
+                            'controller'    => 'ViewPaste', 
+                            'action'        => 'view',
+                            'param1'        => $myPaste->pasteid,
+                    )); ?>" target="_blank">
+                <?php echo $myPaste->title; ?>
+                </a>    
+            </td>
+            <td><?php echo $myPaste->exposure; ?></td>
+            <td><?php echo $myPaste->syntax; ?></td>
+            <td><?php echo $myPaste->status; ?></td>
+            <td>
+                <?php if($myPaste->password_test): ?>
+                <span class="sprite icn-check" title="<?php echo $this->translate('Yes'); ?>"></span>
+                <?php else: ?>
+                <span class="sprite icn-cross" title="<?php echo $this->translate('No'); ?>"></span>
+                <?php endif; ?>
+            </td>
+            <td><?php echo $myPaste->pasted_on; ?></td>
+            <td><?php echo (int)$myPaste->viewed; ?></td>
+            <td>
+                <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'viewPasteStats', 
+                'param1' => $myPaste->pasteid)); ?>" target="_blank">
+                    <span class="sprite icn-stats" 
+                          title="<?php echo $this->translate('View Paste Stats'); ?>"></span>
+                </a>
+            </td>
+            <td>
+                <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'editPaste', 
+                'param1' => $myPaste->pasteid)); ?>">
+                    <span class="sprite icn-edit" 
+                          title="<?php echo $this->translate('Edit Paste'); ?>"></span>
+                </a>
+            </td>
+            <td>
+                <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'deletePaste', 
+                'param1' => $myPaste->pasteid)); ?>">
+                    <span class="sprite icn-trash" 
+                          title="<?php echo $this->translate('Delete Paste'); ?>"></span>
+                </a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+echo $this->paginationControl(
+    $this->myPastes,
+    'sliding',
+    array( 'partial/paginator.phtml', 'Admin' ),
+    array( 
+        'route'         => 'paster', 
+        'action'        => 'viewMyPastes',
+    )
+);
+endif;

@@ -1,0 +1,158 @@
+<?php
+$title = $this->translate('Register');
+$this->headTitle($title);
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ALREADY_A_USER':
+                echo '<p>';
+                echo $this->translate('You are already a user and don\'t need to register!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'PASSWORDS_DO_NOT_MATCH':
+                echo '<p>';
+                echo $this->translate('The provided passwords do not match!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'USER_NAME_ALREADY_EXISTS':
+                echo '<p>';
+                echo $this->translate('This username already exists. Please try another one.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'EMAIL_ALREADY_EXISTS':
+                echo '<p>';
+                echo $this->translate('This email already exists. Please try another one.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_VALUE_PROVIDED':
+                echo '<p>';
+                echo $this->translate('The provided data is invalid!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'TERMS_DECLINED':
+                echo '<p>';
+                echo $this->translate('If you want to signup, you have to agree to our terms of service!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+elseif ( isset($this->error) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Registration was successful. An email has dispatched to your email address. Follow the link inside it to verify your email address.'); ?><br />
+
+            <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->layout()->language, 0, 2), 'controller' => 'Home')); ?>"><?php echo $this->translate('Continue'); ?></a>
+        </p>
+    </div>
+<?php
+endif;
+
+if(isset($this->form)) {
+    $this->form->setAttribute('action', $this->url('user',array('lang' => substr($this->layout()->language, 0, 2),'action' => 'signup')));
+    $this->form->prepare();
+    echo $this->form()->openTag($this->form);
+    
+    $recoverLink = '<a href=\"' . $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'changePassword')) .
+                    '\">' . $this->translate('Recover your password') . '</a>';
+?>
+    <h4><?php echo $this->translate('Please fill out the following form to register.'); ?></h4>
+    <div class="width700p">
+        <div class="formRow">
+            <label>
+                <span title="<?php echo $this->translate('Username'); ?>">
+                    <?php echo $this->translate('Username'); ?>
+                </span>
+                <?php 
+                $this->form->get('username')->
+                        setAttribute('onkeyup', 'checkUsernameExists("' . 
+                        $this->translate('This username has already been taken!') . $recoverLink . '");');
+                echo $this->formRow($this->form->get('username')); 
+                ?>
+            </label>
+        </div>
+        
+        <div class="formRow">
+            <label>
+                <span title="<?php echo $this->translate('Email'); ?>">
+                    <?php echo $this->translate('Email'); ?>
+                </span>
+                <?php
+                $this->form->get('email')->
+                        setAttribute('onkeyup', 'checkEmailExists("' . 
+                        $this->translate('This email already exists in our database!') . $recoverLink . '");');
+                echo $this->formRow($this->form->get('email')); 
+                ?>
+            </label>
+        </div>
+
+        <div class="formRow">
+            <label>
+                <span title="<?php echo $this->translate('Password'); ?>">
+                    <?php echo $this->translate('Password'); ?>
+                </span>
+                <?php 
+                $this->form->get('password')->setAttribute('onkeyup', 'assessPasswordEntropy(this.value);');
+                echo $this->formRow($this->form->get('password')); 
+                ?>
+            </label>
+        </div>
+        <label class="hint">
+            <?php echo $this->translate('Password must be a least 7 characters long. Although choosing a strong password is not enforced, it ensures your security.'); ?>
+        </label>
+        <div class="width100">
+            <div class="passwordStrengthOuter">
+                <div class="passwordStrengthInner"></div>
+            </div>
+            <button type="button" onclick="getRandomSequence('password', 'randompassword', 16, 
+                        'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-_'); 
+                $('#randompassword').show();">
+                <span class="sprite icn-dice"></span>
+            </button>
+            <input type="text" id="randompassword" value="" />
+        </div>
+        <div class="clear"></div>
+        <div class="formRow">
+            <label>
+                <span title="<?php echo $this->translate('Repeat password'); ?>">
+                    <?php echo $this->translate('Repeat password'); ?>
+                </span>
+                <?php echo $this->formRow($this->form->get('repassword')); ?>
+            </label>
+        </div>
+
+        <div class="captcha">
+            <label>
+                <span><?php echo $this->translate('Captcha'); ?>:</span>
+                <?php echo $this->formRow($this->form->get('captcha')); ?>
+            </label>
+        </div>
+
+        <?php echo $this->formRow($this->form->get('csrf')); ?>
+        <br /><br />
+        <button type="submit">
+            <span class='sprite icn-register'></span>
+            <?php echo $this->translate('Register'); ?>
+        </button>
+    </div>
+    
+<?php
+    echo $this->form()->closeTag();
+}
+

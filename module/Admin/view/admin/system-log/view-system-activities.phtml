@@ -1,0 +1,145 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-system-activities.phtml
+ * @createdat   aug 3, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('System Activities');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->activities ) ):
+    $route = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemLog',
+        'action'        => 'ViewSystemActivities',
+    ));
+?>
+<h3 class="center-align"><?php echo $this->translate('System Activities'); ?></h3>
+<table class='table' id='systemActivitiesTable'>
+    <thead>
+        <tr>
+            <th><?php echo $this->translate( 'Activity ID' ); ?></th>
+            <th><?php echo $this->translate( 'Activity' ); ?></th>
+            <th><?php echo $this->translate( 'User ID' ); ?></th>
+            <th><?php echo $this->translate( 'user IP' ); ?></th>
+            <th><?php echo $this->translate( 'Activity Time' ); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach( $this->activities as $activity): ?>
+        <tr>
+            <td><?php echo $activity->activityid; ?></td>
+            <td><?php echo $activity->activity; ?></td>
+            <td>
+                <?php
+                if( $activity->userid ):
+                    $userLink = $this->url( 'admin', array(
+                        'lang'          => substr($this->layout()->language, 0, 2),
+                        'controller'    => 'UserManagement',
+                        'action'        => 'ViewUsers',
+                        'param1'        => $activity->userid
+                    ) );
+                ?>
+                <a href='<?php echo $userLink; ?>' target='_blank'>
+                    <?php echo $activity->userid; ?>
+                </a>
+                <?php
+                else:
+                    echo 'A';
+                endif;
+                ?>
+            </td>
+            <td>
+                <?php
+                $flagPath = $this->ipInfo->setIp( $activity->userip )->getFlagPath();
+                $country = $this->ipInfo->getLongName();
+                echo "<img src='$flagPath' alt='$country' title='$country' />";
+                echo $activity->userip;
+                ?>
+            </td>
+            <td>
+                <?php echo KpasteCore\KDateTime\KDateTime::PrefDate($activity->activity_datetime); ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="100">
+                <form action='<?php echo $route; ?>' method='post'>
+                    <label>
+                        <span><?php echo $this->translate( 'User ID' ); ?>:</span>
+                        <input type='number' name='userid' />
+                    </label>
+                    <label>
+                        <span><?php echo $this->translate( 'User IP' ); ?>:</span>
+                        <input type='text' name='userip' />
+                    </label>
+                    <label>
+                        <span><?php echo $this->translate( 'From Date' ); ?>:</span>
+                        <input type='datetime-local' name='datetimeMin' />
+                    </label>
+                    <label>
+                        <span><?php echo $this->translate( 'To Date' ); ?>:</span>
+                        <input type='datetime-local' name='datetimeMax' />
+                    </label>
+                    <label>
+                        <span><?php echo $this->translate( 'Activity Filter' ); ?>:</span>
+                        <input type='text' name='filter' />
+                    </label>
+                    <button type='submit' name='action' value='filter'>
+                        <?php echo $this->translate( 'Filter Results' ); ?>
+                    </button>
+                    <button type='submit' name='action' value='clear'>
+                        <?php echo $this->translate( 'Clear Filters' ); ?>
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<br />
+<?php
+
+    echo $this->paginationControl(
+        $this->activities,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Admin' ),
+        array( 
+            'route'         => 'admin', 
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewSystemActivities'
+        )
+    );
+endif;
+

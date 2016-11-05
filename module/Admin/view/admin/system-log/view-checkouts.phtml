@@ -1,0 +1,275 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-checkouts.phtml
+ * @createdat   aug 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Checkouts');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'PAYOUT_PERMISSION_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to do payouts.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->pendingCheckouts ) ):
+    $route = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewCheckouts',
+        ));
+?>
+    <h3 class="center-align"><?php echo $this->translate('Pending Checkouts'); ?></h3>
+    <table class="table" id="pendingCheckoutsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Checkout ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Requested Date' ); ?></th>
+                <th><?php echo $this->translate( 'Amount' ); ?></th>
+                <th><?php echo $this->translate( 'Status' ); ?></th>
+                <th><?php echo $this->translate( 'Transaction Code' ); ?></th>
+                <th><?php echo $this->translate( 'Transaction Date' ); ?></th>
+                <th><?php echo $this->translate( 'Description' ); ?></th>
+                <th><?php echo $this->translate( 'Opps' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->pendingCheckouts as $pendingCheckout ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $pendingCheckout->userid
+        ) );
+?>
+        <tr>
+            <td><?php echo $pendingCheckout->checkoutid; ?></td>
+            <td>
+                <a href="<?php echo $viewUserLink; ?>">
+                    <?php echo $pendingCheckout->userid; ?>
+                </a>
+            </td>
+            <td>                
+                <?php 
+                echo KpasteCore\KDateTime\KDateTime::PrefDate( $pendingCheckout->datetime_requested ); 
+                ?>
+            </td>
+            <td>
+                <?php echo $pendingCheckout->amount; ?>
+            </td>
+            <td>
+                <?php
+                echo $this->translate( 'Pending' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $pendingCheckout->transaction_tracking_code )
+                    echo $pendingCheckout->transaction_tracking_code;
+                else 
+                    echo $this->translate( 'N/A' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $pendingCheckout->transaction_datetime )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $pendingCheckout->transaction_datetime ); 
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $pendingCheckout->description )
+                    echo $this->escapeHtml( $pendingCheckout->description ); 
+                else
+                    echo $this->translate( 'No Description' );
+                ?>
+            </td>
+            <td>
+                <button onclick="SlideDownNextRowToButtonInTable(this);"><?php echo $this->translate( 'Opps' ); ?></button>
+            </td>
+        </tr>
+        <tr style='display: none;'>
+            <td colspan="9">
+                <form action="<?php echo $route; ?>" method="post" onsubmit="return(($('button[type=submit][clicked=true]').val() === 'paid') ? confirm('<?php echo $this->translate('Are you sure you want to set the status of this checkout to paid?'); ?>') : confirm('<?php echo $this->translate('Are you sure you want to deny this request? You must have a good reason to do so, since the amount will not be returned to the user. Practice caution.'); ?>'));">
+                    <input type="hidden" name='checkoutid' 
+                           value='<?php echo $pendingCheckout->checkoutid; ?>' />
+                    <label>
+                        <span><?php echo $this->translate( 'Transaction Tracking Code' ); ?>:</span>
+                        <input type='text' name='tracking_code' />
+                    </label>
+                    <label>
+                        <span><?php echo $this->translate( 'Transaction Time(Gregorian)' ); ?>:</span>
+                        <input type='datetime-local' name='datetime' />
+                    </label>
+                    <br />
+                    <label>
+                        <span><?php echo $this->translate( 'Description' ); ?>:</span>
+                        <br />
+                        <textarea name='description'><?php echo $this->translate('The amount was deposited into your account.'); ?></textarea>
+                    </label>
+                    <br />
+                    <button type='submit' name='status' value='paid' onclick='$("button[type=submit]", $(this).parents("form")).removeAttr("clicked");$(this).attr("clicked", "true");'>
+                        <?php echo $this->translate( 'Update transaction information for this checkout' ); ?>
+                    </button>
+                    <?php echo $this->translate( 'Or' ); ?>
+                    <button type='submit' name='status' value='denied' onclick='$("button[type=submit]", $(this).parents("form")).removeAttr("clicked");$(this).attr("clicked", "true");'>
+                        <?php echo $this->translate( 'Deny Request' ); ?>
+                    </button>
+                </form>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+    </table>
+    <br />
+<?php
+    echo $this->paginationControl(
+                $this->pendingCheckouts,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewCheckouts',
+                    'queryParamName'=> 'ppage',
+                )
+            );
+
+endif;
+
+if( isset( $this->otherCheckouts ) ):
+?>
+    <br /><br /><br />
+    <h3 class="center-align"><?php echo $this->translate('Other Checkouts'); ?></h3>
+    <table class="table" id="otherCheckoutsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Checkout ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Requested Date' ); ?></th>
+                <th><?php echo $this->translate( 'Amount' ); ?></th>
+                <th><?php echo $this->translate( 'Status' ); ?></th>
+                <th><?php echo $this->translate( 'Transaction Code' ); ?></th>
+                <th><?php echo $this->translate( 'Transaction Date' ); ?></th>
+                <th><?php echo $this->translate( 'Description' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->otherCheckouts as $otherCheckout ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $otherCheckout->userid
+        ) );
+?>
+        <tr>
+            <td><?php echo $otherCheckout->checkoutid; ?></td>
+            <td>
+                <a href="<?php echo $viewUserLink; ?>">
+                    <?php echo $otherCheckout->userid; ?>
+                </a>
+            </td>
+            <td>                
+                <?php 
+                echo KpasteCore\KDateTime\KDateTime::PrefDate( $otherCheckout->datetime_requested ); 
+                ?>
+            </td>
+            <td>
+                <?php echo $otherCheckout->amount; ?>
+            </td>
+            <td>
+                <?php
+                switch($otherCheckout->status)
+                {
+                    case 'paid':
+                        echo $this->translate( 'Paid' );
+                        break;
+                    case 'denied':
+                        echo $this->translate( 'Denied' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $otherCheckout->transaction_tracking_code )
+                    echo $otherCheckout->transaction_tracking_code;
+                else 
+                    echo $this->translate( 'N/A' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $otherCheckout->transaction_datetime )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $otherCheckout->transaction_datetime ); 
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $otherCheckout->description )
+                    echo $this->escapeHtml( $otherCheckout->description ); 
+                else
+                    echo $this->translate( 'No Description' );
+                ?>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+    </table>
+<?php
+    echo $this->paginationControl(
+                $this->otherCheckouts,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewCheckouts',
+                    'queryParamName'=> 'opage',
+                )
+            );
+
+endif;

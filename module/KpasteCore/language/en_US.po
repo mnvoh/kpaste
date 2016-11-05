@@ -1,0 +1,3032 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kPaste\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-02 12:20+0330\n"
+"PO-Revision-Date: 2013-12-02 12:20+0330\n"
+"Last-Translator: mnvoh <mnvoh90@gmail.com>\n"
+"Language-Team: kCoder <mnvoh90@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module\n"
+"X-Poedit-SearchPath-0: /home/mnvoh/VirtualHosts/kpaste/module\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:121
+msgid "Left to Right"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:122
+msgid "Right to Left"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:130
+msgid "Gregorian"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:131
+msgid "Shamsi"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:198
+msgid "Your ad campaign has been accepted."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:204
+msgid "Ad Campaign accepted!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:205
+#, php-format
+msgid "Ad campaign #%s has been accepted. Find more info in your control panel."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:224
+msgid "Your ad campaign has been rejected."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:229
+msgid "Ad Campaign rejected!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:230
+#, php-format
+msgid "Ad campaign #%s has been rejected. Find more info in your control panel."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:246
+msgid "The requested amount was deposited into your account."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:251
+msgid "Checkout Request Was Fulfilled"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:252
+#, php-format
+msgid "The requested checkout amount (%s) has been successfully deposited into your bank account."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:269
+msgid "Checkout request denied!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:274
+msgid "Checkout Request Denied"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:275
+#, php-format
+msgid "The requested checkout amount (%s) was denied. Seek the reason in your user control panel."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:108
+msgid "Thanks for registering."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:148
+msgid "Your password has been changed."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:158
+msgid "Account Password Changed!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:159
+msgid "Your account password has been changed."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:206
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:214
+msgid "Your account information has been changed."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:213
+msgid "Account Information Changed!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:48
+#, php-format
+msgid "Hi %s <br>We have recieved a request to change the account associated with this email address. If you haven't made such request just ignore this email. Otherwise follow this link <br>%s <br>Or copy and paste this %s<br>into your browser to complete the process."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:61
+msgid "Confirm Password Change Request"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:69
+#, php-format
+msgid "Hi %s <br>Your account has been successfully created. In order to use all functionallities you have to activate your account by verifying your email address. In order to do so, please follow the below link: <br>%s <br>Or copy and paste the following in your browser: %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:81
+msgid "Verify Your Email Address"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:86
+msgid "Unpaid"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:88
+msgid "Paid"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:90
+msgid "Your invoice has been created"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:92
+msgid "Your invoice has been paid"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:97
+msgid "Title"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:98
+msgid "Amount"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:101
+msgid "Extra Tax"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:102
+msgid "Gross"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:103
+msgid "Status"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:104
+msgid "Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:119
+msgid "Regards, kPaste Team"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/KSMS.php:57
+msgid "kPaste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:97
+msgid "The submitted data is incomplete!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:98
+msgid "IP or merchant ID is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:99
+msgid "Amount must be above 100t!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:100
+msgid "The reciever's clearance level is below silver!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:101
+msgid "The request was not found!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:102
+msgid "No financial operation is associated with this transaction!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:103
+msgid "Transaction Failed!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:104
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:273
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:450
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:631
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:811
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:991
+msgid "The transaction amount and the amount payed do not match!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:105
+msgid "The request has been archived!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:106
+msgid "The operation was successful!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:107
+msgid "The operation was successful but PaymentVerification has been done before!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:261
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:438
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:619
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:799
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:979
+msgid "The payment gateway is down at the moment. Please try again or choose another gateway."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:262
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:439
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:620
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:800
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:980
+msgid "An unknown error has occured."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:263
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:440
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:621
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:801
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:981
+msgid "API is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:264
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:441
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:622
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:802
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:982
+msgid "IP is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:265
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:442
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:623
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:803
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:983
+msgid "Amount is lower than the minimum."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:266
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:443
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:624
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:804
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:984
+msgid "Amount is higher than the maximum."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:267
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:444
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:625
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:805
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:985
+msgid "Invalid amount."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:268
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:445
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:626
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:806
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:986
+msgid "The gateway is inactive."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:269
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:446
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:627
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:807
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:987
+msgid "Your IP address has been banned!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:270
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:447
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:628
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:808
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:988
+msgid "Callback is empty!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:271
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:448
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:629
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:809
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:989
+msgid "No such transaction."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:272
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:449
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:630
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:810
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:990
+msgid "Transaction was not completed!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:274
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:451
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:632
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:812
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:992
+msgid "Transaction was successful."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:53
+msgid "Paste ID is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:72
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:87
+msgid "OK"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:68
+msgid "You have already reported this paste!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:75
+msgid "Your report was successfully registered. Thanks for your cooperation."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:114
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:160
+msgid "You have already voted for this paste!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:131
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:177
+msgid "Thank you! Your vote has been registered."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:395
+#, php-format
+msgid "Coupon Discount: %s%%, Coupons Left: %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:403
+msgid "Coupon doesn't exist."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:409
+msgid "Coupon ID is missing."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:416
+msgid "Access Denied!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:96
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:97
+msgid "kPaste's Announcements"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:128
+#, php-format
+msgid "%s's Latest Public Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:140
+msgid "Latest Public Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:144
+#, php-format
+msgid "Your account was recharged. New balance: %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:150
+msgid "Account Recharged!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:151
+#, php-format
+msgid "Your account has been recharged. New account balance is %s."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:90
+msgid "Left, Top or Right Square Button"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:91
+msgid "Bottom Square Button"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:92
+msgid "Vertical Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:93
+msgid "Top Leaderboard"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:94
+msgid "Bottom Leaderboard"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:95
+msgid "Inline Frame Ads"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:114
+msgid "Your request has been registered and its result will be texted to you."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:122
+msgid "Checkout Request Registered!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:123
+msgid "Checkout request has been registered and will be processed shortly."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:94
+msgid "New Ticket Opened"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:95
+#, php-format
+msgid "A new ticket has been opened for you. <br />Title: %s <br />Message: %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:121
+msgid "New Message In Your Ticket"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:122
+#, php-format
+msgid "There's a new message in your ticket: <br />%s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:14
+msgid "Coupons List"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:24
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:24
+msgid "Access denied! You don't have permission to access this area."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:48
+msgid "An unknown error has occured!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:47
+msgid "New Coupon"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:50
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:73
+msgid "Coupon ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:53
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:74
+msgid "Discount"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:56
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:75
+msgid "Count"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:76
+msgid "Edit"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:14
+msgid "Create New Admin"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:30
+msgid "This username already exists!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:36
+msgid "This email already exists!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:42
+msgid "The data you have entered in the form is not valid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:62
+msgid "Admin account was created successfully. Now the user needs to activate the account by verifying his email address."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:81
+msgid "Username"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:88
+msgid "Email"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:95
+msgid "Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:102
+msgid "Repeat password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:109
+msgid "First Name"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:116
+msgid "Last Name"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:123
+msgid "Cell phone number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:129
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:130
+msgid "Security Question (for password reset)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:136
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:137
+msgid "Security Question Answer"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:145
+msgid "Create Admin"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:59
+msgid "Admins List"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:43
+msgid "Edit Permissions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:44
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:14
+msgid "Suspend Admin"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:14
+msgid "Remove Admin Suspension"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:46
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:14
+msgid "Delete Admin"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:50
+msgid "Right click on each row for options."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:60
+msgid "Full Name"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:169
+msgid "Registration Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:60
+msgid "Cell Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:61
+msgid "Last Login"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:62
+msgid "Last IP"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:72
+msgid "Right click for options"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:82
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:88
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:112
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:95
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:399
+msgid "Pending"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:84
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:91
+msgid "Verified"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:86
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:94
+msgid "Suspended"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:94
+msgid "None"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:102
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:134
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:111
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:245
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:310
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:477
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:485
+msgid "Never"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:116
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:203
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:212
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:237
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:163
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:324
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:499
+msgid "N/A"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:30
+msgid "The admin ID has not been provided or it is incorrect!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:36
+msgid "The admin is not verified yet. No point in suspending."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:60
+msgid "Are you sure you want to suspend this admin?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:62
+msgid "Yes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:63
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:63
+msgid "No"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:54
+#, php-format
+msgid "Are you sure you want to delete %s's acccount?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:14
+msgid "Edit Admin Permissions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:50
+msgid "All permissions set successfully."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:55
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:55
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:79
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:61
+msgid "Continue"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:63
+msgid "Accept Ad Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:64
+msgid "Change System Settings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:65
+msgid "Change Users' Passwords"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:66
+msgid "Close a Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:67
+msgid "Delete All Closed Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:68
+msgid "Delete All Rejected Ad Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:69
+msgid "Delete Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:70
+msgid "Payout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:71
+msgid "Publish Announcements"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:72
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:182
+msgid "Reject Ad Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:73
+msgid "Remove User Suspension"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:74
+msgid "Suspend Users"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:75
+msgid "View Checkout Requests"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:76
+msgid "View All Transactions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:77
+msgid "View All Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:78
+msgid "View Reported Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:79
+msgid "View System Activities"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:80
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:83
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:91
+msgid "View Users"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:81
+msgid "View Users Ad Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:90
+msgid "Please choose the permissions you want this admin to be granted with:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:109
+msgid "All Permissions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:112
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:113
+msgid "Grant Permissions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:118
+msgid "Cancel"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:36
+msgid "The admin is not suspended."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:60
+msgid "Are you sure you want to remove the suspension of this admin?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:14
+msgid "System Settings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:99
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:107
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:14
+msgid "Transactions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:115
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:123
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:14
+msgid "Checkouts"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:131
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:139
+msgid "Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:147
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:155
+msgid "Reported Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:163
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:171
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:14
+msgid "Ad Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:179
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:187
+msgid "Coupons"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:195
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:203
+msgid "System Activities"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:211
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:219
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:14
+msgid "General Settings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:227
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:235
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:14
+msgid "Ads Layout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:243
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:251
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:14
+msgid "Terms and Privacy Policy"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:261
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:269
+msgid "Announcements"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:284
+msgid "Support"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:292
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:299
+msgid "My Account"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:307
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:314
+msgid "Logout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:50
+msgid "Terms"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:55
+msgid "Privacy Policy"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:61
+msgid "Quetions & Answers"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:68
+msgid "Save"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:56
+msgid "Layout saved successfully."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:57
+msgid "There was an error saving your layout!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:58
+msgid "Save Layout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:101
+msgid "Square Button"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:111
+msgid "Leaderboard"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:14
+msgid "Publish News"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:34
+msgid "The provided data is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:50
+msgid "News published successfully!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:55
+msgid "View News"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:90
+msgid "Announcement"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:94
+msgid "Publish Announcement"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:54
+msgid "Settings successfully saved!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:74
+msgid "Website Name"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:81
+msgid "Website URL"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:88
+msgid "Admin Email"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:95
+msgid "Theme"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:102
+msgid "Language"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:109
+msgid "Text Direction"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:116
+msgid "Locale"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:123
+msgid "Peyment Per Thousand"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:130
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:131
+msgid "Left, Top and Right Square Button Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:138
+msgid "Bottom Square Button Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:145
+msgid "Vertical Banner Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:152
+msgid "Top Leaderboard Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:159
+msgid "Bottom Leaderboard Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:166
+msgid "Inline Frame Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:173
+msgid "Local Price Factor"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:180
+msgid "Discount Factor"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:187
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:188
+msgid "Minimum Balance for Checkout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:195
+msgid "Minimum Recharge Amount"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:202
+msgid "Currency"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:209
+msgid "Calendar"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:216
+msgid "Maximum Banner Size(KB)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:223
+msgid "Maximum Attachment Size(KB)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:230
+msgid "Keep Activities for(days)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:238
+msgid "Save These Settings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:241
+msgid "Cancel Changes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:235
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:249
+msgid "Change Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:30
+msgid "Invalid user ID has been provided!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:36
+msgid "The provided passwords do not match!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:42
+msgid "Password must be between 7 and 255 characters!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:63
+msgid "Password changed successfully!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:14
+msgid "Change Status"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:14
+msgid "Users"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:53
+msgid "List of all users"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:145
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:80
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:185
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:71
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:214
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:357
+msgid "User ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:61
+msgid "Reg. Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:63
+msgid "User Type"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:64
+msgid "Ticket"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:97
+msgid "Deleted"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:105
+msgid "Paster"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:107
+msgid "Advertiser"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:165
+msgid "Email Verification Code"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:173
+msgid "Account Status"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:177
+msgid "Cell Phone Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:181
+msgid "Last Login Time"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:185
+msgid "Last Ip Address"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:199
+msgid "Credit Card Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:208
+msgid "Zarinpal ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:217
+msgid "Total Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:221
+msgid "Total Views"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:225
+msgid "Unpaid Viewes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:230
+msgid "Account Balance"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:256
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:270
+msgid "Suspend User"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:268
+msgid "Suspension Reason"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:290
+msgid "Remove Suspension"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:49
+msgid "Filter by"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:54
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:85
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:186
+msgid "Requested Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:59
+msgid "Using operator"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:61
+msgid "Less Than"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:62
+msgid "Greater Than"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:63
+msgid "Equal"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:68
+msgid "Value"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:73
+msgid "Clear Filter"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:79
+msgid "Transaction ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:83
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:189
+msgid "Transaction Code"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:84
+msgid "Receipt"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:86
+msgid "Finished Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:115
+msgid "Completed"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:30
+msgid "Access denied! You don't have permission to do payouts."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:53
+msgid "Pending Checkouts"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:184
+msgid "Checkout ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:63
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:190
+msgid "Transaction Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:64
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:141
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:191
+msgid "Description"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:65
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:123
+msgid "Opps"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:119
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:253
+msgid "No Description"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:128
+msgid "Are you sure you want to set the status of this checkout to paid?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:128
+msgid "Are you sure you want to deny this request? You must have a good reason to do so, since the amount will not be returned to the user. Practice caution."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:132
+msgid "Transaction Tracking Code"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:136
+msgid "Transaction Time(Gregorian)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:143
+msgid "The amount was deposited into your account."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:147
+msgid "Update transaction information for this checkout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:149
+msgid "Or"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:151
+msgid "Deny Request"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:180
+msgid "Other Checkouts"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:227
+msgid "Denied"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:30
+msgid "Access denied! You are not allowed to accept ad campaigns."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:36
+msgid "Access denied! You are not allowed to reject ad campaigns."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:59
+msgid "Pending Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:61
+msgid "Are you sure you want to perform this operation?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:68
+msgid "Invert Selection"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:70
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:213
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:356
+msgid "Campaign ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:216
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:359
+msgid "Type"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:74
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:217
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:360
+msgid "Scope"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:218
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:361
+msgid "Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:76
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:219
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:362
+msgid "Daily"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:77
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:223
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:367
+msgid "URL"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:78
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:224
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:368
+msgid "Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:137
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:280
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:447
+msgid "Local"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:282
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:449
+msgid "Global"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:154
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:315
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:490
+msgid "Go to URL"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:160
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:321
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:496
+msgid "View Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:175
+msgid "Accept Ad Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:180
+msgid "Rejection Reason"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:209
+msgid "Active Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:220
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:363
+msgid "Remaining"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:221
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:364
+msgid "Start"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:222
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:365
+msgid "Extension"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:352
+msgid "Other Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:366
+msgid "Finish"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:402
+msgid "Active"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:405
+msgid "Paused"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:408
+msgid "Rejected"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:411
+msgid "Canceled"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:414
+msgid "Finished"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:51
+msgid "Activity ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:52
+msgid "Activity"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:54
+msgid "user IP"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:55
+msgid "Activity Time"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:105
+msgid "User IP"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:109
+msgid "From Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:113
+msgid "To Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:117
+msgid "Activity Filter"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:121
+msgid "Filter Results"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:124
+msgid "Clear Filters"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:30
+msgid "The Campaign ID is invalid."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:36
+msgid "This campaign's banner does not exist on this server!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:56
+msgid "Current Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:75
+msgid "There is no banner available for this campaign!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:30
+msgid "Access denied! You don't have permission close or open pastes."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:36
+msgid "Access denied! You don't have permission delete pastes."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:59
+msgid "List of all pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:70
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:70
+msgid "Paste ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:73
+msgid "Password Protected"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:74
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:74
+msgid "Exposure"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:75
+msgid "Syntax"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:77
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:76
+msgid "Pasted At"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:140
+msgid "Private"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:141
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:142
+msgid "Public"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:156
+msgid "Closed"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:175
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:173
+msgid "Close Selected Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:178
+msgid "Reopen Selected Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:181
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:176
+msgid "Delete Selected Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:77
+msgid "No. of Reports"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/resend-verification-email.phtml:15
+msgid "Your account status is not pending, therefore you don't need a verification email."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/resend-verification-email.phtml:34
+msgid "Email Verification sent successfully."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:9
+msgid "The provided email does not exist in our database. Please check your information and try again."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:12
+msgid "Try Again"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:20
+#, php-format
+msgid "You can only request a password change once every 24 hours. Try again in %s hours."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:26
+msgid "Please fill out the form correctly."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:32
+msgid "Password change request has expired. You have 2 hours to complete a password change request from the moment it gets registered."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:38
+msgid "The password change request confirmation code you have provided is incorrect."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:44
+msgid "The new passwords you have entered do not match!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:50
+msgid "The current password is wrong!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:67
+#, php-format
+msgid "Your password has been changed. Your new password is <span class=\"new-password\">%s</span> Please change your password immediately using the following form."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:69
+msgid "Your password has been changed. Please login again."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:72
+msgid "Your password change request has been successfully registered. <span class=\"bold\">Please be wary that this request will expire in 2 hours.</span>"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:86
+msgid "Password Change Request"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:87
+msgid "Enter your email address and instructions on how to reset your password will be sent to you."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:145
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:185
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:234
+msgid "Captcha"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:110
+msgid "Request password change"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:126
+msgid "Please answer your security question to complete the process:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:131
+msgid "Security Question"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:164
+msgid "Current Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:171
+msgid "New Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:178
+msgid "Repeat New Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:2
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:253
+msgid "Register"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:11
+msgid "You are already a user and don't need to register!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:23
+msgid "This username already exists. Please try another one."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:29
+msgid "This email already exists. Please try another one."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:41
+msgid "If you want to signup, you have to agree to our terms of service!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:59
+msgid "Registration was successful. An email has dispatched to your email address. Follow the link inside it to verify your email address."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:68
+#, php-format
+msgid "In order to update your bank account info please visit %s section."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:86
+msgid "Recover your password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:88
+msgid "Please fill out the following form to register."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:98
+msgid "This username has already been taken!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:112
+msgid "This email already exists in our database!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:130
+msgid "Password must be a least 7 characters long. Although choosing a strong password is not enforced, it ensures your security."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:171
+msgid "For pasters, payouts will only be made to credit cards owned by this name."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:182
+msgid "Correct example of a cell phone number:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:199
+msgid "In case you forgot your password, you'll need this to recover it."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:213
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:214
+msgid "Signup as a(n)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:242
+#, php-format
+msgid "I have read and accept the %s and %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:245
+msgid "terms of service"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:248
+msgid "privacy policy"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/verify-email.phtml:21
+msgid "Email successfully verified. Please login again."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/verify-email.phtml:22
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:3
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:99
+msgid "Login"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:28
+msgid "Account information successfully updated."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:38
+msgid "Account Overview"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:91
+msgid "Resend Verification Email"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:102
+msgid "Update Cell Phone Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:131
+msgid "Update Credit Card Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:136
+msgid "Currently payouts will only be made to Shetab credit cards."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:146
+msgid "Update ZarinPal ID"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:150
+msgid "Most of the time, payouts to your zarinpal account will be faster."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:152
+msgid "If you don't want payouts to be made directly to your credit card, leave this blank."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:15
+msgid "Sorry, you can not login. Your account has been suspended by one of our administrators."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:21
+#, php-format
+msgid "Invalid password provided! %s attempts remaining."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:27
+#, php-format
+msgid "Invalid username provided! %s attempts remaining."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:33
+msgid "An unknown error occured during login. Apologies"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:39
+#, php-format
+msgid "You have entered wrong login credentials for more than %s times. You can try again in %s."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:51
+msgid "You are already logged in "
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:92
+msgid "Remember Me"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/questions-and-answers.phtml:13
+msgid "Questions & Answers"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/announcements.phtml:54
+msgid "Delete"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/announcements.phtml:74
+msgid "No Announcements Found"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:13
+msgid "Ads"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:17
+msgid "You can use the following to determine the kind of ad you want."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:24
+msgid "Left, Top, Right Square Button"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:26
+msgid "Iframe"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:47
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:106
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:168
+msgid "Paste Is Here"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:188
+msgid "You website will be loaded here. Just as if the paste viewer visited your website."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/terms.phtml:13
+msgid "Terms of Service"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:13
+msgid "Contact Us"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:28
+msgid "Contact Support"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:29
+msgid "Contact Our Support Team"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:34
+msgid "Contact Info"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:44
+msgid "SMS Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:56
+msgid "Telephone Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:62
+#, php-format
+msgid "Only for advertiser's support. Workdays from %s to %s."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:19
+msgid "Invalid data provided. Please check again."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:37
+msgid "Paste was saved successfully."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:50
+msgid "Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:71
+msgid "Guest"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:93
+msgid "Compose new paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:106
+msgid "Paste title"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:108
+msgid "--untitled--"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:116
+msgid "Input your paste here..."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:124
+msgid "Password (Optional)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:143
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:145
+msgid "Save Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:20
+msgid "The provided paste ID is incorrect!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:26
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:38
+msgid "The provided password is incorrect!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:62
+msgid "Confirm"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:31
+msgid "Pasters List"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:54
+#, php-format
+msgid "%s's Pastes List"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:69
+#, php-format
+msgid "Follow %s's public pastes via RSS"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:83
+msgid "Viewed"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:44
+msgid "You have provided incorrect data!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:50
+msgid "Paste not found! Either this paste doesn't exist or it has been removed"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:56
+msgid "This paste has been closed due to violation of our terms."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:62
+msgid "This paste is private. If this is your paste, you have to login to your account to view it."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:106
+msgid "Loading, Please Wait..."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:132
+msgid "Anonymous"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:143
+#, php-format
+msgid "Pasted On %s By %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:151
+msgid "Size"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:160
+msgid "Plain"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:166
+msgid "Share on Facebook"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:175
+msgid "Share on Twitter"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:186
+msgid "Share on Google+"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:196
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:208
+msgid "Email Using Gmail"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:220
+msgid "Email Using Yahoo Mail"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:234
+msgid "Select All"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:248
+msgid "Download Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:261
+msgid "View Paste Link"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:273
+msgid "Embed Paste In Site Or Blog"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:280
+msgid "Report Abuse"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:289
+msgid "Edit Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:294
+msgid "Delete Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:302
+msgid "In order to embed this paste place the following code in your site or blog code. But you won't have any income from embeded pastes."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:317
+msgid "The link is selected. Just press Ctrl+C to copy it."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:12
+msgid "E-Payment"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:28
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:31
+msgid "No data has been sent. Maybe you have opened this page directly."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:37
+msgid "The amount is too low."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:45
+msgid "This transaction has already been completed."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:51
+msgid "No such transaction exists!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:57
+msgid "There was an error during the transaction."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:53
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:59
+msgid "Error Description: "
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:12
+msgid "Confirm Transaction"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:34
+#, php-format
+msgid "The minimum recharge amount is %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:59
+msgid "Please confirm the amount of the transaction"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:61
+msgid "Please confirm this invoice by clicking the continue button."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:78
+#, php-format
+msgid "Recharge Advertiser's Account %s %s"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:11
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:15
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:19
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/404.phtml:3
+msgid "Page Not Found :("
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/paginator.phtml:117
+msgid "Items count in each page"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:32
+msgid "My Earnings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:41
+msgid "New Paste"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:50
+msgid "My Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:69
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:76
+msgid "New Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:54
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:61
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:52
+msgid "My Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:95
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:13
+msgid "Recent Transactions"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:113
+msgid "Create a New Admin"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:124
+msgid "View Admins"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:283
+msgid "Log out"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:32
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:143
+msgid "Home"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:89
+msgid "Recover Password"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:111
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:116
+msgid "About"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:123
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:128
+msgid "Cantact Us"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:140
+msgid "Subscribe"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:145
+msgid "kPaste on Facebook"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:151
+msgid "kPaste on Twitter"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:52
+msgid "Share Paste Easily"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:54
+msgid "Earn easy money by sharing your pastes - Advertise on the internet at the lowest price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:55
+msgid "share paste, earn money by sharing paste, earn easy money, advertise, advertise on the internet, advertise at the lowest price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:126
+msgid "Warning! You are using and old and incompatible Browser."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:175
+msgid "Report Bugs"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:188
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:137
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:138
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:106
+msgid "kCoder"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:191
+#, php-format
+msgid "%s All rights reserved."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:24
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:24
+msgid "You don't have permission to access this area. Please log in to continue!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:47
+#, php-format
+msgid "Amount(%s)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:51
+msgid "Invoice Creation Time"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:52
+msgid "Payment Time"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:61
+msgid "Invoice Created"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:30
+#, php-format
+msgid ""
+"Sorry! But your balance is not enough to create this\n"
+"                    campaign. Your balance is %s%s. You need %s%s to create this campaign."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:34
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:46
+msgid "You need to recharge first and then try again."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:40
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:30
+msgid "You provided invalid data in the form!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:60
+msgid "Register and Start Your Campaigns"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:70
+msgid "Campaign created successfully and it's awaiting approval from our staff."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:72
+msgid "Final Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:75
+#, php-format
+msgid "Your coupon granted you %s%% discount."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:78
+msgid "Price Without Coupon"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:85
+msgid "Upload a banner for this campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:118
+msgid "Create New Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:119
+msgid "Please note that:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:121
+msgid "You should fill out all of the fields. You can edit your campaign later, as long as it's pending."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:122
+#, php-format
+msgid "A local scope makes your ads only available to IP Addresses with \"%s\" country code."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:123
+#, php-format
+msgid "If this is your first time, check out the %s section before choosing a campaign type."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:124
+msgid "help"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:125
+msgid "Campaign Credits is the total number of times your ads will be displayed to unique visitors"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:127
+msgid "Correct URL examples are:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:136
+#, php-format
+msgid "You can always order your banner at <a href=\"http://kcoder.ir\" title=\"%s\" target=\"_blank\">%s</a> and pay online for it."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:142
+msgid "Inline Frame Ads ACTUALLY increase the number of visitors of your website!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:150
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:80
+msgid "Campaign Title"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:157
+msgid "Campaign Scope"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:170
+msgid "Campaign Type"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:179
+msgid "Campaign Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:189
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:87
+msgid "Daily Credits Limit"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:196
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:94
+msgid "Campaign URL"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:203
+msgid "Discount Coupon"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:212
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:114
+msgid "Total Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:219
+msgid "Total Price With Discount(Without Coupon)"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:226
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:128
+msgid "Unit Price"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:233
+msgid "Provided Coupon Discount"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:235
+msgid "No Coupon Selected"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:239
+msgid "Your Account Balance"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:258
+msgid "Create Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:38
+msgid "Access denied! Your account is not verified."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:60
+msgid "Enter amount to recharge account"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:71
+msgid "Choose Your Gateway"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:148
+msgid "Recharge Account"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:136
+msgid "Upload Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:29
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:23
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:23
+msgid "Either the campaign you are refering to doesn't exist or campaign ID has not been provided."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:30
+msgid "You don't have permission to access this campaign!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:42
+msgid "You don't have permission to modify this campaign!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:48
+msgid "This is an iframe campaign and it doesn't need a banner."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:54
+msgid "An error occured while uploading the file."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:60
+msgid "Permission Denied! Please login to continue."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:66
+#, php-format
+msgid "The size of the uploaded file is too large. Maximum file size is %s KBs"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:73
+msgid "This is not an allowed file type!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:91
+msgid "Banner was uploaded successfuly."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:107
+msgid "Order Your Banner Now"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:110
+msgid "Please note that this is just for your conveniese and you can get your banner from wherever you're most comfortable with."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:122
+msgid "Maximum banner size:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:124
+msgid "Banner dimensions should be:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:131
+msgid "Choose banner to upload"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:170
+msgid "No Banner Uploaded Yet"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:13
+msgid "Confirm Action"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:36
+msgid "This is not an active campaign. You can't pause it!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:55
+#, php-format
+msgid "Do you really want to pause '%s'?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:14
+msgid "Advertiser Panel"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:44
+msgid "Latest News"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:44
+msgid "Edit Compaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:45
+msgid "View/Upload Banner"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:46
+msgid "View Stats"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:47
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:142
+msgid "Extend Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:48
+msgid "Pause Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:49
+msgid "Resume Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:53
+msgid "You can right click on any of your campaigns to view a list of available options"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:60
+msgid "Total Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:61
+msgid "Daily Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:62
+msgid "Remaining Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:64
+msgid "Start Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:65
+msgid "Extension Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:66
+msgid "Finish Date"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:105
+msgid "Pending Approval"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:111
+msgid "Paused By User"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:114
+msgid "Your campaign has been rejected due to the following reason:<br />"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:118
+msgid "Unfortunately no reason has been specified!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:142
+msgid "Not Started Yet"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:158
+msgid "Not Finished Yet"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:36
+msgid "This is not a paused campaign. You can't resume it!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:55
+#, php-format
+msgid "Do you really want to resume '%s'?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:14
+msgid "Campaign Stats"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:30
+msgid "This campaign does not exist, or has been deleted."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:36
+msgid "This is not your campaign and you don't have permission to view its stats."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:54
+msgid "Statistics"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:66
+msgid "Country/IP"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:67
+msgid "IP Address"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:102
+msgid "Edit Campaign"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:50
+msgid "Campaign was edited successfully and it's awaiting approval from our staff."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:42
+#, php-format
+msgid "Sorry! But your balance is not enough to extend this campaign. Your balance is %s%s. You need %s%s to create this campaign."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:52
+msgid "Invalid value entered for the extra credits field. A value between 1000 and 50000 is expected."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:58
+msgid "Only active and finished campaigns can be extended."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:79
+msgid "Campaign was extended successfully."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:92
+msgid "Please choose an amount to extend your campaign by it. Remember that you should have enough balance in your account."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:97
+msgid "Extra Credits"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:121
+msgid "Total Price With Discount"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:14
+msgid "Earnings"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:30
+#, php-format
+msgid "Sorry! But your balance is not enought to checkout. Your balance is %s%s. You need at least %s%s to checkout."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:36
+msgid "Your account has not been verified yet. You need to verify your account using the link in the verification email sent to you."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:57
+msgid "Your checkout request has been registered. Remember that your request may take 1 to 14 workdays to be processed, depending on the amount of requests."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:64
+#, php-format
+msgid "Do you want to checkout %s%s out of your account?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/delete-paste.phtml:14
+msgid "Confirm Paste Deletion"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/delete-paste.phtml:42
+#, php-format
+msgid "Are you sure you want to delete \"%s\"?"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:20
+msgid "The password you have entered is incorrect."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:26
+msgid "The data you have entered is invalid."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:38
+msgid "This is paste is closed due to violation of out terms."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-paste-stats.phtml:14
+msgid "View paste statistics"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-paste-stats.phtml:42
+#, php-format
+msgid "Statistics for \"%s\""
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/new-paste.phtml:77
+msgid "Paste your paste here"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/index.phtml:35
+msgid "Paster Panel"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-my-pastes.phtml:13
+msgid "View My Pastes"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-my-pastes.phtml:88
+msgid "View Paste Stats"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:45
+msgid "Current account balance"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:56
+msgid "Checkout Now"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:66
+#, php-format
+msgid "You need %s more to checkout"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:76
+msgid "Date Requested"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:80
+msgid "Transaction Date and Time"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:108
+msgid "No Transaction Tracking Code Is Available"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:119
+msgid "No Transaction Date Is Available"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:130
+msgid "No Description Is Available"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:140
+msgid "Total Income"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:20
+msgid "Invalid attachment ID provided!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:27
+msgid "Attachment not found on this server! It might have been removed by the administrators."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:33
+msgid "Access denied! You don't have permission to download this attachment."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:12
+msgid "Advertisement"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:20
+msgid "Acess Denied! You have to login before submitting new support ticket."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:26
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:20
+msgid "Uploading attachment file failed!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:39
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:33
+#, php-format
+msgid "The maximum size for attachments is %s KBs!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:39
+msgid "The attachment type is invalid!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:51
+msgid "The recipient is not specified!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:71
+msgid "The ticket was successfully submitted!"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:79
+msgid "The support message was successfully sent. We will contact you via email soon."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:89
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:193
+msgid "Submit New Ticket"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:94
+msgid "Advertisment"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:96
+msgid "General Support"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:97
+msgid "Bug Report"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:124
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:65
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:205
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:350
+msgid "Importance"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:127
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:97
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:240
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:312
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:385
+msgid "Low"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:128
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:100
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:243
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:315
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:388
+msgid "Medium"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:129
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:246
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:318
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:391
+msgid "High"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:66
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:201
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:273
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:346
+msgid "Department"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:148
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:204
+msgid "Input your message here..."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:154
+msgid "Attachment"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:159
+msgid "Allowed File Types:"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:172
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:215
+msgid "Submit"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:185
+msgid "Contact kPaste's Support"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:187
+msgid "Please note that by signing up and sending a support ticket we will process your request sooner and better."
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:61
+msgid "Ticket Number"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:63
+msgid "Opend At"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:81
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:224
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:296
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:369
+msgid "Pending Administrators' Response"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:84
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:227
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:299
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:372
+msgid "Pending user's Response"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:121
+msgid "From"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:125
+msgid "At"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:150
+msgid "Download Attachment"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:152
+msgid "Download"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:170
+msgid "New Message"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:175
+msgid "Post Message"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:179
+msgid "Close Ticket"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:203
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:275
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:348
+msgid "Opened At"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:268
+msgid "Tickets pending your response"
+msgstr ""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:341
+msgid "Other Tickets"
+msgstr ""
+

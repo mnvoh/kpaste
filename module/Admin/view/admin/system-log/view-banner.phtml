@@ -1,0 +1,79 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-ad-campaigns.phtml
+ * @createdat   aug 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Ad Campaigns');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_CAMPAIGN_ID':
+                echo '<p>';
+                echo $this->translate('The Campaign ID is invalid.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'BANNER_NOT_FOUND':
+                echo '<p>';
+                echo $this->translate('This campaign\'s banner does not exist on this server!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+?>
+<div class="current-banner">
+    <span class="banner-preview">
+        <?php
+        if(isset($this->banner) && $this->banner):
+            echo $this->translate('Current Banner');
+            echo '<br />';
+            $bannerUrl = $this->url('kpastecore', array(
+                'lang'      => substr($this->layout()->language, 0, 2),
+                'controller'=> 'ViewPaste',
+                'action'    => 'banner',
+                'param1'    => $this->campaignid,
+            )); 
+            $size = \KpasteCore\Utilities::getBannerSize( $this->bannerType );
+            $extension = end(explode('.', $this->banner));
+            if($extension == 'swf'):
+                echo \KpasteCore\Utilities::getFlashMarkup($bannerUrl, $size);
+            else:
+            ?>
+                <img src='<?php echo $bannerUrl; ?>' 
+                     width='<?php echo $size['width']; ?>' height='<?php echo $size['height']; ?>'/>
+            <?php
+            endif;
+        else:
+            echo '<h2>' . $this->translate('There is no banner available for this campaign!') . '</h2>';
+        endif;
+        ?>
+    </span>
+</div>

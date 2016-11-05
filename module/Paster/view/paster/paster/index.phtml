@@ -1,0 +1,130 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    edit-paste.php
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+else:
+    $title = $this->translate('Paster Panel');
+    $this->headTitle($title);
+    ?>
+    <?php
+        $lang = substr($this->layout()->language, 0, 2);
+        if(isset($this->layout()->latestNews) && $this->layout()->latestNews):
+    ?>
+    <div class="latestNews">
+        <h4><?php echo $this->translate('Latest News'); ?>:
+            <?php echo $this->layout()->latestNews->title; ?></h4>
+        <p><?php echo $this->layout()->latestNews->news; ?></p>
+    </div>
+    <?php endif; ?>
+
+    <div class="user-panel-items-wrapper">
+        <div class="user-panel-items">
+            <div class="user-panel-item-image">
+                <img src="/themes/<?php echo $this->theme; ?>/images/newpaste.png" 
+                     alt="<?php echo $this->translate('New Paste'); ?>" width="128" height="128" />
+            </div>
+            <div class="user-panel-item-text">
+                <a href="<?php echo $this->url('paster', array(
+                    'lang'      => $lang,
+                    'action'    => 'newPaste',
+                )); ?>">
+                    <?php echo $this->translate('New Paste'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="user-panel-items">
+            <div class="user-panel-item-image">
+                <img src="/themes/<?php echo $this->theme; ?>/images/paste.png" 
+                     alt="<?php echo $this->translate('My Pastes'); ?>" width="128" height="128" />
+            </div>
+            <div class="user-panel-item-text">
+                <a href="<?php echo $this->url('paster', array(
+                    'lang'      => $lang,
+                    'action'    => 'viewMyPastes',
+                )); ?>">
+                    <?php echo $this->translate('My Pastes'); ?>
+                </a>
+            </div>
+        </div>
+
+        <!-- ################################### -->
+
+        <div class="user-panel-items">
+            <div class="user-panel-item-image">
+                <img src="/themes/<?php echo $this->theme; ?>/images/announcements.png" 
+                     alt="<?php echo $this->translate('Announcements'); ?>" width="128" height="128" />
+            </div>
+            <div class="user-panel-item-text">
+                <a href="<?php echo $this->url('kpastecore', array(
+                    'lang'      => $lang,
+                    'controller'=> 'Home',
+                    'action'    => 'Announcements',
+                )); ?>">
+                    <?php echo $this->translate('Announcements'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="user-panel-items">
+            <div class="user-panel-item-image">
+                <img src="/themes/<?php echo $this->theme; ?>/images/account.png" 
+                     alt="<?php echo $this->translate('My Account'); ?>" width="128" height="128" />
+            </div>
+            <div class="user-panel-item-text">
+                <a href="<?php echo $this->url('user', array(
+                    'lang'      => $lang,
+                    'action'    => 'myAccount',
+                )); ?>">
+                    <?php echo $this->translate('My Account'); ?>
+                </a>
+            </div>
+        </div>
+
+        <div class="user-panel-items">
+            <div class="user-panel-item-image">
+                <img src="/themes/<?php echo $this->theme; ?>/images/logout.png" 
+                     alt="<?php echo $this->translate('Logout'); ?>" width="128" height="128" />
+            </div>
+            <div class="user-panel-item-text">
+                <a href="<?php echo $this->url('user', array(
+                    'lang'      => $lang,
+                    'action'    => 'logout',
+                )); ?>">
+                    <?php echo $this->translate('Logout'); ?>
+                </a>
+            </div>
+        </div>
+    </div>    
+<?php
+endif;
+?>

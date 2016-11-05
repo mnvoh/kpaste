@@ -1,0 +1,122 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    edit-permissions.phtml
+ * @createdat   Jul 31, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Edit Admin Permissions');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_ADMIN_ID':
+                echo '<p>';
+                echo $this->translate('The admin ID has not been provided or it is incorrect!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->error ) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate( 'All permissions set successfully.' ); ?><br />
+            <a href='<?php echo $this->url('admin', array(
+                'lang'          => substr($this->layout()->language, 0, 2),
+                'controller'    => 'MasterAdmin',
+                'action'        => 'ViewAdmins',
+            )); ?>'><?php echo $this->translate( 'Continue' ); ?></a>
+        </p>
+    </div>
+<?php
+endif;
+
+if( isset( $this->permissions ) ):
+    $translations = array(
+        'ACCEPT_AD_CAMPAIGN'            => $this->translate( 'Accept Ad Campaigns' ),
+        'CHANGE_SYSTEM_SETTINGS'        => $this->translate( 'Change System Settings' ),
+        'CHANGE_USERS_PASSWORDS'        => $this->translate( 'Change Users\' Passwords' ),
+        'CLOSE_PASTE'                   => $this->translate( 'Close a Paste' ),
+        'DELETE_CLOSED_PASTES'          => $this->translate( 'Delete All Closed Pastes' ),
+        'DELETE_REJECTED_CAMPAIGNS'     => $this->translate( 'Delete All Rejected Ad Campaigns' ),
+        'DELETE_PASTES'                 => $this->translate( 'Delete Pastes' ),
+        'PAYOUT'                        => $this->translate( 'Payout' ),
+        'PUBLISH_NEWS'                  => $this->translate( 'Publish Announcements' ),
+        'REJECT_AD_CAMPAIGN'            => $this->translate( 'Reject Ad Campaign' ),
+        'REMOVE_USER_SUSPENSION'        => $this->translate( 'Remove User Suspension' ),
+        'SUSPEND_USERS'                 => $this->translate( 'Suspend Users' ),
+        'VIEW_CHECKOUT_REQUESTS'        => $this->translate( 'View Checkout Requests' ),
+        'VIEW_TRANSACTIONS'             => $this->translate( 'View All Transactions' ),
+        'VIEW_PASTES'                   => $this->translate( 'View All Pastes' ),
+        'VIEW_REPORTED_PASTES'          => $this->translate( 'View Reported Pastes' ),
+        'VIEW_SYSTEM_ACTIVITIES'        => $this->translate( 'View System Activities' ),
+        'VIEW_USERS'                    => $this->translate( 'View Users' ),
+        'VIEW_USERS_AD_CAMPAIGNS'       => $this->translate( 'View Users Ad Campaigns' ),
+    );
+    $url = $this->url('admin', array(
+        'lang'              => substr($this->layout()->language, 0, 2),
+        'controller'        => 'MasterAdmin',
+        'action'            => 'EditPermissions',
+        'param1'            => $this->adminid,
+    ));
+?>
+    <h2><?php echo $this->translate( 'Please choose the permissions you want this admin to be granted with:' ); ?></h2>
+    <form action='<?php echo $url; ?>' method='post'>
+<?php
+    foreach( $this->permissions as $permission ):
+?>
+        <label class='checkbox-label'>
+            <?php if(in_array($permission, $this->currentPermissions)): ?>
+                <input type='checkbox' name='selected_permissions[]' value='<?php echo $permission; ?>' checked="checked"/>
+            <?php else: ?>
+                <input type='checkbox' name='selected_permissions[]' value='<?php echo $permission; ?>' />
+            <?php endif; ?>
+            <?php echo $translations[$permission]; ?>
+        </label>
+        <br />
+<?php
+    endforeach;
+?>
+        <label class='checkbox-label'>
+            <input type='checkbox' name='selected_permissions' value='ALL' />
+            <?php echo $this->translate( 'All Permissions' ); ?>
+        </label>
+        <br />
+        <button type='submit' value='<?php echo $this->translate('Grant Permissions'); ?>'>
+            <?php echo $this->translate('Grant Permissions'); ?>
+        </button>
+        <button type="button" onclick="document.location.href=
+    '<?php echo $this->url('admin', array('lang'=> substr($this->layout()->language, 0, 2),
+        'controller' => 'MasterAdmin', 'action' => 'ViewAdmins')); ?>';">
+            <?php echo $this->translate('Cancel'); ?>
+        </button>
+    </form>
+<?php
+endif;

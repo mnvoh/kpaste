@@ -1,0 +1,156 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-transactions.phtml
+ * @createdat   aug 1, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Transactions');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->transactions ) ):
+    $url = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemLog',
+        'action'        => 'ViewTransactions',
+    ) );
+?>
+    <form action="<?php echo $url; ?>" method="post">
+        <label>
+            <span><?php echo $this->translate( 'Filter by' ); ?></span>
+            <select name="field">
+                <option value="uid"><?php echo $this->translate( 'User ID' ); ?></option>
+                <option value="mnt"><?php echo $this->translate( 'Amount' ); ?></option>
+                <option value="sts"><?php echo $this->translate( 'Status' ); ?></option>
+                <option value="rdt"><?php echo $this->translate( 'Requested Date' ); ?></option>
+            </select>
+        </label>
+        
+        <label>
+            <span><?php echo $this->translate( 'Using operator' ); ?></span>
+            <select name="operator">
+                <option value="lt"><?php echo $this->translate( 'Less Than' ); ?></option>
+                <option value="gt"><?php echo $this->translate( 'Greater Than' ); ?></option>
+                <option value="eq"><?php echo $this->translate( 'Equal' ); ?></option>
+            </select>
+        </label>
+        
+        <label>
+            <span><?php echo $this->translate( 'Value' ); ?></span>
+            <input type="text" name="value" />
+        </label>
+        
+        <button type="submit" name="submit" value="OK"><?php echo $this->translate('OK'); ?></button>
+        <button type="submit" name="clear" value="clear"><?php echo $this->translate('Clear Filter'); ?></button>
+    </form>
+
+    <table class="table" id="transactionsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Transaction ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Amount' ); ?></th>
+                <th><?php echo $this->translate( 'Status' ); ?></th>
+                <th><?php echo $this->translate( 'Transaction Code' ); ?></th>
+                <th><?php echo $this->translate( 'Receipt' ); ?></th>
+                <th><?php echo $this->translate( 'Requested Date' ); ?></th>
+                <th><?php echo $this->translate( 'Finished Date' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->transactions as $transaction ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $transaction->userid
+        ));
+?>
+        <tr>
+            <td><?php echo $transaction->transactionid; ?></td>
+            <td>
+                <a href="<?php echo $viewUserLink; ?>">
+                    <?php echo $transaction->userid; ?>
+                </a>
+            </td>
+            <td><?php echo $transaction->amount; ?></td>
+            <td>
+                <?php 
+                switch($transaction->status)
+                {
+                    case 'pending':
+                        echo $this->translate( 'Pending' );
+                        break;
+                    case 'completed':
+                        echo $this->translate( 'Completed' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php echo $transaction->au; ?>
+            </td>
+            <td>
+                <?php echo $transaction->receipt; ?>
+            </td>
+            <td>
+                <?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $transaction->requested_datetime ); ?>
+            </td>
+            <td>
+                <?php 
+                if( $transaction->completed_datetime )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $transaction->completed_datetime ); 
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+    </table>
+<br />
+<?php
+    echo $this->paginationControl(
+                $this->transactions,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewTransactions'
+                )
+            );
+
+endif;

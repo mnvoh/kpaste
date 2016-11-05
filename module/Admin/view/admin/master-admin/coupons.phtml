@@ -1,0 +1,113 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    coupons.phtml
+ * @createdat   Oct 16, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Coupons List');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+$url = $this->url('admin', array(
+    'lang'          => substr($this->layout()->language, 0, 2),
+    'controller'    => 'MasterAdmin',
+    'action'        => 'coupons',
+));
+?>
+
+<a name="newcoupon"></a>
+<h4><?php echo $this->translate('New Coupon'); ?></h4>
+<div>
+    <form action="<?php echo $url; ?>" method="post">
+        <label for="couponid"><?php echo $this->translate('Coupon ID'); ?>:</label>
+        <input type='text' name='couponid' id='couponid' />
+        
+        <label for="discount"><?php echo $this->translate('Discount'); ?>:</label>
+        <input type='text' name='discount' id='discount' />%
+        
+        <label for="count"><?php echo $this->translate('Count'); ?>:</label>
+        <input type='text' name='count' id='count' />
+        
+        <button type='submit' class='padding5'>
+            <span class='sprite icn-save'></span>
+        </button>
+    </form>
+</div>
+<br />
+<?php
+if( isset( $this->coupons ) ):
+?>
+    <h3><?php echo $title; ?></h3>
+    <br />
+    <table class="table" id="couponsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Coupon ID' ); ?></th>
+                <th><?php echo $this->translate( 'Discount' ); ?></th>
+                <th><?php echo $this->translate( 'Count' ); ?></th>
+                <th><?php echo $this->translate( 'Edit' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->coupons as $coupon ):
+?>
+        <tr>
+            <td><?php echo $coupon->couponid; ?></td>
+            <td><?php echo $coupon->discount; ?>%</td>
+            <td><?php echo $coupon->count; ?></td>
+            <td>
+                <button type='button' onclick='
+                            document.location.href = "<?php echo $url; ?>#newcoupon";
+                            $("#couponid").val("<?php echo $coupon->couponid; ?>");
+                            $("#discount").val("<?php echo $coupon->discount; ?>");
+                            $("#count").val("<?php echo $coupon->count; ?>");
+                        ' class='padding5'>
+                    <span class='sprite icn-edit'></span>
+                </button>
+            </td>
+        </tr>
+<?php
+    endforeach;
+    echo '</tbody></table><br />';
+    
+    echo $this->paginationControl(
+        $this->coupons,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Admin'),
+        array( 
+            'route'         => 'admin',
+            'controller'    => 'MasterAdmin',
+            'action'        => 'coupons',
+        )
+    );
+endif;
+?>

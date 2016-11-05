@@ -1,0 +1,42 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    download-attachment.phtml
+ * @createdat   Aug 27, 2013 4:50:05 PM
+ */
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'INVALID_ATTACHMENT_ID':
+                echo '<p>';
+                echo $this->translate( 'Invalid attachment ID provided!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ATTACHMENT_NOT_FOUND':
+                echo '<h1>404</h1>';
+                echo '<p>';
+                echo $this->translate('Attachment not found on this server! It might have been removed by the administrators.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to download this attachment.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch; 
+
+        ?>
+    </div>
+<?php
+endif;

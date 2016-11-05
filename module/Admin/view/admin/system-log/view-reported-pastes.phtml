@@ -1,0 +1,196 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-reported-pastes.phtml
+ * @createdat   aug 4, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Reported Pastes');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'PERMISSION_DENIED_FOR_CLOSING_OR_OPENING_PASTE':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission close or open pastes.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'PERMISSION_DENIED_FOR_DELETING_PASTE':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission delete pastes.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->pastes ) ):
+    $route = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewReportedPastes',
+        ));
+?>
+<h3 class="center-align"><?php echo $this->translate('Reported Pastes'); ?></h3>
+<form action='<?php echo $route; ?>' method='post' id='reportedPastesActions'
+      onsubmit="return confirm('<?php echo $this->translate('Are you sure you want to perform this operation?'); ?>');">
+    <table class="table" id="adminPastesTable">
+        <thead>
+            <tr>
+                <th>
+                    <input type='checkbox' id='selectalltop' 
+                           onclick='ToggleAllCheckboxesInForm(event, "reportedPastesActions");'
+                           title='<?php echo $this->translate('Invert Selection'); ?>'/>
+                </th>
+                <th><?php echo $this->translate( 'Paste ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Title' ); ?></th>
+                <th><?php echo $this->translate( 'Password Protected' ); ?></th>
+                <th><?php echo $this->translate( 'Exposure' ); ?></th>
+                <th><?php echo $this->translate( 'Syntax' ); ?></th>
+                <th><?php echo $this->translate( 'Pasted At' ); ?></th>
+                <th><?php echo $this->translate( 'No. of Reports' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+        foreach( $this->pastes as $paste ):
+            
+            $viewUserLink = $this->url( 'admin', array(
+                'lang'          => substr($this->layout()->language, 0, 2),
+                'controller'    => 'UserManagement',
+                'action'        => 'ViewUsers',
+                'param1'        => $paste->userid
+            ) );
+        
+            $viewPasteLink = $this->url( 'kpastecore', array(
+                'lang'          => substr($this->layout()->language, 0, 2),
+                'controller'    => 'ViewPaste',
+                'action'        => 'view',
+                'param1'        => $paste->pasteid,
+            ));
+?>
+            <tr onclick='ToggleCheckBoxInCurrentTableRow(event, this);' style='cursor: pointer;'>
+                <!-- Checkbox -->
+                <td>
+                    <input type='checkbox' name='pasteid[]' value='<?php echo $paste->pasteid; ?>' 
+                           onclick='stopPropagationOnEvent(event);'/>
+                </td>
+                <!-- Paste ID -->
+                <td><?php echo $paste->pasteid; ?></td>
+                <!-- User ID -->
+                <td>
+                    <?php if( $paste->userid ): ?>
+                    <a href="<?php echo $viewUserLink; ?>" target='_blank' onclick="stopPropagationOnEvent( event );">
+                        <?php echo $paste->userid; ?>
+                    </a>
+                    <?php else: ?>
+                    A
+                    <?php endif; ?>
+                </td>
+                <!-- Title -->
+                <td>                
+                    <a href="<?php echo $viewPasteLink; ?>" target='_blank' onclick="stopPropagationOnEvent( event );">
+                        <?php echo $this->escapeHtml( $paste->title ); ?>
+                    </a>
+                </td>
+                <!-- Password Protected -->
+                <td>
+                    <?php
+                    if( $paste->password_test ):
+                    ?>
+                    <span class="sprite icn-check" alt='<?php echo $this->translate( 'Yes' ); ?>'></span>
+                    <?php
+                    else:
+                    ?>
+                    <span class="sprite icn-cross" alt='<?php echo $this->translate( 'No' ); ?>'></span>
+                    <?php
+                    endif;
+                    ?>
+                </td>
+                <!-- Exposure -->
+                <td>
+                    <?php
+                    if( 'private' == $paste->exposure )
+                        echo $this->translate( 'Private' );
+                    else
+                        echo $this->translate( 'Public' );
+                    ?>
+                </td>
+                <!-- Syntax -->
+                <td>
+                    <?php 
+                    echo $paste->syntax;
+                    ?>
+                </td>
+                <!-- Pasted At -->
+                <td>
+                    <?php 
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $paste->pasted_on ); 
+                    ?>
+                </td>
+                <!-- Number of Reports -->
+                <td>
+                    <?php
+                    echo $paste->reports_count;
+                    ?>
+                </td>
+            </tr>
+<?php
+    endforeach;
+?>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="100">
+                    <button type='submit' name='action' value='close'>
+                        <?php echo $this->translate( 'Close Selected Pastes' ); ?>
+                    </button>
+                    <button type='submit' name='action' value='delete'>
+                        <?php echo $this->translate( 'Delete Selected Pastes' ); ?>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<br />
+<?php
+    echo $this->paginationControl(
+                $this->pastes,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewReportedPastes',
+                )
+            );
+
+endif;

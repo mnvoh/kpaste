@@ -1,0 +1,62 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    delete-admin.phtml
+ * @createdat   Jul 31, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Delete Admin');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_ADMIN_ID':
+                echo '<p>';
+                echo $this->translate('The admin ID has not been provided or it is incorrect!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->adminid ) ):
+    $url = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'MasterAdmin',
+        'action'        => 'DeleteAdmin',
+        'param1'        => $this->adminid,
+    ));
+?>
+    <h2><?php echo sprintf($this->translate('Are you sure you want to delete %s\'s acccount?'),
+                    $this->firstname . ' ' . $this->lastname); ?></h2>
+    <form action='<?php echo $this->url; ?>' method='post'>
+        <button type='submit' name='confirm' value='YES'><?php echo $this->translate('Yes'); ?></button>
+        <button type='submit' name='confirm' value='NO'><?php echo $this->translate('No'); ?></button>
+    </form>
+<?php    
+endif;
+?>

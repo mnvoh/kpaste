@@ -1,0 +1,3156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kPaste - User Module\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-02 12:20+0330\n"
+"PO-Revision-Date: 2013-12-02 12:20+0330\n"
+"Last-Translator: mnvoh <mnvoh90@gmail.com>\n"
+"Language-Team: kCoder <mnvoh90@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module/Admin\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module/Paster\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module/Support\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: /home/mnvoh/VirtualHosts/kpaste/module/User\n"
+"X-Poedit-SearchPath-0: /home/mnvoh/VirtualHosts/kpaste/module\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:121
+msgid "Left to Right"
+msgstr "چپ به راست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:122
+msgid "Right to Left"
+msgstr "راست به چپ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:130
+msgid "Gregorian"
+msgstr "میلادی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/SystemSettingsController.php:131
+msgid "Shamsi"
+msgstr "شمسی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:198
+msgid "Your ad campaign has been accepted."
+msgstr "کمپین تبلیغاتی شما تایید شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:204
+msgid "Ad Campaign accepted!"
+msgstr "کمپین تبلیغاتی تایید شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:205
+#, php-format
+msgid "Ad campaign #%s has been accepted. Find more info in your control panel."
+msgstr "کمپین تبلیغاتی شماره %s شما تایید شده است. اطلاعات بیشتر در پنل کاربری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:224
+msgid "Your ad campaign has been rejected."
+msgstr "کمپین تبلیغاتی شما رد شده است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:229
+msgid "Ad Campaign rejected!"
+msgstr "کمپین تبلیغاتی رد شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:230
+#, php-format
+msgid "Ad campaign #%s has been rejected. Find more info in your control panel."
+msgstr "کمپین تبلیغاتی شماره %s شما **رد** شده است. اطلاعات بیشتر در پنل کاربری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:246
+msgid "The requested amount was deposited into your account."
+msgstr "وجه مورد نظر به حساب شما واریز شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:251
+msgid "Checkout Request Was Fulfilled"
+msgstr "درخواست تسویه حساب انجام شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:252
+#, php-format
+msgid "The requested checkout amount (%s) has been successfully deposited into your bank account."
+msgstr "مقدار تسویه حساب مورد نظر(%s) به حساب شما واریز شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:269
+msgid "Checkout request denied!"
+msgstr "درخواست تسویه حساب رد شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:274
+msgid "Checkout Request Denied"
+msgstr "درخواست تسویه حساب رد شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/src/Admin/Controller/KEventManager.php:275
+#, php-format
+msgid "The requested checkout amount (%s) was denied. Seek the reason in your user control panel."
+msgstr "درخواست تصفیه حساب(%s) رد شده است. اطلاعات بیشتر در پنل کاربری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:108
+msgid "Thanks for registering."
+msgstr "با تشکر از ثبت نام شما."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:148
+msgid "Your password has been changed."
+msgstr "گذرواژه ی شما تغییر یافت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:158
+msgid "Account Password Changed!"
+msgstr "گذرواژه ی حساب شما تغییر یافت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:159
+msgid "Your account password has been changed."
+msgstr "گذرواژه ی حساب شما تغییر یافت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:206
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:214
+msgid "Your account information has been changed."
+msgstr "اطلاعات حساب شما تغییر یافت.."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/src/User/Controller/KEventManager.php:213
+msgid "Account Information Changed!"
+msgstr "اطلاعات حساب شما تغییر یافت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:48
+#, php-format
+msgid "Hi %s <br>We have recieved a request to change the account associated with this email address. If you haven't made such request just ignore this email. Otherwise follow this link <br>%s <br>Or copy and paste this %s<br>into your browser to complete the process."
+msgstr "با سلام %s <br>درخواستی مبنی بر تغییر گذرواژه ی مربوط به این ایمیل به دست ما رسیده است. اگر شما چنین درخواستی نداده اید از این ایمیل چشم پوشی کنید. در غیر این صورت لینک زیر را دنبال کنید<br>%s<br>و یا این را در مرورگر خود کپی پیست کنید<br>%s<br>تا بتوانید روال تغییر گذرواژه را کامل کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:61
+msgid "Confirm Password Change Request"
+msgstr "درخواست تغییر گذرواژه ی خود را تایید کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:69
+#, php-format
+msgid "Hi %s <br>Your account has been successfully created. In order to use all functionallities you have to activate your account by verifying your email address. In order to do so, please follow the below link: <br>%s <br>Or copy and paste the following in your browser: %s"
+msgstr "با سلام %s<br>حساب شما با موفقیت ساخته شد. برای استفاده از تمامی امکانات باید ایمیل خود را تایید کنید. برای این کار، لینک زیر را دنبال کنید<br>%s<br>و یا این را در مرورگر خود کپی پیست کنید<br>%s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:81
+msgid "Verify Your Email Address"
+msgstr "ایمیل خود را تایید کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:86
+msgid "Unpaid"
+msgstr "پرداخت نشده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:88
+msgid "Paid"
+msgstr "پرداخت شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:90
+msgid "Your invoice has been created"
+msgstr "فاکنور شما ایجاد شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:92
+msgid "Your invoice has been paid"
+msgstr "فاکتور شما پرداخت شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:97
+msgid "Title"
+msgstr "عنوان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:98
+msgid "Amount"
+msgstr "مقدار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:101
+msgid "Extra Tax"
+msgstr "مالیات بر ارزش افزوده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:102
+msgid "Gross"
+msgstr "جمع کل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:103
+msgid "Status"
+msgstr "وضعیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:104
+msgid "Date"
+msgstr "تاریخ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/EmailSender.php:119
+msgid "Regards, kPaste Team"
+msgstr "با تشکر، کی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/KSMS.php:57
+msgid "kPaste"
+msgstr "کی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:97
+msgid "The submitted data is incomplete!"
+msgstr "اطلاعات ارسال شده ناقص است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:98
+msgid "IP or merchant ID is invalid!"
+msgstr "آیپی یا مرچنت کد پذیرنده صحیح نیست."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:99
+msgid "Amount must be above 100t!"
+msgstr "رقم باید بالای ۱۰۰ تومان باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:100
+msgid "The reciever's clearance level is below silver!"
+msgstr "سطح تایید پذیرنده پایین تر از سطح نقره ای است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:101
+msgid "The request was not found!"
+msgstr "درخواست مورد نظر یافت نشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:102
+msgid "No financial operation is associated with this transaction!"
+msgstr "هیچ نوع عملیات مالی برای این تراکنش یافت نشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:103
+msgid "Transaction Failed!"
+msgstr "تراکنش ناموفق می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:104
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:273
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:450
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:631
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:811
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:991
+msgid "The transaction amount and the amount payed do not match!"
+msgstr "رقم تراکنش با رقم پرداخت شده مطابقت ندارد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:105
+msgid "The request has been archived!"
+msgstr "درخواست مورد نظر آرشیو شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:106
+msgid "The operation was successful!"
+msgstr "تراکنش با موفقیت به پایان رسید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:107
+msgid "The operation was successful but PaymentVerification has been done before!"
+msgstr "عملیات موفقیت آمیز بود اما PaymentVeification قبلا انجام شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:261
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:438
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:619
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:799
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:979
+msgid "The payment gateway is down at the moment. Please try again or choose another gateway."
+msgstr "در حال حاضر درگاه پرداخت در دسترس نیست. لطفا مجددا تلاش نمایید و یا درگاه دیگری را انتخاب کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:262
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:439
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:620
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:800
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:980
+msgid "An unknown error has occured."
+msgstr "خطای نامشخصی رخ داده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:263
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:440
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:621
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:801
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:981
+msgid "API is invalid!"
+msgstr "ای پی آی نا معتبر است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:264
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:441
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:622
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:802
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:982
+msgid "IP is invalid!"
+msgstr "آی پی نا معتبر است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:265
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:442
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:623
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:803
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:983
+msgid "Amount is lower than the minimum."
+msgstr "مقدار از حداقل کمتر است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:266
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:443
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:624
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:804
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:984
+msgid "Amount is higher than the maximum."
+msgstr "مقدار از حداکثر بیشتر است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:267
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:444
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:625
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:805
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:985
+msgid "Invalid amount."
+msgstr "مقدار نا معتبر است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:268
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:445
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:626
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:806
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:986
+msgid "The gateway is inactive."
+msgstr "درگاه غیر فعال است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:269
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:446
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:627
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:807
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:987
+msgid "Your IP address has been banned!"
+msgstr "آی پی شما مسدود شده است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:270
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:447
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:628
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:808
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:988
+msgid "Callback is empty!"
+msgstr "کالبک خالی است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:271
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:448
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:629
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:809
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:989
+msgid "No such transaction."
+msgstr "چنین تراکنشی موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:272
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:449
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:630
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:810
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:990
+msgid "Transaction was not completed!"
+msgstr "این تراکنش پایان نیافته است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:274
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:451
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:632
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:812
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/EPaymentController.php:992
+msgid "Transaction was successful."
+msgstr "تراکنش با موفقیت به پایان رسید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:53
+msgid "Paste ID is invalid!"
+msgstr "شناسه ی پیست نا معتبر است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:72
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:87
+msgid "OK"
+msgstr "تایید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:68
+msgid "You have already reported this paste!"
+msgstr "شما قبلا این پیست را گزارش داده اید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:75
+msgid "Your report was successfully registered. Thanks for your cooperation."
+msgstr "گزارش شما با موفقیت ثبت شد. از همکاری شما سپاس گذاریم."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:114
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:160
+msgid "You have already voted for this paste!"
+msgstr "شما قبلا برای این پیست رای داده اید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:131
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:177
+msgid "Thank you! Your vote has been registered."
+msgstr "با تشکر. رای شما ثبت شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:395
+#, php-format
+msgid "Coupon Discount: %s%%, Coupons Left: %s"
+msgstr "تخفیف کوپن: %s%%، تعداد باقی مانده: %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:403
+msgid "Coupon doesn't exist."
+msgstr "کوپن موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:409
+msgid "Coupon ID is missing."
+msgstr "شناسه ی کوپن اشتباه است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/AjaxController.php:416
+msgid "Access Denied!"
+msgstr "اجازه دسترسی رد شد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:96
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:97
+msgid "kPaste's Announcements"
+msgstr "خبر های کی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:128
+#, php-format
+msgid "%s's Latest Public Pastes"
+msgstr "آخرین پیست های عمومی %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/src/KpasteCore/Controller/RSSController.php:140
+msgid "Latest Public Pastes"
+msgstr "آخرین پیست های عمومی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:144
+#, php-format
+msgid "Your account was recharged. New balance: %s"
+msgstr "حساب شما شارژ شد. موجودی جدید: %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:150
+msgid "Account Recharged!"
+msgstr "حساب شاٰرژ شد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/KEventManager.php:151
+#, php-format
+msgid "Your account has been recharged. New account balance is %s."
+msgstr "حساب شما شارژ شد. موجود جدید حساب %s می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:90
+msgid "Left, Top or Right Square Button"
+msgstr "دکمه مربعی چپ، بالا و راست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:91
+msgid "Bottom Square Button"
+msgstr "دکمه مربعی پایین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:92
+msgid "Vertical Banner"
+msgstr "بنر عمودی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:93
+msgid "Top Leaderboard"
+msgstr "لیدر بورد بالا"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:94
+msgid "Bottom Leaderboard"
+msgstr "لیدر بورد پایین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/src/Advertiser/Controller/AdvertiserController.php:95
+msgid "Inline Frame Ads"
+msgstr "تبلیغات قاب درون خطی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:114
+msgid "Your request has been registered and its result will be texted to you."
+msgstr "درخواست شما ثبت شده است و نتیجه ی آن برای شما ارسال خواهد شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:122
+msgid "Checkout Request Registered!"
+msgstr "درخواست تسویه حساب شما ثبت شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/src/Paster/Controller/KEventManager.php:123
+msgid "Checkout request has been registered and will be processed shortly."
+msgstr "درخواست تسویه حساب ثبت شده است و به زودی با آن رسیدگی خواهد شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:94
+msgid "New Ticket Opened"
+msgstr "تیکت جدیدی باز شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:95
+#, php-format
+msgid "A new ticket has been opened for you. <br />Title: %s <br />Message: %s"
+msgstr "تیکتی جدیدی برای شما باز شده است. <br /> عنوان: %s <br /> پیغام: %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:121
+msgid "New Message In Your Ticket"
+msgstr "پیغام جدید در تیکت شما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/src/Support/Controller/KEventManager.php:122
+#, php-format
+msgid "There's a new message in your ticket: <br />%s"
+msgstr "پیغام جدید در تیکت شما ارسال شده است: <br />%s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:14
+msgid "Coupons List"
+msgstr "لیست کوپن ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:24
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:24
+msgid "Access denied! You don't have permission to access this area."
+msgstr "اجازه ی دسترسی رد شد! شما اجازه ی ورود به این قسمت را ندارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:48
+msgid "An unknown error has occured!"
+msgstr "خطای نامشخصی رخ داده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:47
+msgid "New Coupon"
+msgstr "کوپن جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:50
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:73
+msgid "Coupon ID"
+msgstr "شناسه ی کوپن"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:53
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:74
+msgid "Discount"
+msgstr "تخفیف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:56
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:75
+msgid "Count"
+msgstr "تعداد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/coupons.phtml:76
+msgid "Edit"
+msgstr "ویرایش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:14
+msgid "Create New Admin"
+msgstr "ساخت مدیر جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:30
+msgid "This username already exists!"
+msgstr "این نام کاربری در حال حاضر وجود دارد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:36
+msgid "This email already exists!"
+msgstr "این ایمیل در حال حاضر وجود دارد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:42
+msgid "The data you have entered in the form is not valid!"
+msgstr "داده های وارد شده در فرم نامعتبر هستند!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:62
+msgid "Admin account was created successfully. Now the user needs to activate the account by verifying his email address."
+msgstr "حساب مدیر جدید ایجاد شد. حال مدیر باید با مراجعه به ایمیل خود حساب کاربری را تایید کند."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:81
+msgid "Username"
+msgstr "نام کاربری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:88
+msgid "Email"
+msgstr "ایمیل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:95
+msgid "Password"
+msgstr "گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:102
+msgid "Repeat password"
+msgstr "تکرار گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:109
+msgid "First Name"
+msgstr "نام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:116
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:123
+msgid "Cell phone number"
+msgstr "شماره تلفن همراه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:129
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:130
+msgid "Security Question (for password reset)"
+msgstr "پرسش محرمانه(برای بازیابی گذرواژه)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:136
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:137
+msgid "Security Question Answer"
+msgstr "پاسخ پرسش محرمانه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/create-new-admin.phtml:145
+msgid "Create Admin"
+msgstr "ساخت مدیر جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:59
+msgid "Admins List"
+msgstr "لیست مدیر ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:43
+msgid "Edit Permissions"
+msgstr "ویرایش دسترسی ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:44
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:14
+msgid "Suspend Admin"
+msgstr "تعلیق مدیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:14
+msgid "Remove Admin Suspension"
+msgstr "رفع تعلیق مدیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:46
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:14
+msgid "Delete Admin"
+msgstr "حذف مدیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:50
+msgid "Right click on each row for options."
+msgstr "برای انتخاب های بیشتر بر روی هر آیتم کلیک راست کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:60
+msgid "Full Name"
+msgstr "نام کامل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:169
+msgid "Registration Date"
+msgstr "تاریخ عضویت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:60
+msgid "Cell Number"
+msgstr "شماره همراه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:61
+msgid "Last Login"
+msgstr "آخرین ورود"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:62
+msgid "Last IP"
+msgstr "آخرین آدرس آی پی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:72
+msgid "Right click for options"
+msgstr "برای انتخاب های بیشتر بر روی هر آیتم کلیک راست کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:82
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:88
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:112
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:95
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:399
+msgid "Pending"
+msgstr "در حال انتظار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:84
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:91
+msgid "Verified"
+msgstr "تایید شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:86
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:94
+msgid "Suspended"
+msgstr "معلق"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:94
+msgid "None"
+msgstr "هیچ کدام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:102
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:134
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:111
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:245
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:310
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:477
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:485
+msgid "Never"
+msgstr "هرگز"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/view-admins.phtml:116
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:203
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:212
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:237
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:163
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:324
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:499
+msgid "N/A"
+msgstr "نامعلوم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:30
+msgid "The admin ID has not been provided or it is incorrect!"
+msgstr "شناسه ی مدیر فراهم نشده و یا اشتباه است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:36
+msgid "The admin is not verified yet. No point in suspending."
+msgstr "این مدیر هنوز تایید نشده و نیازی به تلیق وجود ندارد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:60
+msgid "Are you sure you want to suspend this admin?"
+msgstr "آیا می خواهید این مدیر را معلق سازید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:62
+msgid "Yes"
+msgstr "بلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/suspend-admin.phtml:63
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:63
+msgid "No"
+msgstr "خیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/delete-admin.phtml:54
+#, php-format
+msgid "Are you sure you want to delete %s's acccount?"
+msgstr "آیا واقعا می خواهید حساب %s را حذف کنید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:14
+msgid "Edit Admin Permissions"
+msgstr "ویرایش دسترسی های مدیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:50
+msgid "All permissions set successfully."
+msgstr "تمامی دسترسی ها با موفقیت انتصاب یافت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:55
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:55
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:79
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:61
+msgid "Continue"
+msgstr "ادامه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:63
+msgid "Accept Ad Campaigns"
+msgstr "قبول کمپین های تبلیغاتی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:64
+msgid "Change System Settings"
+msgstr "تغییر تنظیمات سیستمی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:65
+msgid "Change Users' Passwords"
+msgstr "تغییر کذرواژه ی کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:66
+msgid "Close a Paste"
+msgstr "بستن پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:67
+msgid "Delete All Closed Pastes"
+msgstr "پاک کردن تمامی پیست های بسته شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:68
+msgid "Delete All Rejected Ad Campaigns"
+msgstr "پاک کردن تمامی کمپین ها رد شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:69
+msgid "Delete Pastes"
+msgstr "حذف پیست ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:70
+msgid "Payout"
+msgstr "پرداخت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:71
+msgid "Publish Announcements"
+msgstr "انتشار اعلان ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:72
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:182
+msgid "Reject Ad Campaign"
+msgstr "رد کمپین های تبلیغاتی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:73
+msgid "Remove User Suspension"
+msgstr "برداشتن تعلیق کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:74
+msgid "Suspend Users"
+msgstr "تعلیق کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:75
+msgid "View Checkout Requests"
+msgstr "نمایش درخواست های تصویه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:76
+msgid "View All Transactions"
+msgstr "نمایش تمامی تراکنش ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:77
+msgid "View All Pastes"
+msgstr "نمایش همه ی پیست ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:78
+msgid "View Reported Pastes"
+msgstr "نمایش پیست های گزارش شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:79
+msgid "View System Activities"
+msgstr "نمایش فعالیت های سیستم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:80
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:83
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:91
+msgid "View Users"
+msgstr "نمایش کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:81
+msgid "View Users Ad Campaigns"
+msgstr "نمایش کمپین های تبلیغاتی کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:90
+msgid "Please choose the permissions you want this admin to be granted with:"
+msgstr "لطفا دسترسی هایی را که می خواهید این مدیر داشته باشد انتخاب کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:109
+msgid "All Permissions"
+msgstr "تمامی دسترسی ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:112
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:113
+msgid "Grant Permissions"
+msgstr "اعطای دسترسی ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/edit-permissions.phtml:118
+msgid "Cancel"
+msgstr "لغو"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:36
+msgid "The admin is not suspended."
+msgstr "مدیر معلق نشده است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/master-admin/remove-suspension.phtml:60
+msgid "Are you sure you want to remove the suspension of this admin?"
+msgstr "آیا می خواهید که تعلیق این مدیر را رفع کنید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:14
+msgid "System Settings"
+msgstr "تنظیمات سیستم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:99
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:107
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:14
+msgid "Transactions"
+msgstr "تراکنش ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:115
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:123
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:14
+msgid "Checkouts"
+msgstr "تصویه حساب ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:131
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:139
+msgid "Pastes"
+msgstr "پیست ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:147
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:155
+msgid "Reported Pastes"
+msgstr "پیست های گزارش شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:163
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:171
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:14
+msgid "Ad Campaigns"
+msgstr "کمپین های تبلیغاتی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:179
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:187
+msgid "Coupons"
+msgstr "کوپن ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:195
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:203
+msgid "System Activities"
+msgstr "فعالیت های سیستم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:211
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:219
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:14
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:227
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:235
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:14
+msgid "Ads Layout"
+msgstr "چینش تبلیغات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:243
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:251
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:14
+msgid "Terms and Privacy Policy"
+msgstr "قوانین و سیاست حفظ حریم خصوصی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:261
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:269
+msgid "Announcements"
+msgstr "خبرها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:284
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:292
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:299
+msgid "My Account"
+msgstr "حساب من"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:307
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/index.phtml:314
+msgid "Logout"
+msgstr "خروج"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:50
+msgid "Terms"
+msgstr "قوانین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:55
+msgid "Privacy Policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:61
+msgid "Quetions & Answers"
+msgstr "پرسش و پاسخ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-terms-and-privacy.phtml:68
+msgid "Save"
+msgstr "ذخیره"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:56
+msgid "Layout saved successfully."
+msgstr "چینش با موفقیت ذخیره شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:57
+msgid "There was an error saving your layout!"
+msgstr "خطایی در هنگام ذخیره ی چینش رخ داد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:58
+msgid "Save Layout"
+msgstr "ذخیره ی چینش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:101
+msgid "Square Button"
+msgstr "دکمه مربعی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/change-ads-layout.phtml:111
+msgid "Leaderboard"
+msgstr "لیدر بورد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:14
+msgid "Publish News"
+msgstr "انتشار خبر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:34
+msgid "The provided data is invalid!"
+msgstr "اطلاعات وارد شده نامعتبر می باشند!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:50
+msgid "News published successfully!"
+msgstr "خبر با موفقیت منتشر شد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:55
+msgid "View News"
+msgstr "نمایش خبرها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:90
+msgid "Announcement"
+msgstr "اعلان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/publish-announcement.phtml:94
+msgid "Publish Announcement"
+msgstr "انتشار خبر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:54
+msgid "Settings successfully saved!"
+msgstr "تنظیمات با موفقیت ذخیره شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:74
+msgid "Website Name"
+msgstr "نام وبسایت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:81
+msgid "Website URL"
+msgstr "یو آر ال وبسایت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:88
+msgid "Admin Email"
+msgstr "ایمیل مدیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:95
+msgid "Theme"
+msgstr "پوسته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:102
+msgid "Language"
+msgstr "زبان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:109
+msgid "Text Direction"
+msgstr "جهت متون"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:116
+msgid "Locale"
+msgstr "موقعیت محلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:123
+msgid "Peyment Per Thousand"
+msgstr "برداخت به ازای هر هزار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:130
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:131
+msgid "Left, Top and Right Square Button Price"
+msgstr "قیمت دکمه مربعی چپ، بالا و راست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:138
+msgid "Bottom Square Button Price"
+msgstr "قیمت دکمه مربعی پایین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:145
+msgid "Vertical Banner Price"
+msgstr "قیمت بنر عمودی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:152
+msgid "Top Leaderboard Price"
+msgstr "قیمت لیدر بورد بالا"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:159
+msgid "Bottom Leaderboard Price"
+msgstr "قیمت لیدر بورد پایین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:166
+msgid "Inline Frame Price"
+msgstr "قیمت قاب های درون خطی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:173
+msgid "Local Price Factor"
+msgstr "ضریب قیمت محلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:180
+msgid "Discount Factor"
+msgstr "ضریب تخفیف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:187
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:188
+msgid "Minimum Balance for Checkout"
+msgstr "حداقل موجودی برای تصویه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:195
+msgid "Minimum Recharge Amount"
+msgstr "حداقل مقدار شارژ کردن"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:202
+msgid "Currency"
+msgstr "ارز"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:209
+msgid "Calendar"
+msgstr "تقویم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:216
+msgid "Maximum Banner Size(KB)"
+msgstr "حداکثر اندازه بنر ها(KB)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:223
+msgid "Maximum Attachment Size(KB)"
+msgstr "حداکثر اندازه الصاق ها(KB)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:230
+msgid "Keep Activities for(days)"
+msgstr "نگهداری فعالیت ها برای (روز)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:238
+msgid "Save These Settings"
+msgstr "ذخیره ی این تنظیمات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-settings/general-settings.phtml:241
+msgid "Cancel Changes"
+msgstr "لغو تغییرات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:235
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:249
+msgid "Change Password"
+msgstr "تغییر گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:30
+msgid "Invalid user ID has been provided!"
+msgstr "شناسه ی کاریری نامعتبری فراهم شده است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:36
+msgid "The provided passwords do not match!"
+msgstr "گذرواژه های وارد شده با هم تطابق ندارند!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:42
+msgid "Password must be between 7 and 255 characters!"
+msgstr "گذرواژه باید حداقل ۷ و حداکثر ۲۵۵ کاراکتر باشد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-password.phtml:63
+msgid "Password changed successfully!"
+msgstr "گذرواژه با موفقیت تغییر پیدا کرد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/change-status.phtml:14
+msgid "Change Status"
+msgstr "تغییر وضعیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:14
+msgid "Users"
+msgstr "کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:53
+msgid "List of all users"
+msgstr "لیست تمامی کاربران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:145
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:80
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:58
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:185
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:71
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:214
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:357
+msgid "User ID"
+msgstr "شناسه ی کاربری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:61
+msgid "Reg. Date"
+msgstr "تاریخ عضویت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:63
+msgid "User Type"
+msgstr "نوع کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:64
+msgid "Ticket"
+msgstr "تیکت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:97
+msgid "Deleted"
+msgstr "حذف شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:105
+msgid "Paster"
+msgstr "پیست کننده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:107
+msgid "Advertiser"
+msgstr "تبلیغ دهنده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:165
+msgid "Email Verification Code"
+msgstr "کد تایید ایمیل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:173
+msgid "Account Status"
+msgstr "وضعیت حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:177
+msgid "Cell Phone Number"
+msgstr "شماره تلفن همراه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:181
+msgid "Last Login Time"
+msgstr "آخرین زمان ورود"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:185
+msgid "Last Ip Address"
+msgstr "آخرین آی پی ورود"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:199
+msgid "Credit Card Number"
+msgstr "شماره کارت اعتباری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:208
+msgid "Zarinpal ID"
+msgstr "شناسه ی زرین پال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:217
+msgid "Total Pastes"
+msgstr "تعداد کل پیست ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:221
+msgid "Total Views"
+msgstr "تعداد کل نمایش ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:225
+msgid "Unpaid Viewes"
+msgstr "نمایش های پرداخت نشده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:230
+msgid "Account Balance"
+msgstr "موجودی حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:256
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:270
+msgid "Suspend User"
+msgstr "تعلیق کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:268
+msgid "Suspension Reason"
+msgstr "دلیل تعلیق"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/user-management/view-users.phtml:290
+msgid "Remove Suspension"
+msgstr "رفع تعلیق"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:49
+msgid "Filter by"
+msgstr "فیلتر به وسیله ی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:54
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:85
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:186
+msgid "Requested Date"
+msgstr "تاریخ درخواست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:59
+msgid "Using operator"
+msgstr "با عملگر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:61
+msgid "Less Than"
+msgstr "کمتر از"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:62
+msgid "Greater Than"
+msgstr "بیشتر از"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:63
+msgid "Equal"
+msgstr "مساوی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:68
+msgid "Value"
+msgstr "مقدار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:73
+msgid "Clear Filter"
+msgstr "پاک کردن فیلترها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:79
+msgid "Transaction ID"
+msgstr "شناسه ی تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:83
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:189
+msgid "Transaction Code"
+msgstr "کد تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:84
+msgid "Receipt"
+msgstr "رسید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:86
+msgid "Finished Date"
+msgstr "تاریخ اتمام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-transactions.phtml:115
+msgid "Completed"
+msgstr "پایان یافته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:30
+msgid "Access denied! You don't have permission to do payouts."
+msgstr "اجازه ی دسترسی داده نشد! شما اجازه انجام پرداخت به کاربران را ندارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:53
+msgid "Pending Checkouts"
+msgstr "تصویه حساب های در حال انتظار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:184
+msgid "Checkout ID"
+msgstr "شناسه ی تصویه حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:63
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:190
+msgid "Transaction Date"
+msgstr "تاریخ تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:64
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:141
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:191
+msgid "Description"
+msgstr "توضیحات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:65
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:123
+msgid "Opps"
+msgstr "عملیات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:119
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:253
+msgid "No Description"
+msgstr "توضیحی وجود ندارد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:128
+msgid "Are you sure you want to set the status of this checkout to paid?"
+msgstr "آیا واقعا می خواهید که وضعیت این تصوبه حساب را به پرداخت شده تغییر دهید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:128
+msgid "Are you sure you want to deny this request? You must have a good reason to do so, since the amount will not be returned to the user. Practice caution."
+msgstr "آیا واقعا می خواهید که درخواست را رد کنید؟دقت کنید! باید دلیل خوبی برای اینکار داشته باشید چرا که این مقدار به حساب کاربری برگردانده نمی شود."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:132
+msgid "Transaction Tracking Code"
+msgstr "کد رهگیری تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:136
+msgid "Transaction Time(Gregorian)"
+msgstr "تاریخ تراکنش(میلادی)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:143
+msgid "The amount was deposited into your account."
+msgstr "وجه مورد نظر به حساب شما واریز شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:147
+msgid "Update transaction information for this checkout"
+msgstr "به روزرسانی اطلاعات تراکنش این تصویه حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:149
+msgid "Or"
+msgstr "یا"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:151
+msgid "Deny Request"
+msgstr "رد درخواست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:180
+msgid "Other Checkouts"
+msgstr "تصویه حساب های دیگر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-checkouts.phtml:227
+msgid "Denied"
+msgstr "رد شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:30
+msgid "Access denied! You are not allowed to accept ad campaigns."
+msgstr "اجازه دسترسی رد شد! شما اجازه ندارید کمپین ها را تایید کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:36
+msgid "Access denied! You are not allowed to reject ad campaigns."
+msgstr "اجازه دسترسی رد شد! شما اجازه ندارید کمپین ها را رد کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:59
+msgid "Pending Campaigns"
+msgstr "کمپین های در حال انتظار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:61
+msgid "Are you sure you want to perform this operation?"
+msgstr "آیا اطمینان دارید که می خواهید این عملیات را انجام دهید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:68
+msgid "Invert Selection"
+msgstr "معکوس کردن انتخاب ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:70
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:213
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:356
+msgid "Campaign ID"
+msgstr "شناسه ی کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:216
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:359
+msgid "Type"
+msgstr "نوع"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:74
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:217
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:360
+msgid "Scope"
+msgstr "حوزه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:218
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:361
+msgid "Credits"
+msgstr "اعتبار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:76
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:219
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:362
+msgid "Daily"
+msgstr "روزانه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:77
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:223
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:367
+msgid "URL"
+msgstr "یو آر ال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:78
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:224
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:368
+msgid "Banner"
+msgstr "بنر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:137
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:280
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:447
+msgid "Local"
+msgstr "محلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:282
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:449
+msgid "Global"
+msgstr "جهانی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:154
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:315
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:490
+msgid "Go to URL"
+msgstr "برو به یو آر ال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:160
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:321
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:496
+msgid "View Banner"
+msgstr "نمایش بنر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:175
+msgid "Accept Ad Campaign"
+msgstr "قبول کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:180
+msgid "Rejection Reason"
+msgstr "دلیل رد کردن"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:209
+msgid "Active Campaigns"
+msgstr "کمپین های فعال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:220
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:363
+msgid "Remaining"
+msgstr "مانده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:221
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:364
+msgid "Start"
+msgstr "شروع"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:222
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:365
+msgid "Extension"
+msgstr "بسط"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:352
+msgid "Other Campaigns"
+msgstr "کمپین های دیگر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:366
+msgid "Finish"
+msgstr "اتمام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:402
+msgid "Active"
+msgstr "فعال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:405
+msgid "Paused"
+msgstr "متوقف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:408
+msgid "Rejected"
+msgstr "رد شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:411
+msgid "Canceled"
+msgstr "لغو شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-ad-campaigns.phtml:414
+msgid "Finished"
+msgstr "پایان یافته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:51
+msgid "Activity ID"
+msgstr "شناسه ی فعالیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:52
+msgid "Activity"
+msgstr "فعالیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:54
+msgid "user IP"
+msgstr "آدرس آی پی کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:55
+msgid "Activity Time"
+msgstr "زمان فعالیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:105
+msgid "User IP"
+msgstr "آدرس آی پی کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:109
+msgid "From Date"
+msgstr "از تاریخ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:113
+msgid "To Date"
+msgstr "تا تاریخ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:117
+msgid "Activity Filter"
+msgstr "فیلتر فعالیت ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:121
+msgid "Filter Results"
+msgstr "فیلتر نتایج"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-system-activities.phtml:124
+msgid "Clear Filters"
+msgstr "پاک کردن فیلترها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:30
+msgid "The Campaign ID is invalid."
+msgstr "شناسه ی کمپین نامعتبر است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:36
+msgid "This campaign's banner does not exist on this server!"
+msgstr "بنر این کمپین بر روی این سرور موجود نیست!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:56
+msgid "Current Banner"
+msgstr "بنر فعلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-banner.phtml:75
+msgid "There is no banner available for this campaign!"
+msgstr "هیچ بنری برای این کمپین موجود نیست!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:30
+msgid "Access denied! You don't have permission close or open pastes."
+msgstr "اجازه دسترسی داده نشد! شما نمی تواند پیست ها را ببندید یا باز کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:36
+msgid "Access denied! You don't have permission delete pastes."
+msgstr "اجازه دسترسی داده نشد! شما نمی تواند پیست ها را حذف کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:59
+msgid "List of all pastes"
+msgstr "لیست تمامی پیست ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:70
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:70
+msgid "Paste ID"
+msgstr "شناسه ی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:73
+msgid "Password Protected"
+msgstr "محافظت شده با گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:74
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:74
+msgid "Exposure"
+msgstr "آشکاری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:75
+msgid "Syntax"
+msgstr "سینتکس"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:77
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:76
+msgid "Pasted At"
+msgstr "پیست شده در"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:140
+msgid "Private"
+msgstr "خصوصی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:141
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:142
+msgid "Public"
+msgstr "عمومی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:156
+msgid "Closed"
+msgstr "بسته شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:175
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:173
+msgid "Close Selected Pastes"
+msgstr "بستن پیست های انتخاب شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:178
+msgid "Reopen Selected Pastes"
+msgstr "باز کردن پیست های انتخاب شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-pastes.phtml:181
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:176
+msgid "Delete Selected Pastes"
+msgstr "حذف پیست های انتخاب شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Admin/view/admin/system-log/view-reported-pastes.phtml:77
+msgid "No. of Reports"
+msgstr "تعداد گزارشات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/resend-verification-email.phtml:15
+msgid "Your account status is not pending, therefore you don't need a verification email."
+msgstr "وضعیت حساب شما در حال انتظار نیست در نتیجه به ایمیل فعال سازی احتیاج ندارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/resend-verification-email.phtml:34
+msgid "Email Verification sent successfully."
+msgstr "ایمیل فعال سازی با موفقیت ارسال شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:9
+msgid "The provided email does not exist in our database. Please check your information and try again."
+msgstr "ایمیل وارد شده در دیتابیس ما موجود نمی باشد. لطفا مجددا بررسی بفرمایید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:12
+msgid "Try Again"
+msgstr "تلاش مجدد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:20
+#, php-format
+msgid "You can only request a password change once every 24 hours. Try again in %s hours."
+msgstr "شما در هر ۲۴ ساعت یک بار می توانید درخواست تغییر گذرواژه دهید. %s ساعت دیگر مجددا تلاش کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:26
+msgid "Please fill out the form correctly."
+msgstr "لطفا فرم را به درستی پر کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:32
+msgid "Password change request has expired. You have 2 hours to complete a password change request from the moment it gets registered."
+msgstr "درخواست تغییر گذرواژه باطل شده است. شما از زمان ثبت درخواست دو ساعت برای تکمیل آن فرصت دارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:38
+msgid "The password change request confirmation code you have provided is incorrect."
+msgstr "کد درخواست تغییر گذرواژه ی فراهم شده اشتباه است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:44
+msgid "The new passwords you have entered do not match!"
+msgstr "گذرواژه های جدید وارد شده با هم هم خوانی ندارند."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:50
+msgid "The current password is wrong!"
+msgstr "گذرواژه ی فعلی اشتیاه است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:67
+#, php-format
+msgid "Your password has been changed. Your new password is <span class=\"new-password\">%s</span> Please change your password immediately using the following form."
+msgstr "گذرواژه ی شما تغییر یافت. گذرواژه ی جدید  <span class=\"new-password\">%s</span> می باشد. لطفا سریعا گذرواژه ی خود را با استفاده از فرم زیر تغییر دهید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:69
+msgid "Your password has been changed. Please login again."
+msgstr "گذرواژه ی شما تغییر یافت. لطفا دوباره وارد شوید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:72
+msgid "Your password change request has been successfully registered. <span class=\"bold\">Please be wary that this request will expire in 2 hours.</span>"
+msgstr "درخواست تغییر گذرواژه ثبت شد. <span class=\"bold\">لطفا به یاد داشته باشید که این درخواست تا دو ساعت دیگر باطل می شود</span>"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:86
+msgid "Password Change Request"
+msgstr "درخواست تغییر گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:87
+msgid "Enter your email address and instructions on how to reset your password will be sent to you."
+msgstr "ایمیل خود را وارد کنید و دستورالعمل مورد نیاز برای تغییر گذرواژه برای شما ارسال خواهد شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:145
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:185
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:234
+msgid "Captcha"
+msgstr "تصویر امنیتی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:110
+msgid "Request password change"
+msgstr "درخواست تغییر گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:126
+msgid "Please answer your security question to complete the process:"
+msgstr "لطفا برای تکمیل فرآیند سوال امنیتی خود را جواب دهید:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:131
+msgid "Security Question"
+msgstr "سوال امنیتی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:164
+msgid "Current Password"
+msgstr "گذرواژه ی فعلی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:171
+msgid "New Password"
+msgstr "گذرواژه ی جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/change-password.phtml:178
+msgid "Repeat New Password"
+msgstr "تکرار گذرواژه ی جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:2
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:253
+msgid "Register"
+msgstr "ثبت نام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:11
+msgid "You are already a user and don't need to register!"
+msgstr "شما هم اکنون کاربر ما هستید و لازم نیست ثبت نام کنید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:23
+msgid "This username already exists. Please try another one."
+msgstr "این نام کاربری وجود دارد. لطفا نام کاربری دیگری را امتحان کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:29
+msgid "This email already exists. Please try another one."
+msgstr "این ایمیل وجود دارد. اگر گذرواژه ی خود را فراموش کرده اید دررخواست تغییر بدهید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:41
+msgid "If you want to signup, you have to agree to our terms of service!"
+msgstr "برای ثبت نام باید قوانین را قبول کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:59
+msgid "Registration was successful. An email has dispatched to your email address. Follow the link inside it to verify your email address."
+msgstr "ثبت نام با موفقیت پایان یافت! ایمیلی به آدرس شما ارسال شده است. لینک داخل آنرا برای تایید آدرس ایمیل خود دنبال کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:68
+#, php-format
+msgid "In order to update your bank account info please visit %s section."
+msgstr "جهت به روز رسانی اطلاعات حساب بانکی خود لطفا به بخش %s مراجعه فرمایید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:86
+msgid "Recover your password"
+msgstr "بازیابی گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:88
+msgid "Please fill out the following form to register."
+msgstr "لطفا فرم زیر را برای ثبت نام کامل کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:98
+msgid "This username has already been taken!"
+msgstr "این نام کاربری قبلا گرفته شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:112
+msgid "This email already exists in our database!"
+msgstr "این ایمیل در دیتابیس ما موجود می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:130
+msgid "Password must be a least 7 characters long. Although choosing a strong password is not enforced, it ensures your security."
+msgstr "گذرواژه می بایست حداقل ۷ کاراکتر باشد. با وجود اینکه انتخاب گذرواژه ی قدرتمند اجباری نیست، ولی امنیت شما را تضمین می کند."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:171
+msgid "For pasters, payouts will only be made to credit cards owned by this name."
+msgstr "برای پیست کننده ها، پرداخت ها فقط به کارت های اعتباری به این نام واریز خواهند شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:182
+msgid "Correct example of a cell phone number:"
+msgstr "مثال صحیح شماره تلفن همراه:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:199
+msgid "In case you forgot your password, you'll need this to recover it."
+msgstr "در صورت فراموشی گذرواژه به این قسمت احتیاج خواهید داشت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:213
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:214
+msgid "Signup as a(n)"
+msgstr "ثبت نام به عنوان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:242
+#, php-format
+msgid "I have read and accept the %s and %s"
+msgstr "من %s و %s را خوانده ام و قبول دارم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:245
+msgid "terms of service"
+msgstr "قوانین سرویس دهی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/signup.phtml:248
+msgid "privacy policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/verify-email.phtml:21
+msgid "Email successfully verified. Please login again."
+msgstr "ایمیل با موفقیت تایید شد. لطفا مجددا وارد شوید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/verify-email.phtml:22
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:3
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:99
+msgid "Login"
+msgstr "ورود"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:28
+msgid "Account information successfully updated."
+msgstr "اطلاعات حساب به روز شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:38
+msgid "Account Overview"
+msgstr "مرور حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:91
+msgid "Resend Verification Email"
+msgstr "ارسال مجدد ایمیل فعال سازی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:102
+msgid "Update Cell Phone Number"
+msgstr "به روز رسانی شماره همراه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:131
+msgid "Update Credit Card Number"
+msgstr "به روز رسانی شماره کارت اعتباری"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:136
+msgid "Currently payouts will only be made to Shetab credit cards."
+msgstr "در حال حاضر پرداخت ها تنها به کارت های عضو شتاب صورت می گیرد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:146
+msgid "Update ZarinPal ID"
+msgstr "به روز رسانی شناسه ی زرین پال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:150
+msgid "Most of the time, payouts to your zarinpal account will be faster."
+msgstr "بیشتر وقت ها پرداخت ها به حساب زرین پال شما سریع تر صورت می گیرد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/my-account.phtml:152
+msgid "If you don't want payouts to be made directly to your credit card, leave this blank."
+msgstr "اگر می خواهید که پرداخت ها به کارت اعتباریتان صورت گیرد این فیلد را خالی بگذارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:15
+msgid "Sorry, you can not login. Your account has been suspended by one of our administrators."
+msgstr "با عرض بوزش شما نمی توانید وارد شوید! حساب شما توسط یکی از مدیران غیر فعال شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:21
+#, php-format
+msgid "Invalid password provided! %s attempts remaining."
+msgstr "گذرواژه ی وارد شده اشتباه است. %s تلاش دیگر باقی است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:27
+#, php-format
+msgid "Invalid username provided! %s attempts remaining."
+msgstr "نام کاربری وارد شده اشتباه است. %s تلاش دیگر باقی است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:33
+msgid "An unknown error occured during login. Apologies"
+msgstr "خطای نامعلومی در حین ورود اتفاق افتاد. پوزش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:39
+#, php-format
+msgid "You have entered wrong login credentials for more than %s times. You can try again in %s."
+msgstr "شما اطلاعات ورود اشتباه برای بیش از %s بار وارد کرده اید. شما می توانید %s دیگر مجددا تلاش کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:51
+msgid "You are already logged in "
+msgstr "شما هم اکنون وارد شده اید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/User/view/user/user/login.phtml:92
+msgid "Remember Me"
+msgstr "مرا به خاطر بسپار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/questions-and-answers.phtml:13
+msgid "Questions & Answers"
+msgstr "پرسش و پاسخ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/announcements.phtml:54
+msgid "Delete"
+msgstr "حذف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/announcements.phtml:74
+msgid "No Announcements Found"
+msgstr "هیچ خبری پیدا نشد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:13
+msgid "Ads"
+msgstr "تبلیغات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:17
+msgid "You can use the following to determine the kind of ad you want."
+msgstr "از راهنمای زیر برای انتخاب تبلیغ مورد نیاز خود می توانید استفاده کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:24
+msgid "Left, Top, Right Square Button"
+msgstr "دکمه مربعی چپ، بالا و راست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:26
+msgid "Iframe"
+msgstr "قاب درون خطی(iframe)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:47
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:75
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:106
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:168
+msgid "Paste Is Here"
+msgstr "پیست اینجاست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/ads.phtml:188
+msgid "You website will be loaded here. Just as if the paste viewer visited your website."
+msgstr "وبسایت شما اینجا بارگذاری می شود. درست مثل اینکه بازدید کننده پیست از وبسایت شما دیدن کرده باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/terms.phtml:13
+msgid "Terms of Service"
+msgstr "قوانین سرویس دهی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:13
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:28
+msgid "Contact Support"
+msgstr "تماس با پشتیبانی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:29
+msgid "Contact Our Support Team"
+msgstr "تماس با واحد پشتیبانی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:34
+msgid "Contact Info"
+msgstr "مشخصات تماس"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:44
+msgid "SMS Number"
+msgstr "شماره پیام کوتاه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:56
+msgid "Telephone Number"
+msgstr "شماره تلفن"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/contact-us.phtml:62
+#, php-format
+msgid "Only for advertiser's support. Workdays from %s to %s."
+msgstr "فقط جهت پشتیبانی تبلیغ کنندگان. روزهای کاری از ساعت %s تا %s."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:19
+msgid "Invalid data provided. Please check again."
+msgstr "اطلاعات وارد شده صحیح نیست. لطفا دوباره بررسی نمایید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:37
+msgid "Paste was saved successfully."
+msgstr "پیست با موفقیت ذخیره شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:50
+msgid "Paste"
+msgstr "پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:71
+msgid "Guest"
+msgstr "مهمان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:93
+msgid "Compose new paste"
+msgstr "انتشار پیست جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:106
+msgid "Paste title"
+msgstr "عنوان پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:108
+msgid "--untitled--"
+msgstr "--بدون عنوان--"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:116
+msgid "Input your paste here..."
+msgstr "پیست خود را اینجا وارد کنید..."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:124
+msgid "Password (Optional)"
+msgstr "گذرواژه(اختیاری)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:143
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/home/index.phtml:145
+msgid "Save Paste"
+msgstr "ذخیره ی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:20
+msgid "The provided paste ID is incorrect!"
+msgstr "شناسه ی پیست ارائه شده صحیح نمی باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:26
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:38
+msgid "The provided password is incorrect!"
+msgstr "گذرواژه ارایه شده صحیح نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/download.phtml:62
+msgid "Confirm"
+msgstr "تایید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:31
+msgid "Pasters List"
+msgstr "لیست پیست کننده ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:54
+#, php-format
+msgid "%s's Pastes List"
+msgstr "لیست پیست های %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:69
+#, php-format
+msgid "Follow %s's public pastes via RSS"
+msgstr "پیست های عمومی %s را از طریق آر اس اس دنبال کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/user.phtml:83
+msgid "Viewed"
+msgstr "تعداد نمایش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:44
+msgid "You have provided incorrect data!"
+msgstr "شما اطلاعات نامعتبر ارایه کرده اید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:50
+msgid "Paste not found! Either this paste doesn't exist or it has been removed"
+msgstr "پیست پیدا نشد! این پیست یا وجود ندارد و یا حذف شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:56
+msgid "This paste has been closed due to violation of our terms."
+msgstr "این پیست به دلیل تخطی از قوانین بسته شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:62
+msgid "This paste is private. If this is your paste, you have to login to your account to view it."
+msgstr "این پیست خصوصی است. اگر شما صاحب این پیست هستید وارد حساب خود شوید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:106
+msgid "Loading, Please Wait..."
+msgstr "در حال بارگذاری، لطفا صبر کنید..."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:132
+msgid "Anonymous"
+msgstr "ناشناس"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:143
+#, php-format
+msgid "Pasted On %s By %s"
+msgstr "پیست شده در %s به وسیله ی %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:151
+msgid "Size"
+msgstr "اندازه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:160
+msgid "Plain"
+msgstr "ساده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:166
+msgid "Share on Facebook"
+msgstr "به اشتراک گذاری در فیس بوک"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:175
+msgid "Share on Twitter"
+msgstr "به اشترام گذاری در تویتر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:186
+msgid "Share on Google+"
+msgstr "به اشتراک گذاری در گوگل پلاس"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:196
+msgid "Share on LinkedIn"
+msgstr "به اشترام گذاری در لینکد این"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:208
+msgid "Email Using Gmail"
+msgstr "ارسال به ایمیل با جی میل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:220
+msgid "Email Using Yahoo Mail"
+msgstr "ارسال به ایمیل با یاهو میل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:234
+msgid "Select All"
+msgstr "انتخاب همه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:248
+msgid "Download Paste"
+msgstr "دانلود پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:261
+msgid "View Paste Link"
+msgstr "نمایش لینک پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:273
+msgid "Embed Paste In Site Or Blog"
+msgstr "جاسازی پیست در سایت یا وبلاگ"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:280
+msgid "Report Abuse"
+msgstr "گزارش پیست خلاف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:289
+msgid "Edit Paste"
+msgstr "ویرایش پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:294
+msgid "Delete Paste"
+msgstr "حذف پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:302
+msgid "In order to embed this paste place the following code in your site or blog code. But you won't have any income from embeded pastes."
+msgstr "جهت جاسازی پیست زیر در سایت یا وبلاگ، کد زیر را در سایت یا وبلاگ خود قرار دهید. اما از پیست های جاسازی شده درآمد نخواهید داشت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/view-paste/view.phtml:317
+msgid "The link is selected. Just press Ctrl+C to copy it."
+msgstr "لینک انتخاب شده است. دکمه های Ctrl+C را برای کپی کردن فشار دهید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:12
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:12
+msgid "E-Payment"
+msgstr "پرداخت الکترونیک"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:31
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:28
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:31
+msgid "No data has been sent. Maybe you have opened this page directly."
+msgstr "اطلاعاتی ارسال نشده است. شاید این صفحه را مستقیما باز کرده اید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:37
+msgid "The amount is too low."
+msgstr "مقدار وارد شده بسیار پایین است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:45
+msgid "This transaction has already been completed."
+msgstr "این تراکنش قبلا پایان یافته است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:51
+msgid "No such transaction exists!"
+msgstr "چنین تراکنشی موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:51
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:57
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:57
+msgid "There was an error during the transaction."
+msgstr "خطایی در هنگام تراکنش رخ داد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/jahanpay.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/parsian.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/zarinpal.phtml:53
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/saman.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/melat.phtml:59
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/meli.phtml:59
+msgid "Error Description: "
+msgstr "توضیحات خطا:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:12
+msgid "Confirm Transaction"
+msgstr "تایید تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:34
+#, php-format
+msgid "The minimum recharge amount is %s"
+msgstr "حداقل مقدار شارژ کردن %s می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:59
+msgid "Please confirm the amount of the transaction"
+msgstr "لطفا مقدار تراکنش را تایید کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:61
+msgid "Please confirm this invoice by clicking the continue button."
+msgstr "لطفا فاکتور زیر را با استفاده از دکمه ی ادامه پرداخت نمایید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/kpaste-core/e-payment/index.phtml:78
+#, php-format
+msgid "Recharge Advertiser's Account %s %s"
+msgstr "شارژ حساب تبلیغ کننده به میزان %s %s"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr "خطایی رخ داد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:8
+msgid "Additional information"
+msgstr "اطلاعات بیشتر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:11
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:35
+msgid "File"
+msgstr "فایل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:15
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:39
+msgid "Message"
+msgstr "پیغام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:19
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr "رهگیری پشته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "استثناهای گذشته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr "هیچ استثنایی در دسترس نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/error/404.phtml:3
+msgid "Page Not Found :("
+msgstr "صفحه ی مورد نظر پیدا نشد :("
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/paginator.phtml:117
+msgid "Items count in each page"
+msgstr "تعداد آیتم ها در هر صفحه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:32
+msgid "My Earnings"
+msgstr "درآمد های من"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:41
+msgid "New Paste"
+msgstr "پیست جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:50
+msgid "My Pastes"
+msgstr "پیست های من"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:62
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:69
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:76
+msgid "New Campaign"
+msgstr "کمپین جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:73
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:54
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:61
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:52
+msgid "My Campaigns"
+msgstr "کمپین های من"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:95
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:13
+msgid "Recent Transactions"
+msgstr "تراکنش های اخیر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:113
+msgid "Create a New Admin"
+msgstr "ساخت مدیر جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:124
+msgid "View Admins"
+msgstr "نمایش مدیرها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/userbar.phtml:283
+msgid "Log out"
+msgstr "خروج"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:32
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:37
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:143
+msgid "Home"
+msgstr "خانه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:89
+msgid "Recover Password"
+msgstr "بازیابی گذرواژه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:111
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:116
+msgid "About"
+msgstr "درباره"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:123
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:128
+msgid "Cantact Us"
+msgstr "تماس با ما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:140
+msgid "Subscribe"
+msgstr "اشتراک"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:145
+msgid "kPaste on Facebook"
+msgstr "کی پیست در فیس بوک"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/partial/header.phtml:151
+msgid "kPaste on Twitter"
+msgstr "کی پیست در تویتر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:52
+msgid "Share Paste Easily"
+msgstr "انتشار آسان پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:54
+msgid "Earn easy money by sharing your pastes - Advertise on the internet at the lowest price"
+msgstr "با به اشتراک گذاری پیست درآمد آسان کسب کنید - تبلیغات با پایین ترین قیمت در اینترنت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:55
+msgid "share paste, earn money by sharing paste, earn easy money, advertise, advertise on the internet, advertise at the lowest price"
+msgstr "به اشتراک گذاری متن, کسب درآمد از طریق به اشتراک گذاری متن, کسب درآمد آسان, تبلیغات, تبلیغات در اینترنت, تبلیغات با قیمت پایین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:126
+msgid "Warning! You are using and old and incompatible Browser."
+msgstr "اخطار! شما درحال استفاده از یک مرورگر قدیمی و ناسازگار هستید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:175
+msgid "Report Bugs"
+msgstr "گزارش مشکلات سیستم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:188
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:137
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:138
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:106
+msgid "kCoder"
+msgstr "کی کودر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/KpasteCore/view/layout/layout.phtml:191
+#, php-format
+msgid "%s All rights reserved."
+msgstr "تمامی حقوق برای %s محفوظ است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:24
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:24
+msgid "You don't have permission to access this area. Please log in to continue!"
+msgstr "شما اجازه دسترسی به این قسمت را ندارید. لطفا برای ادامه وارد حساب خود شوید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:47
+#, php-format
+msgid "Amount(%s)"
+msgstr "مبلغ(%s)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:51
+msgid "Invoice Creation Time"
+msgstr "تاریخ صدور فاکتور"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:52
+msgid "Payment Time"
+msgstr "تاریخ پرداخت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/transactions.phtml:61
+msgid "Invoice Created"
+msgstr "فاکتور صادر شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:30
+#, php-format
+msgid ""
+"Sorry! But your balance is not enough to create this\n"
+"                    campaign. Your balance is %s%s. You need %s%s to create this campaign."
+msgstr ""
+"با عرض پوزش! اما شما اعتبار کافی برای ایجاد این کمپین\n"
+"را ندارید. اعتبار حساب شما %s %s می باشد. شما به %s %s برای ایجاد این کمپین احتیاج دارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:34
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:46
+msgid "You need to recharge first and then try again."
+msgstr "شما باید ابتدا حساب خود را شارژ کنید و سپس مجددا تلاش کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:40
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:30
+msgid "You provided invalid data in the form!"
+msgstr "شما اطلاعات نامعتبر در فرم ارایه کردید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:60
+msgid "Register and Start Your Campaigns"
+msgstr "ثبت نام و کمپین خود را ایجاد کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:70
+msgid "Campaign created successfully and it's awaiting approval from our staff."
+msgstr "کمپین شما با موفقیت ساخته شد و هم اکنون در انتظار تایید مدیران می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:72
+msgid "Final Price"
+msgstr "قیمت نهایی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:75
+#, php-format
+msgid "Your coupon granted you %s%% discount."
+msgstr "کوپن انتخاب شد و %s%% تخفیف به شما تعلق یافت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:78
+msgid "Price Without Coupon"
+msgstr "قیمت بدون کوپن تخفیف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:85
+msgid "Upload a banner for this campaign"
+msgstr "آپلود بنر برای این کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:118
+msgid "Create New Campaign"
+msgstr "ساخت کمپین جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:119
+msgid "Please note that:"
+msgstr "لطفا توجه کنید که:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:121
+msgid "You should fill out all of the fields. You can edit your campaign later, as long as it's pending."
+msgstr "شما باید تمامی فیلد ها را پر کنید. تا زمانی که کمپین در انتظار تایید است خواهید توانست آنرا ویرایش کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:122
+#, php-format
+msgid "A local scope makes your ads only available to IP Addresses with \"%s\" country code."
+msgstr "یک حوزه ی محلی تبلیغات شما را تنها به آی پی هایی با کد کشور \"%s\" نمایش می دهد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:123
+#, php-format
+msgid "If this is your first time, check out the %s section before choosing a campaign type."
+msgstr "اگر این اولین بار شماست، قبل از انتخاب نوع کمپین بخش %s را ببینید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:124
+msgid "help"
+msgstr "راهنما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:125
+msgid "Campaign Credits is the total number of times your ads will be displayed to unique visitors"
+msgstr "اعتبار کمپین تعداد کل دفعات نمایش تبلیغات شما به بازدید کنندگان یکتاست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:127
+msgid "Correct URL examples are:"
+msgstr "نمونه های صحیح یو آر ال عبارت اند از:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:136
+#, php-format
+msgid "You can always order your banner at <a href=\"http://kcoder.ir\" title=\"%s\" target=\"_blank\">%s</a> and pay online for it."
+msgstr "می توانید بنر تبلیغاتی خود را در<a href=\"http://kcoder.ir\" title=\"%s\" target=\"_blank\">%s</a> سفارش دهید و هزینه ی آن را آنلاین بپردازید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:142
+msgid "Inline Frame Ads ACTUALLY increase the number of visitors of your website!"
+msgstr "تبلیغات قاب درون خطی به صورت واقعی آمار بازدید کنندگان شما را افزایش می دهد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:150
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:80
+msgid "Campaign Title"
+msgstr "عنوان کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:157
+msgid "Campaign Scope"
+msgstr "حوزه ی کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:170
+msgid "Campaign Type"
+msgstr "نوع کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:179
+msgid "Campaign Credits"
+msgstr "اعتبار کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:189
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:87
+msgid "Daily Credits Limit"
+msgstr "حد روزانه ی اعتبار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:196
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:94
+msgid "Campaign URL"
+msgstr "یو آر ال کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:203
+msgid "Discount Coupon"
+msgstr "کوپن تخفیف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:212
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:114
+msgid "Total Price"
+msgstr "قیمت کل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:219
+msgid "Total Price With Discount(Without Coupon)"
+msgstr "قیمت کل با تخفیف(بدون کوپن)"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:226
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:128
+msgid "Unit Price"
+msgstr "قیمت واحد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:233
+msgid "Provided Coupon Discount"
+msgstr "تخفیف کوپن انتخاب شده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:235
+msgid "No Coupon Selected"
+msgstr "کوپنی انتخاب نشده است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:239
+msgid "Your Account Balance"
+msgstr "موجودی حساب شما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/new-campaign.phtml:258
+msgid "Create Campaign"
+msgstr "ساخت کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:38
+msgid "Access denied! Your account is not verified."
+msgstr "اجازه دسترسی رد شد! حساب شما هنوز فعال نشده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:60
+msgid "Enter amount to recharge account"
+msgstr "مقداری را برای شارژ حساب انتخاب کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:71
+msgid "Choose Your Gateway"
+msgstr "درگاه مورد نظر خود را انتخاب کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/account-balance.phtml:148
+msgid "Recharge Account"
+msgstr " شارژ حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:136
+msgid "Upload Banner"
+msgstr "آپلود بنر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:29
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:23
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:23
+msgid "Either the campaign you are refering to doesn't exist or campaign ID has not been provided."
+msgstr "یا این کمپین وجود ندارد و یا شناسه ی کمپین ارایه نشده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:30
+msgid "You don't have permission to access this campaign!"
+msgstr "شما اجازه ی دسترسی به این کمپین را ندارید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:42
+msgid "You don't have permission to modify this campaign!"
+msgstr "شما اجازه ی ایجاد تغییرات در این کمپین را ندارید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:48
+msgid "This is an iframe campaign and it doesn't need a banner."
+msgstr "این یک تبلیغ قالب درون خطی است و احتیاجی به بنر ندارد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:54
+msgid "An error occured while uploading the file."
+msgstr "خطایی در حین آپلود فایل رخ داد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:60
+msgid "Permission Denied! Please login to continue."
+msgstr "اجازه دسترسی رد شد! لطفا برای ادامه دادن وارد حساب کاربری خود شوید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:66
+#, php-format
+msgid "The size of the uploaded file is too large. Maximum file size is %s KBs"
+msgstr "اندازه ی بنر انتخاب شده بسیار بزرگ است. حداکثر اندازه ی قابل قبول %s کیلو بایت است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:73
+msgid "This is not an allowed file type!"
+msgstr "این نوع فایل قابل آپلود نیست!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:91
+msgid "Banner was uploaded successfuly."
+msgstr "بنر با موفقیت آپلود شد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:107
+msgid "Order Your Banner Now"
+msgstr "هم اکنون بنر تبلیغاتی خود را سفارش دهید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:110
+msgid "Please note that this is just for your conveniese and you can get your banner from wherever you're most comfortable with."
+msgstr "لطفا توجه کنید که این فقط برای راحتی شماست و  می توانید بنر خود را از هر کجای دیگر تهیه کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:122
+msgid "Maximum banner size:"
+msgstr "حداکثر اندازه ی مجاز بنر:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:124
+msgid "Banner dimensions should be:"
+msgstr "ابعاد بنر:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:131
+msgid "Choose banner to upload"
+msgstr "بنری را برای آپلود انتخاب کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/upload-banner.phtml:170
+msgid "No Banner Uploaded Yet"
+msgstr "هیچ بنری تا به حال آپلود نشده است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:13
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:13
+msgid "Confirm Action"
+msgstr "تایید عمل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:36
+msgid "This is not an active campaign. You can't pause it!"
+msgstr "این کمپین فعال نیست. شما نمی توانید آنرا متوقف کنید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/pause-campaign.phtml:55
+#, php-format
+msgid "Do you really want to pause '%s'?"
+msgstr "آیا واقعا می خواهید که '%s' را متوقف کنید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:14
+msgid "Advertiser Panel"
+msgstr "پنل تبلیغ دهنده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/index.phtml:44
+msgid "Latest News"
+msgstr "آخرین اخبار "
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:44
+msgid "Edit Compaign"
+msgstr "ویرایش کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:45
+msgid "View/Upload Banner"
+msgstr "مشاهده / آپلود بنر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:46
+msgid "View Stats"
+msgstr "نمایش آمار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:47
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:142
+msgid "Extend Campaign"
+msgstr "بسط دادن کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:48
+msgid "Pause Campaign"
+msgstr "توقف کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:49
+msgid "Resume Campaign"
+msgstr "از سر گیری کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:53
+msgid "You can right click on any of your campaigns to view a list of available options"
+msgstr "جهت مشاهده انتخاب های خود بر روی کمپین مورد نظر راست کلیک کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:60
+msgid "Total Credits"
+msgstr "اعتبار کل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:61
+msgid "Daily Credits"
+msgstr "اعتبار روزانه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:62
+msgid "Remaining Credits"
+msgstr "اعتبار باقی مانده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:64
+msgid "Start Date"
+msgstr "تاربخ شروع"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:65
+msgid "Extension Date"
+msgstr "تاریخ بسط"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:66
+msgid "Finish Date"
+msgstr "تاریخ اتمام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:105
+msgid "Pending Approval"
+msgstr "در انتظار تایید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:111
+msgid "Paused By User"
+msgstr "متوقف شده به وسیله ی کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:114
+msgid "Your campaign has been rejected due to the following reason:<br />"
+msgstr "کمپین شما به دلیل زیر رد شده است:<br />"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:118
+msgid "Unfortunately no reason has been specified!"
+msgstr "متاسفانه هیچ دلیلی مشخص نشده است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:142
+msgid "Not Started Yet"
+msgstr "هنوز شروع نشده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaigns.phtml:158
+msgid "Not Finished Yet"
+msgstr "هنوز پایان نیافته"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:36
+msgid "This is not a paused campaign. You can't resume it!"
+msgstr "این یک کمپین متوقف شده نیست و شما نمی توانید آنرا شروع کنید!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/resume-campaign.phtml:55
+#, php-format
+msgid "Do you really want to resume '%s'?"
+msgstr "آیا واقعا می خواهید که '%s' را از سر بگیرید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:14
+msgid "Campaign Stats"
+msgstr "آمار کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:30
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:30
+msgid "This campaign does not exist, or has been deleted."
+msgstr "این کمپین وجود ندارد و یا حذف شده است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:36
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:36
+msgid "This is not your campaign and you don't have permission to view its stats."
+msgstr "این کمپین متعلق به شما نیست و نمی توانید آمار آنرا مشاهده کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:54
+msgid "Statistics"
+msgstr "آمار"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:66
+msgid "Country/IP"
+msgstr "کشور/آی پی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/campaign-stats.phtml:67
+msgid "IP Address"
+msgstr "آدرس آی پی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:14
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:102
+msgid "Edit Campaign"
+msgstr "ویرایش کمپین"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/edit-campaign.phtml:50
+msgid "Campaign was edited successfully and it's awaiting approval from our staff."
+msgstr "کمپین شما با موفقیت ویرایش شد و هم اکنون در انتظار تایید مدیران می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:42
+#, php-format
+msgid "Sorry! But your balance is not enough to extend this campaign. Your balance is %s%s. You need %s%s to create this campaign."
+msgstr "با عرض پوزش! اما شما اعتبار کافی برای ایجاد این کمپین را ندارید. اعتبار حساب شما %s %s می باشد. شما به %s %s برای ایجاد این کمپین احتیاج دارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:52
+msgid "Invalid value entered for the extra credits field. A value between 1000 and 50000 is expected."
+msgstr "مقدار وارد شده در فیلد اعتبار اضافه نا معتبر است. مقداری بین ۱۰۰۰ و ۵۰۰۰۰ قابل قبول است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:58
+msgid "Only active and finished campaigns can be extended."
+msgstr "تنها کمپین های فعال و پایان یافته را می توانید بسط دهید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:79
+msgid "Campaign was extended successfully."
+msgstr "کمپین با موفقیت بسط داده شد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:92
+msgid "Please choose an amount to extend your campaign by it. Remember that you should have enough balance in your account."
+msgstr "لطفا مقداری را برای بسط کمپین خود وارد کنید. به یاد داشته باشید که باید موجودی کافی در حساب خود داشته باشید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:97
+msgid "Extra Credits"
+msgstr "اعتبار اضافه"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Advertiser/view/advertiser/advertiser/extend-campaign.phtml:121
+msgid "Total Price With Discount"
+msgstr "قیمت کل با تخفیف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:14
+msgid "Earnings"
+msgstr "درآمد ها"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:30
+#, php-format
+msgid "Sorry! But your balance is not enought to checkout. Your balance is %s%s. You need at least %s%s to checkout."
+msgstr "با عرض پوزش! اما موجودی حساب شما برای تصویه کافی نیست. موجودی حساب شما %s %s می باشد. شما به حداقل %s %s برای تصویه نیاز دارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:36
+msgid "Your account has not been verified yet. You need to verify your account using the link in the verification email sent to you."
+msgstr "حساب شما تایید نشده است. برای تایید حساب از لینک موجود در ایمیل فعال سازی که برای شما ارسال شد استفاده کنید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:57
+msgid "Your checkout request has been registered. Remember that your request may take 1 to 14 workdays to be processed, depending on the amount of requests."
+msgstr "درخواست تسویه حساب شما ثبت شده است. به یاد داشته باشید که بسته به تعداد درخواست ها، واریز به حسابتان ممکن است از یک تا چهارده روز کاری طول بکشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/checkout.phtml:64
+#, php-format
+msgid "Do you want to checkout %s%s out of your account?"
+msgstr "آیا می خواهید که %s %s از حسابتان برداشت کنید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/delete-paste.phtml:14
+msgid "Confirm Paste Deletion"
+msgstr "حذف پیست را تایید کنید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/delete-paste.phtml:42
+#, php-format
+msgid "Are you sure you want to delete \"%s\"?"
+msgstr "ایا واقعا می خواهید که \"%s\" را حذف کنید؟"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:20
+msgid "The password you have entered is incorrect."
+msgstr "گذرواژه ی وارد شده اشتباه است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:26
+msgid "The data you have entered is invalid."
+msgstr "اطلاعات واردشده نامعتبر است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/edit-paste.phtml:38
+msgid "This is paste is closed due to violation of out terms."
+msgstr "این پیست به دلیل تخطی از قوانین بسته شده است."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-paste-stats.phtml:14
+msgid "View paste statistics"
+msgstr "نمایش آمار پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-paste-stats.phtml:42
+#, php-format
+msgid "Statistics for \"%s\""
+msgstr "آمار \"%s\""
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/new-paste.phtml:77
+msgid "Paste your paste here"
+msgstr "پیست خود را اینجا پیست کنید..."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/index.phtml:35
+msgid "Paster Panel"
+msgstr "پنل پیست کننده"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-my-pastes.phtml:13
+msgid "View My Pastes"
+msgstr "نمایش پیست های من"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/view-my-pastes.phtml:88
+msgid "View Paste Stats"
+msgstr "نمایش آمار پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:45
+msgid "Current account balance"
+msgstr "موجودی فعلی حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:56
+msgid "Checkout Now"
+msgstr "تسویه حساب"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:66
+#, php-format
+msgid "You need %s more to checkout"
+msgstr "شما به %s  دیگر برای تسویه حساب نیاز دارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:76
+msgid "Date Requested"
+msgstr "تاریخ درخواست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:80
+msgid "Transaction Date and Time"
+msgstr "تاریخ تراکنش"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:108
+msgid "No Transaction Tracking Code Is Available"
+msgstr "کد رهگیری تراکنش موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:119
+msgid "No Transaction Date Is Available"
+msgstr "تاریخ تراکنش موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:130
+msgid "No Description Is Available"
+msgstr "توضیحی موجود نیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Paster/view/paster/paster/earnings.phtml:140
+msgid "Total Income"
+msgstr "درآمد کل"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:20
+msgid "Invalid attachment ID provided!"
+msgstr "شناسه ی الصاق فراهم شده نامعتبر است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:27
+msgid "Attachment not found on this server! It might have been removed by the administrators."
+msgstr "الصاق مورد نظر بر روی این سرور پیدا نشد. ممکن است توسط مدیران حذف شده باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/download-attachment.phtml:33
+msgid "Access denied! You don't have permission to download this attachment."
+msgstr "اجازه ی دسترسی رد شد! شما اجازه ی دانلود این الصاق را ندارید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:12
+msgid "Advertisement"
+msgstr "تبلیغات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:20
+msgid "Acess Denied! You have to login before submitting new support ticket."
+msgstr "اجازه ی دسترسی رد شد! شما باید قبل از ارسال تیکت جدید وارد حساب کاربری خود شوید."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:26
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:20
+msgid "Uploading attachment file failed!"
+msgstr "آپلود فایل الصاقی شکست خورد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:39
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:33
+#, php-format
+msgid "The maximum size for attachments is %s KBs!"
+msgstr "حداکثر اندازه ی الصاق ها %s کیلو بایت می باشد."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:45
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:39
+msgid "The attachment type is invalid!"
+msgstr "نوع فایل الصاقی نا معتبر است"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:51
+msgid "The recipient is not specified!"
+msgstr "گیرنده مشخص نشده است!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:71
+msgid "The ticket was successfully submitted!"
+msgstr "تیکت با موفقیت ارسال شد!"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:79
+msgid "The support message was successfully sent. We will contact you via email soon."
+msgstr "پیغام پشتیبانی ارسال شد. به زودی از طریق ایمیل با شما تماس خواهیم گرفت."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:89
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:193
+msgid "Submit New Ticket"
+msgstr "ارسال تیکت جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:94
+msgid "Advertisment"
+msgstr "تبلیغات"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:96
+msgid "General Support"
+msgstr "پشتیبانی عمومی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:97
+msgid "Bug Report"
+msgstr "گزارش مشکلات سیستم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:124
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:65
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:205
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:277
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:350
+msgid "Importance"
+msgstr "اهمیت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:127
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:97
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:240
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:312
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:385
+msgid "Low"
+msgstr "کم"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:128
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:100
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:243
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:315
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:388
+msgid "Medium"
+msgstr "متوسط"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:129
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:103
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:246
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:318
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:391
+msgid "High"
+msgstr "زیاد"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:139
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:66
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:201
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:273
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:346
+msgid "Department"
+msgstr "دپارتمان"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:148
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:204
+msgid "Input your message here..."
+msgstr "پیغام خود را اینجا وارد کنید..."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:154
+msgid "Attachment"
+msgstr "فایل الصاقی"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:159
+msgid "Allowed File Types:"
+msgstr "نوع فایل های معتبر:"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:172
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:215
+msgid "Submit"
+msgstr "ارسال"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:185
+msgid "Contact kPaste's Support"
+msgstr "تماس با پشتیبانی کی پیست"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/submit-ticket.phtml:187
+msgid "Please note that by signing up and sending a support ticket we will process your request sooner and better."
+msgstr "لطفا توجه فرمایید که با ثبت نام و ارسال تیکت پشتیبانی زود تر و بهتر به درخواست شما رسیدگی می شود."
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:61
+msgid "Ticket Number"
+msgstr "شماره ی تیکت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:63
+msgid "Opend At"
+msgstr "باز شده در"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:81
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:224
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:296
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:369
+msgid "Pending Administrators' Response"
+msgstr "در انتظار پاسخ مدیران"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:84
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:227
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:299
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:372
+msgid "Pending user's Response"
+msgstr "در انتظار پاسخ کاربر"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:121
+msgid "From"
+msgstr "از طرف"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:125
+msgid "At"
+msgstr "در"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:150
+msgid "Download Attachment"
+msgstr "دانلود الصاق"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:152
+msgid "Download"
+msgstr "دانلود"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:170
+msgid "New Message"
+msgstr "پیغام جدید"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:175
+msgid "Post Message"
+msgstr "ارسال پیغام"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:179
+msgid "Close Ticket"
+msgstr "بستن تیکت"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:203
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:275
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:348
+msgid "Opened At"
+msgstr "باز شده در"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:268
+msgid "Tickets pending your response"
+msgstr "تیکت های در انتظار پاسخ شما"
+
+#: /home/mnvoh/VirtualHosts/kpaste/module/Support/view/support/support/view-tickets.phtml:341
+msgid "Other Tickets"
+msgstr "تیکت های دیگر"
+
+#~ msgid "Inline Frame"
+#~ msgstr "قاب درون خطی(iframe)"
+
+#~ msgid "Get Adobe Flash Player"
+#~ msgstr "ادوبی فلش پلیر را از اینجا بگیرید"
+
+#~ msgid "Your Ads Here..."
+#~ msgstr "تبلیغات شما در این مکان..."
+
+#~ msgid "Leaderboard Banners"
+#~ msgstr "بنرهای لیدر بورد"
+
+#~ msgid "Vertical Banners"
+#~ msgstr "بنرهای عمودی"
+
+#~ msgid "Square Button Banners"
+#~ msgstr "بنر های دکمه مربعی"
+
+#~ msgid ""
+#~ "Ansari St., 1/19 District, Baharan Town, Sanandaj, Kurdistan, Iran, "
+#~ "6617888883"
+#~ msgstr "سنندج، شهرک بهاران، منطقه ۱/۱۹، خ انصاری، 6617888883"
+
+#~ msgid "Forgot password?"
+#~ msgstr "گذرواژه را فراموش کردید؟"
+
+#~ msgid "Generate Random Password"
+#~ msgstr "تولید گذرواژه ی تصادفی"
+
+#~ msgid "Share Paste, Earn Money"
+#~ msgstr "درآمد آسان از به اشتراک گذاری متن"
+
+#~ msgid "Signup and start making money"
+#~ msgstr "ثبت نام و شروع به کسب درآمد کنید"
+
+#~ msgid ""
+#~ "You can easily earn money! All you need to do is to submit your pastes, "
+#~ "and share them. You will earn some money for each unique visit to your "
+#~ "paste."
+#~ msgstr ""
+#~ "تنها کاری که باید بکنید این است که متن های خود را ارسال کنید و آنها را با "
+#~ "دیگران به اشتراک بگذارید. به ازای هر بازدید کننده یکتا به پیست هایتان "
+#~ "درآمدی کسب خواهید کرد."
+
+#~ msgid "Advertise at the Lowest Price"
+#~ msgstr "تبلیغات خود را با کمترین قیمت آغاز کنید"
+
+#~ msgid "Signup and start advertising"
+#~ msgstr "ثبت نام و تبلیغات خود را آغاز کنید"
+
+#~ msgid ""
+#~ "Start advertising your products and services to thousands of users "
+#~ "visiting our pastes at the lowest price possible!"
+#~ msgstr ""
+#~ "تبلیغات خود را شروع کنید و محصولات و خدمات خود را به هزاران بازدید کننده "
+#~ "از پیست های ما با پایین ترین نرخ ممکن معرفی کنید"
+
+#~ msgid "Request a Password Change"
+#~ msgstr "درخواست تغییر گذرواژه"
+
+#~ msgid "Q&A"
+#~ msgstr "پرسش و پاسخ"
+
+#~ msgid "Browser"
+#~ msgstr "مرورگر"
+
+#~ msgid "Gateway"
+#~ msgstr "درگاه"
+
+#~ msgid "Social"
+#~ msgstr "اجتماعی"
+
+#~ msgid "Account Recharge"
+#~ msgstr "شارژ حساب"
+
+#~ msgid "Unknown"
+#~ msgstr "نامعلوم"
+
+#~ msgid "Hello"
+#~ msgstr "سلام"
+
+#~ msgid "Hello Guest"
+#~ msgstr "سلام مهمان"
+
+#~ msgid "%s (%s)"
+#~ msgstr "%s (%s)"
+
+#~ msgid "Share text. Earn money. It's that easy!"
+#~ msgstr "متون خود را به اشتراک بگذارید، درآمد کسب کنید. به همین سادگی!"
+
+#~ msgid "Select a campaign to view its graph"
+#~ msgstr "کمپینی را برای مشاهده گراف آن انتخاب کنید"
+
+#~ msgid "You have no active campaigns!"
+#~ msgstr "شما هیچ کمپین فعالی ندارید!"
+
+#~ msgid "You have no active campaigns at the moment"
+#~ msgstr "شما هیچ کمپین فعالی ندارید"
+
+#~ msgid "Error Code: "
+#~ msgstr "کد خطا:"
+
+#~ msgid "Submit New Ticker"
+#~ msgstr "ارسال تیکت جدید"
+
+#~ msgid "Registration was successful."
+#~ msgstr "ثبت نام با موفقیت به پایان رسید."
+
+#~ msgid ""
+#~ "Hi<br>You have requested your password to be changed. In order to "
+#~ "complete the process click on the link below:<br>"
+#~ msgstr "با سلام<br>شما درخواست تغییر کلمه ی عبور خود را داده اید. "

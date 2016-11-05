@@ -1,0 +1,138 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-admins.phtml
+ * @createdat   Jul 31, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Admins List');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->admins ) ):
+?>
+    <span id="adminCMenuTranslations" class="hidden">
+        <span><?php echo $this->translate('Edit Permissions'); ?></span>
+        <span><?php echo $this->translate('Suspend Admin'); ?></span>
+        <span><?php echo $this->translate('Remove Admin Suspension'); ?></span>
+        <span><?php echo $this->translate('Delete Admin'); ?></span>
+    </span>
+
+    <h3><?php echo $title; ?></h3>
+    <p><?php echo $this->translate('Right click on each row for options.'); ?></p>
+    <br />
+    <table class="table" id="adminsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Username' ); ?></th>
+                <th><?php echo $this->translate( 'Email' ); ?></th>
+                <th><?php echo $this->translate( 'Full Name' ); ?></th>
+                <th><?php echo $this->translate( 'Registration Date' ); ?></th>
+                <th><?php echo $this->translate( 'Status' ); ?></th>
+                <th><?php echo $this->translate( 'Cell Number' ); ?></th>
+                <th><?php echo $this->translate( 'Last Login' ); ?></th>
+                <th><?php echo $this->translate( 'Last IP' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->admins as $admin ):
+        if( $admin->account_status == 'deleted' )   continue;
+?>
+        <tr class="cursor-pointer" oncontextmenu='adminContextMenu( event, <?php echo $admin->userid; ?>, 
+            "<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2))); ?>" );'
+            title="<?php echo $this->translate('Right click for options'); ?>">
+            <td><?php echo $this->escapeHtml( $admin->username ); ?></td>
+            <td><?php echo $this->escapeHtml( $admin->email ); ?></td>
+            <td><?php echo $this->escapeHtml( $admin->firstname . ' ' . $admin->lastname ); ?></td>
+            <td>
+                <?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $admin->reg_date ); ?>
+            </td>
+            <td>
+                <?php 
+                if( $admin->account_status == 'pending' )
+                    echo $this->translate( 'Pending' );
+                else if( $admin->account_status == 'verified' )
+                    echo $this->translate( 'Verified' );
+                else if( $admin->account_status == 'suspended' )
+                    echo $this->translate( 'Suspended' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $admin->cell_number )
+                    echo $this->escapeHtml( $admin->cell_number ); 
+                else
+                    echo $this->translate( 'None' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $admin->last_login_time )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $admin->last_login_time ); 
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $admin->last_ip_addr )
+                {
+                    $flagPath = $this->ipInfo->setIp( $admin->last_ip_addr )->getFlagPath();
+                    $country = $this->ipInfo->getLongName();
+                    echo "<img src='$flagPath' alt='$country' title='$country' /><br />";
+                    echo $admin->last_ip_addr; 
+                }
+                else
+                {
+                    echo $this->translate( 'N/A' );
+                }
+                ?>
+            </td>
+        </tr>
+<?php
+    endforeach;
+    echo '</tbody></table><br />';
+    
+    echo $this->paginationControl(
+                $this->admins,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin'),
+                array( 
+                    'route'         => 'admin',
+                    'controller'    => 'MasterAdmin',
+                    'action'        => 'ViewAdmins',
+                )
+            );
+    echo '<script src="/js/contextmenu.js"></script>';
+    
+endif;
+?>

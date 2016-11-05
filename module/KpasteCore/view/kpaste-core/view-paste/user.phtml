@@ -1,0 +1,128 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view.php
+ * @createdat    Jul 16, 2013 11:40:22 AM
+ */
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->pasters ) ):
+    $title = $this->translate('Pasters List');
+    $this->headTitle($title);
+?>
+<h3 class="center-align"><?php echo $title; ?></h3>
+<?php
+    foreach($this->pasters as $paster):
+        $_paster = $paster->username . "=>" . $paster->total_pastes;
+        $href = $this->url('kpastecore', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'ViewPaste',
+            'action'        => 'user',
+            'param1'        => $paster->userid
+        ));
+?>
+        <a class="pastersListItem" href="<?php echo $href; ?>">
+            <?php echo $_paster; ?>
+        </a>
+<?php
+    endforeach;
+?>
+    
+<?php 
+elseif( isset( $this->pastes ) ): 
+    $title = sprintf($this->translate('%s\'s Pastes List'), $this->username);
+    $this->headTitle($title);
+?>
+<h3 class="center-align">
+    <?php echo $title; 
+
+    $publicPastesFeed = $this->url('kpastecore', array(
+        'lang'      => substr($this->layout()->language, 0, 2),
+        'controller'=> 'RSS', 
+        'action'    => 'LatestPublicPastes',
+        'param1'    => $this->userid,
+    ));
+    ?>
+    <a href="<?php echo $publicPastesFeed; ?>" target="_blank">
+        <span class="sprite icn-rss" 
+              title="<?php echo sprintf($this->translate("Follow %s's public pastes via RSS"), $this->username); ?>">
+        </span>
+    </a> 
+</h3>
+
+<table cellspacing="0" border="0" class="table" id="usersPastesTable">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Title'); ?></th>
+            <th><?php echo $this->translate('Exposure'); ?></th>
+            <th><?php echo $this->translate('Syntax'); ?></th>
+            <th><?php echo $this->translate('Status'); ?></th>
+            <th><?php echo $this->translate('Password'); ?></th>
+            <th><?php echo $this->translate('Pasted At'); ?></th>
+            <th><?php echo $this->translate('Viewed'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($this->pastes as $paste): ?>
+        <tr>
+            <td>
+                <a href="<?php echo $this->url('kpastecore', array(
+                            'lang'          => substr($this->layout()->language, 0, 2),
+                            'controller'    => 'ViewPaste', 
+                            'action'        => 'view',
+                            'param1'        => $paste->pasteid,
+                    )); ?>" target="_blank">
+                <?php echo $paste->title; ?>
+                </a>    
+            </td>
+            <td><?php echo $paste->exposure; ?></td>
+            <td><?php echo $paste->syntax; ?></td>
+            <td><?php echo $paste->status; ?></td>
+            <td>
+                <?php if($paste->password_test): ?>
+                <span class="sprite icn-check" title="<?php echo $this->translate('Yes'); ?>"></span>
+                <?php else: ?>
+                <span class="sprite icn-cross" title="<?php echo $this->translate('No'); ?>"></span>
+                <?php endif; ?>
+            </td>
+            <td><?php echo $paste->pasted_on; ?></td>
+            <td><?php echo (int)$paste->viewed; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+echo $this->paginationControl(
+    $this->pastes,
+    'sliding',
+    array( 'partial/paginator.phtml', 'Admin' ),
+    array( 
+        'route'         => 'kpastecore',
+        'controller'    => 'ViewPaste',
+        'action'        => 'user',
+        'param1'        => $this->username,
+    )
+);
+endif;

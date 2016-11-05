@@ -1,0 +1,115 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    index.php
+ * @createdat   Oct 19, 2013 11:40:22 AM
+ */
+$title = $this->translate('Confirm Transaction');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'NO_DATA_SENT':
+                echo '<p>';
+                echo $this->translate('No data has been sent. Maybe you have opened this page directly.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'AMOUNT_LOWER_THAN_MINIMUM':
+                echo '<p>';
+                echo sprintf($this->translate('The minimum recharge amount is %s'), 
+                        "<span class='new-password inline-block'>" . $this->minAmount . ' ' . $this->currency . "</span>");
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->gateway) && $this->gateway):
+    $action = $this->url('kpastecore', array(
+        'lang'      => substr($this->layout()->language, 0, 2),
+        'controller'=> 'EPayment',
+        'action'    => $this->gateway,
+    ));
+?>
+
+<h3 class="center-align"><?php echo $this->translate('Please confirm the amount of the transaction'); ?></h3>
+<p class="center-align">
+    <?php echo $this->translate('Please confirm this invoice by clicking the continue button.'); ?>
+</p>
+<table class="table width700p auto-margin" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th>
+                <?php echo $this->translate('Description'); ?>
+            </th>
+            <th>
+                <?php echo $this->translate('Amount'); ?>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <?php 
+                $description = sprintf($this->translate('Recharge Advertiser\'s Account %s %s'), 
+                        $this->amount, $this->currency);
+                echo  $description;
+                ?>
+            </td>
+            <td>
+                <?php echo number_format( $this->amount ). ' ' . $this->currency; ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $this->translate('Extra Tax'); ?>
+            </td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>
+                <?php echo $this->translate('Gross'); ?>
+            </td>
+            <td><?php echo number_format( $this->amount ). ' ' . $this->currency; ?></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<form action="<?php echo $action; ?>" method="post" class='center-align'>
+    <input type="hidden" name='amount' value='<?php echo $this->amount; ?>' />
+    <input type='hidden' name='description' value='<?php echo $description; ?>' />
+    <button type='submit' style='font-size: 1.5em; padding: 5px 40px;'>
+        <?php echo $this->translate('Continue'); ?>
+        <br />
+        <img src='/images/gateways/<?php echo $this->gateway; ?>.png' alt='<?php echo $this->gateway; ?>' />
+    </button>
+</form>
+
+<?php
+
+endif;

@@ -1,0 +1,522 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-ad-campaigns.phtml
+ * @createdat   aug 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Ad Campaigns');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ACCEPT_AD_CAMPAIGN_NOT_ALLOWED':
+                echo '<p>';
+                echo $this->translate('Access denied! You are not allowed to accept ad campaigns.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'REJECT_AD_CAMPAIGN_NOT_ALLOWED':
+                echo '<p>';
+                echo $this->translate('Access denied! You are not allowed to reject ad campaigns.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->pendingCamps ) ):
+    $route = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewAdCampaigns',
+        ));
+?>
+<h3 class="center-align"><?php echo $this->translate('Pending Campaigns'); ?></h3>
+<form action='<?php echo $route; ?>' method='post' id='adCampsActions'
+      onsubmit="return confirm('<?php echo $this->translate('Are you sure you want to perform this operation?'); ?>');">
+    <table class="table" id="pendingCampaignsTable">
+        <thead>
+            <tr>
+                <th>
+                    <input type='checkbox' id='selectalltop' 
+                           onclick='ToggleAllCheckboxesInForm(event, "adCampsActions");'
+                           title='<?php echo $this->translate('Invert Selection'); ?>'/>
+                </th>
+                <th><?php echo $this->translate( 'Campaign ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Title' ); ?></th>
+                <th><?php echo $this->translate( 'Type' ); ?></th>
+                <th><?php echo $this->translate( 'Scope' ); ?></th>
+                <th><?php echo $this->translate( 'Credits' ); ?></th>
+                <th><?php echo $this->translate( 'Daily' ); ?></th>
+                <th><?php echo $this->translate( 'URL' ); ?></th>
+                <th><?php echo $this->translate( 'Banner' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->pendingCamps as $pendingCamp ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $pendingCamp->userid
+        ) );
+        $viewBannerUrl = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewBanner',
+            'param1'        => $pendingCamp->campaignid,
+        ));
+?>
+        <tr onclick='ToggleCheckBoxInCurrentTableRow(event, this);' style='cursor: pointer;'>
+            <td>
+                <input type='checkbox' name='campid[]' value='<?php echo $pendingCamp->campaignid; ?>' 
+                       onclick='stopPropagationOnEvent(event);' />
+            </td>
+            <td><?php echo $pendingCamp->campaignid; ?></td>
+            <td>
+                <a href="<?php echo $viewUserLink; ?>" target='_blank' onclick='stopPropagationOnEvent(event);'>
+                    <?php echo $pendingCamp->userid; ?>
+                </a>
+            </td>
+            <td><?php echo $this->escapeHtml( $pendingCamp->campaign_title ); ?></td>
+            <td>
+                <?php 
+                switch( $pendingCamp->campaign_type )
+                {
+                    case 'square_button_ltr':
+                        echo $this->translate('Left, Top or Right Square Button');
+                        break;
+                    case 'square_button_b':
+                        echo $this->translate('Bottom Square Button');
+                        break;
+                    case 'vertical_banner':
+                        echo $this->translate('Vertical Banner');
+                        break;
+                    case 'leaderboard_t':
+                        echo $this->translate('Top Leaderboard');
+                        break;
+                    case 'leaderboard_b':
+                        echo $this->translate('Bottom Leaderboard');
+                        break;
+                    case 'iframe':
+                        echo $this->translate('Inline Frame Ads');
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                if( $pendingCamp->campaign_scope == 'local' )
+                    echo $this->translate( 'Local' );
+                else
+                    echo $this->translate( 'Global' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo $pendingCamp->total_credits;
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo $pendingCamp->daily_credits;
+                ?>
+            </td>
+            <td>
+                <a href="<?php echo $pendingCamp->campaign_url; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                <?php echo $this->translate( 'Go to URL' ); ?>
+                </a>
+            </td>
+            <td>
+                <?php if($pendingCamp->campaign_type != 'iframe'): ?>
+                    <a href="<?php echo $viewBannerUrl; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                    <?php echo $this->translate( 'View Banner' ); ?>
+                    </a>
+                <?php else: ?>
+                    <?php echo $this->translate('N/A'); ?>
+                <?php endif; ?>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <button type="submit" name="action" value="accept">
+                        <?php echo $this->translate( 'Accept Ad Campaign' ); ?>
+                    </button>
+                </td>
+                <td colspan="100">
+                    <input type='text' name='rejectionReason' class='width50'
+                           placeholder='<?php echo $this->translate('Rejection Reason'); ?>'/>
+                    <button type="submit" name="action" value="reject">
+                        <?php echo $this->translate( 'Reject Ad Campaign' ); ?>
+                    </button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<br />
+<?php
+    echo $this->paginationControl(
+        $this->pendingCamps,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Admin' ),
+        array( 
+            'route'         => 'admin', 
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewAdCampaigns',
+            'queryParamName'=> 'ppage',
+        )
+    );
+
+endif;
+
+if( isset( $this->activeCamps ) ):
+?>
+    <br /><br /><br />
+    
+    <h3 class="center-align"><?php echo $this->translate('Active Campaigns'); ?></h3>
+    <table class="table" id="activeCampsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Campaign ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Title' ); ?></th>
+                <th><?php echo $this->translate( 'Type' ); ?></th>
+                <th><?php echo $this->translate( 'Scope' ); ?></th>
+                <th><?php echo $this->translate( 'Credits' ); ?></th>
+                <th><?php echo $this->translate( 'Daily' ); ?></th>
+                <th><?php echo $this->translate( 'Remaining' ); ?></th>
+                <th><?php echo $this->translate( 'Start' ); ?></th>
+                <th><?php echo $this->translate( 'Extension' ); ?></th>
+                <th><?php echo $this->translate( 'URL' ); ?></th>
+                <th><?php echo $this->translate( 'Banner' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->activeCamps as $activeCamp ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $activeCamp->userid
+        ) );
+        $viewBannerUrl = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewBanner',
+            'param1'        => $activeCamp->campaignid,
+        ));
+?>
+        
+            <tr>
+                <td><?php echo $activeCamp->campaignid; ?></td>
+                <td>
+                    <a href="<?php echo $viewUserLink; ?>" target='_blank'>
+                        <?php echo $activeCamp->userid; ?>
+                    </a>
+                </td>
+                <td><?php echo $this->escapeHtml( $activeCamp->campaign_title ); ?></td>
+                <td>
+                    <?php 
+                    switch( $activeCamp->campaign_type )
+                    {
+                        case 'square_button_ltr':
+                            echo $this->translate('Left, Top or Right Square Button');
+                            break;
+                        case 'square_button_b':
+                            echo $this->translate('Bottom Square Button');
+                            break;
+                        case 'vertical_banner':
+                            echo $this->translate('Vertical Banner');
+                            break;
+                        case 'leaderboard_t':
+                            echo $this->translate('Top Leaderboard');
+                            break;
+                        case 'leaderboard_b':
+                            echo $this->translate('Bottom Leaderboard');
+                            break;
+                        case 'iframe':
+                            echo $this->translate('Inline Frame Ads');
+                            break;
+                    }
+                    ?>
+                </td>
+                <td>
+                    <?php
+                    if( $activeCamp->campaign_scope == 'local' )
+                        echo $this->translate( 'Local' );
+                    else
+                        echo $this->translate( 'Global' );
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                    echo $activeCamp->total_credits;
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                    echo $activeCamp->daily_credits;
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                    echo $activeCamp->remaining_credits;
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $activeCamp->start_date );
+                    ?>
+                </td>
+                <td>
+                    <?php 
+                    if( $activeCamp->extension_date )
+                        echo KpasteCore\KDateTime\KDateTime::PrefDate( $activeCamp->extension_date );
+                    else
+                        echo $this->translate( 'Never' );
+                    ?>
+                </td>
+                <td>
+                    <a href="<?php echo $activeCamp->campaign_url; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                    <?php echo $this->translate( 'Go to URL' ); ?>
+                    </a>
+                </td>
+                <td>
+                    <?php if($activeCamp->campaign_type != 'iframe'): ?>
+                        <a href="<?php echo $viewBannerUrl; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                        <?php echo $this->translate( 'View Banner' ); ?>
+                        </a>
+                    <?php else: ?>
+                        <?php echo $this->translate('N/A'); ?>
+                    <?php endif; ?>
+                </td>
+            </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+    </table>
+    <br />
+<?php
+    echo $this->paginationControl(
+                $this->activeCamps,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewAdCampaigns',
+                    'queryParamName'=> 'apage',
+                )
+            );
+
+endif;
+
+if( isset( $this->otherCamps ) ):
+?>
+    <br /><br /><br />
+    <h3 class="center-align"><?php echo $this->translate('Other Campaigns'); ?></h3>
+    <table class="table" id="otherCampsTable">
+        <thead>
+            <tr>
+                <th><?php echo $this->translate( 'Campaign ID' ); ?></th>
+                <th><?php echo $this->translate( 'User ID' ); ?></th>
+                <th><?php echo $this->translate( 'Status' ); ?></th>
+                <th><?php echo $this->translate( 'Type' ); ?></th>
+                <th><?php echo $this->translate( 'Scope' ); ?></th>
+                <th><?php echo $this->translate( 'Credits' ); ?></th>
+                <th><?php echo $this->translate( 'Daily' ); ?></th>
+                <th><?php echo $this->translate( 'Remaining' ); ?></th>
+                <th><?php echo $this->translate( 'Start' ); ?></th>
+                <th><?php echo $this->translate( 'Extension' ); ?></th>
+                <th><?php echo $this->translate( 'Finish' ); ?></th>
+                <th><?php echo $this->translate( 'URL' ); ?></th>
+                <th><?php echo $this->translate( 'Banner' ); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    foreach( $this->otherCamps as $otherCamp ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $otherCamp->userid
+        ) );
+        $viewBannerUrl = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'SystemLog',
+            'action'        => 'ViewBanner',
+            'param1'        => $otherCamp->campaignid,
+        ));
+?>
+        <tr>
+            <td><?php echo $otherCamp->campaignid; ?></td>
+            <td>
+                <a href="<?php echo $viewUserLink; ?>" target='_blank'>
+                    <?php echo $otherCamp->userid; ?>
+                </a>
+            </td>
+            <td>
+                <?php 
+                switch( $otherCamp->status ) 
+                {
+                    case 'pending':
+                        echo $this->translate( 'Pending' );
+                        break;
+                    case 'active':
+                        echo $this->translate( 'Active' );
+                        break;
+                    case 'paused':
+                        echo $this->translate( 'Paused' );
+                        break;
+                    case 'rejected':
+                        echo $this->translate( 'Rejected' );
+                        break;
+                    case 'canceled':
+                        echo $this->translate( 'Canceled' );
+                        break;
+                    case 'finished':
+                        echo $this->translate( 'Finished' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php 
+                switch( $otherCamp->campaign_type )
+                {
+                    case 'square_button_ltr':
+                        echo $this->translate('Left, Top or Right Square Button');
+                        break;
+                    case 'square_button_b':
+                        echo $this->translate('Bottom Square Button');
+                        break;
+                    case 'vertical_banner':
+                        echo $this->translate('Vertical Banner');
+                        break;
+                    case 'leaderboard_t':
+                        echo $this->translate('Top Leaderboard');
+                        break;
+                    case 'leaderboard_b':
+                        echo $this->translate('Bottom Leaderboard');
+                        break;
+                    case 'iframe':
+                        echo $this->translate('Inline Frame Ads');
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                if( $otherCamp->campaign_scope == 'local' )
+                    echo $this->translate( 'Local' );
+                else
+                    echo $this->translate( 'Global' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo $otherCamp->total_credits;
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo $otherCamp->daily_credits;
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo $otherCamp->remaining_credits;
+                ?>
+            </td>
+            <td>
+                <?php 
+                echo KpasteCore\KDateTime\KDateTime::PrefDate( $otherCamp->start_date );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $otherCamp->extension_date )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $otherCamp->extension_date );
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $otherCamp->finished_date )
+                    echo KpasteCore\KDateTime\KDateTime::PrefDate( $otherCamp->finished_date );
+                else
+                    echo $this->translate( 'Never' );
+                ?>
+            </td>
+            <td>
+                <a href="<?php echo $otherCamp->campaign_url; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                <?php echo $this->translate( 'Go to URL' ); ?>
+                </a>
+            </td>
+            <td>
+                <?php if($otherCamp->campaign_type != 'iframe'): ?>
+                    <a href="<?php echo $viewBannerUrl; ?>" target="_blank" onclick='stopPropagationOnEvent(event);'>
+                    <?php echo $this->translate( 'View Banner' ); ?>
+                    </a>
+                <?php else: ?>
+                    <?php echo $this->translate('N/A'); ?>
+                <?php endif; ?>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+        </tbody>
+    </table>
+    <br />
+<?php
+    echo $this->paginationControl(
+                $this->activeCamps,
+                'sliding',
+                array( 'partial/paginator.phtml', 'Admin' ),
+                array( 
+                    'route'         => 'admin', 
+                    'controller'    => 'SystemLog',
+                    'action'        => 'ViewAdCampaigns',
+                    'queryParamName'=> 'opage',
+                )
+            );
+
+endif;

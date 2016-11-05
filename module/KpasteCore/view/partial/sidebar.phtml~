@@ -1,0 +1,299 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    sidebar.phtml
+ * @createdat    Aug 12, 2013 3:05:02 PM
+ */
+
+function isAllowed($permission, $acl)
+{
+    if( !$acl || !is_array( $acl ) )
+        return false;
+    if( ($key = array_search( $permission, $acl)) === FALSE )
+    {
+        return false;
+    }
+    return true;
+}
+?>
+<br />
+<?php if($this->username): ?>
+<h5 class='center-align'><?php echo $this->translate('Hello') . ' ' . $this->username; ?></h5>
+<?php else: ?>
+<h5 class='center-align'><?php echo $this->translate('Hello Guest'); ?></h5>
+<?php endif; ?>
+<ul>
+<?php
+if( $this->userType == 'guest' ):
+?>
+    <li>
+        <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'login')); ?>" 
+           title="<?php echo $this->translate( 'Login' ); ?>">
+            <span class='sprite sprite-light icn-login'></span>
+            <?php echo $this->translate( 'Login' ); ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'signup')); ?>" 
+           title="<?php echo $this->translate( 'Register' ); ?>">
+            <span class='sprite sprite-light icn-register'></span>
+            <?php echo $this->translate( 'Register' ); ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'changePassword')); ?>" 
+           title="<?php echo $this->translate( 'Request a Password Change' ); ?>">
+            <span class='sprite sprite-light icn-change-password'></span>
+            <?php echo $this->translate( 'Request a Password Change' ); ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $this->url('kpastecore', array('lang' => substr($this->layout()->language, 0, 2),)); ?>" 
+           title="<?php echo $this->translate( 'New Paste' ); ?>">
+            <span class='sprite sprite-light icn-new-paste'></span>
+            <?php echo $this->translate( 'New Paste' ); ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $this->url('kpastecore', array(
+                    'lang'          => substr($this->layout()->language, 0, 2), 
+                    'controller'    => 'Home', 
+                    'action'        => 'announcements'
+                )); ?>" 
+           title="<?php echo $this->translate( 'Announcements' ); ?>">
+            <span class='sprite sprite-light icn-news'></span>
+            <?php echo $this->translate( 'Announcements' ); ?>
+        </a>
+    </li>  
+<?php
+else:
+    if( $this->userType == 'paster' ):
+    ?>
+        <li>
+            <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'earnings')); ?>" 
+               title="<?php echo $this->translate( 'My Earnings' ); ?>">
+                <span class='sprite sprite-light icn-earnings'></span>
+                <?php echo $this->translate( 'My Earnings' ); ?>
+            </a>
+        </li>  
+        <li>
+            <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'newPaste')); ?>" 
+               title="<?php echo $this->translate( 'New Paste' ); ?>">
+                <span class='sprite sprite-light icn-new-paste'></span>
+                <?php echo $this->translate( 'New Paste' ); ?>
+            </a>
+        </li>  
+        <li>
+            <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'viewMyPastes')); ?>" 
+               title="<?php echo $this->translate( 'My Pastes' ); ?>">
+                <span class='sprite sprite-light icn-pastes'></span>
+                <?php echo $this->translate( 'My Pastes' ); ?>
+            </a>
+        </li>  
+    <?php
+    elseif( $this->userType == 'advertiser' ):
+    ?>
+        <li>
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'NewCampaign')); ?>" 
+               title="<?php echo $this->translate( 'New Campaign' ); ?>">
+                <span class='sprite sprite-light icn-new-campaign'></span>
+                <?php echo $this->translate( 'New Campaign' ); ?>
+            </a>
+        </li>  
+        <li>
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'Campaigns')); ?>" 
+               title="<?php echo $this->translate( 'My Campaigns' ); ?>">
+                <span class='sprite sprite-light icn-campaigns'></span>
+                <?php echo $this->translate( 'My Campaigns' ); ?>
+            </a>
+        </li>  
+        <li>
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'AccountBalance')); ?>" 
+               title="<?php echo $this->translate( 'Account Balance' ); ?>">
+                <span class='sprite sprite-light icn-earnings'></span>
+                <?php echo $this->translate( 'Account Balance' ); ?>
+            </a>
+        </li>  
+    <?php
+    elseif( $this->userType == 'admin' || $this->userType == 'masteradmin' ):
+    ?>
+        <?php
+        if( $this->userType == 'masteradmin' ):
+        ?>
+            <li>
+                <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'MasterAdmin', 'action' => 'CreateNewAdmin')); ?>" 
+                   title="<?php echo $this->translate( 'Create a New Admin' ); ?>">
+                    <span class='sprite sprite-light icn-register'></span>
+                    <?php echo $this->translate( 'Create a New Admin' ); ?>
+                </a>
+            </li> 
+
+            <li>
+                <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'MasterAdmin', 'action' => 'ViewAdmins')); ?>" 
+                   title="<?php echo $this->translate( 'View Admins' ); ?>">
+                    <span class='sprite sprite-light icn-users'></span>
+                    <?php echo $this->translate( 'View Admins' ); ?>
+                </a>
+            </li> 
+            <li class="seperator"></li>
+        <?php endif; ?>
+
+        <?php if(isAllowed( 'VIEW_USERS', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'UserManagement', 'action' => 'ViewUsers')); ?>" 
+               title="<?php echo $this->translate( 'View Users' ); ?>">
+                <span class='sprite sprite-light icn-users'></span>
+                <?php echo $this->translate( 'View Users' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+            
+        <?php if(isAllowed( 'VIEW_TRANSACTIONS', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewTransactions')); ?>" 
+               title="<?php echo $this->translate( 'Transactions' ); ?>">
+                <span class='sprite sprite-light icn-transactions'></span>
+                <?php echo $this->translate( 'Transactions' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+
+        <?php if(isAllowed( 'VIEW_CHECKOUT_REQUESTS', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewCheckouts')); ?>" 
+               title="<?php echo $this->translate( 'Checkouts' ); ?>">
+                <span class='sprite sprite-light icn-checkouts'></span>
+                <?php echo $this->translate( 'Checkouts' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+
+        <?php if(isAllowed( 'VIEW_PASTES', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewPastes')); ?>" 
+               title="<?php echo $this->translate( 'Pastes' ); ?>">
+                <span class='sprite sprite-light icn-pastes'></span>
+                <?php echo $this->translate( 'Pastes' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+
+        <?php if(isAllowed( 'VIEW_REPORTED_PASTES', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewReportedPastes')); ?>" 
+               title="<?php echo $this->translate( 'Reported Pastes' ); ?>">
+                <span class='sprite sprite-light icn-reported-pastes'></span>
+                <?php echo $this->translate( 'Reported Pastes' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+
+        <?php if(isAllowed( 'VIEW_USERS_AD_CAMPAIGNS', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewAdCampaigns')); ?>" 
+               title="<?php echo $this->translate( 'Ad Campaigns' ); ?>">
+                <span class='sprite sprite-light icn-campaigns'></span>
+                <?php echo $this->translate( 'Ad Campaigns' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+        
+        <?php if(isAllowed( 'VIEW_SYSTEM_ACTIVITIES', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewSystemActivities')); ?>" 
+               title="<?php echo $this->translate( 'System Activities' ); ?>">
+                <span class='sprite sprite-light icn-activities'></span>
+                <?php echo $this->translate( 'System Activities' ); ?>
+            </a>
+        </li>  
+        <?php endif; ?>
+        
+        <?php if(isAllowed( 'CHANGE_SYSTEM_SETTINGS', $this->acl )): ?>
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemSettings', 'action' => 'index')); ?>" 
+               title="<?php echo $this->translate( 'System Settings' ); ?>">
+                <span class='sprite sprite-light icn-settings'></span>
+                <?php echo $this->translate( 'System Settings' ); ?>
+            </a>
+        </li>  
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemSettings', 'action' => 'ChangeAdsLayout')); ?>" 
+               title="<?php echo $this->translate( 'Ads Layout' ); ?>">
+                <span class='sprite sprite-light icn-settings'></span>
+                <?php echo $this->translate( 'Ads Layout' ); ?>
+            </a>
+        </li> 
+        <li>
+            <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemSettings', 'action' => 'ChangeTermsAndPrivacy')); ?>" 
+               title="<?php echo $this->translate( 'Terms and Privacy Policy' ); ?>">
+                <span class='sprite sprite-light icn-settings'></span>
+                <?php echo $this->translate( 'Terms and Privacy Policy' ); ?>
+            </a>
+        </li>
+        <?php endif; ?>
+    <?php
+    endif;
+    ?>
+    <li class="seperator"></li>
+    <li>
+        <a href="<?php echo $this->url('kpastecore', array(
+                    'lang'          => substr($this->layout()->language, 0, 2), 
+                    'controller'    => 'Home', 
+                    'action'        => 'announcements'
+                )); ?>" 
+           title="<?php echo $this->translate( 'Announcements' ); ?>">
+            <span class='sprite sprite-light icn-news'></span>
+            <?php echo $this->translate( 'Announcements' ); ?>
+        </a>
+    </li>  
+    <li>
+        <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'MyAccount')); ?>" 
+           title="<?php echo $this->translate( 'My Account' ); ?>">
+            <span class='sprite sprite-light icn-account'></span>
+            <?php echo $this->translate( 'My Account' ); ?>
+        </a>
+    </li>  
+    <li>
+        <span class='unreadMessagesCount'><script>getUnreadMessagesCount(<?php echo $this->userid; ?>);</script></span>
+        <a href="<?php echo $this->url('support', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'ViewTickets')); ?>" 
+           title="<?php echo $this->translate( 'Support' ); ?>">
+            <span class='sprite sprite-light icn-support'></span>
+            <?php echo $this->translate( 'Support' ); ?>
+        </a>
+    </li> 
+    <li class="seperator"></li>
+    <li>
+        <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'logout')); ?>" 
+           title="<?php echo $this->translate( 'Log out' ); ?>">
+            <span class='sprite sprite-light icn-logout'></span>
+            <?php echo $this->translate( 'Log out' ); ?>
+        </a>
+    </li>
+    <?php
+endif;
+?>
+</ul>
+
+<?php if( $this->userType != 'admin' && $this->userType != 'masteradmin' ): ?>
+<div class="latest-news">
+<h4 class="center-align"><?php echo $this->translate('Latest News'); ?></h4>
+    <h5 style="font-size: 1.2em; font-weight: bold;">
+        <a href="<?php echo $this->url('kpastecore', array(
+            'lang'      => substr($this->layout()->language, 0, 2),
+            'controller'=> 'Home',
+            'action'    => 'announcements',
+        )); ?>">
+            <?php echo $this->layout()->latestNews->title; ?>
+        </a>
+    </h5>
+    <p>
+        <?php echo $this->layout()->latestNews->news; ?>
+    </p>
+</div>
+<?php endif; ?>
+

@@ -1,0 +1,195 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    ads.phtml
+ * @createdat   Nov 25, 2013 3:05:02 PM
+ */
+
+$title = $this->translate( 'Ads' );
+$this->headTitle( $title );
+?>
+
+<h3 class="center-align"><?php echo $this->translate('You can use the following to determine the kind of ad you want.'); ?></h3>
+
+<div class="tabbed-panel-wrapper">
+    <ul class="tabs">
+        <li class="active"><?php echo $this->translate('Top Leaderboard'); ?></li>
+        <li><?php echo $this->translate('Bottom Leaderboard'); ?></li>
+        <li><?php echo $this->translate('Vertical Banner'); ?></li>
+        <li><?php echo $this->translate('Left, Top, Right Square Button'); ?></li>
+        <li><?php echo $this->translate('Bottom Square Button'); ?></li>
+        <li><?php echo $this->translate('Iframe'); ?></li>
+    </ul>
+    
+    <div class="clear"></div>
+    
+    <div class="tabs-contents-wrapper">
+        <div class="tabbed-panel tab1 center-align active">
+            <div class="samplead square_button_ltr"></div>
+            <div class="leaderboard_t">
+                <?php echo file_get_contents(ROOT_NAME . '/leaderboard_t.html'); ?>
+            </div>
+            
+            <br /><br /><br /><br />
+            
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            <div style="border: 1px solid #222; border-radius: 4px; width: 600px; height: 400px; line-height: 400px; 
+                 font-size: 64px; text-align: center; display: inline-block;">
+                <?php echo $this->translate('Paste Is Here'); ?>
+            </div>
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            
+            <br /><br /><br /><br /><br />
+            
+            <div class="samplead square_button_b"></div>
+            <div class="samplead leaderboard_b"></div>
+        </div>
+        
+        
+        <div class="tabbed-panel tab2 center-align">
+            <div class="samplead square_button_ltr"></div>
+            <div class="samplead leaderboard_t"></div>
+            
+            <br /><br /><br /><br />
+            
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            <div style="border: 1px solid #222; border-radius: 4px; width: 600px; height: 400px; line-height: 400px; 
+                 font-size: 64px; text-align: center; display: inline-block;">
+                <?php echo $this->translate('Paste Is Here'); ?>
+            </div>
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            
+            <br /><br /><br /><br /><br />
+            
+            <div class="samplead square_button_b"></div>
+            <div class="leaderboard_b">
+                <?php echo file_get_contents(ROOT_NAME . '/leaderboard_b.html'); ?>
+            </div>
+        </div>
+        
+        <div class="tabbed-panel tab3 center-align">
+            <div class="samplead square_button_ltr"></div>
+            <div class="samplead leaderboard_t"></div>
+            
+            <br /><br /><br /><br />
+            
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="vertical_banner">
+                    <?php echo file_get_contents(ROOT_NAME . '/vertical_banner.html'); ?>
+                </div>
+            </div>
+            <div style="border: 1px solid #222; border-radius: 4px; width: 600px; height: 400px; line-height: 400px; 
+                 font-size: 64px; text-align: center; display: inline-block;">
+                <?php echo $this->translate('Paste Is Here'); ?>
+            </div>
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="vertical_banner">
+                    <?php echo file_get_contents(ROOT_NAME . '/vertical_banner.html'); ?>
+                </div>
+            </div>
+            
+            <br /><br /><br /><br /><br />
+            
+            <div class="samplead square_button_b"></div>
+            <div class="samplead leaderboard_b"></div>
+        </div>
+        
+        <div class="tabbed-panel tab4 center-align">
+            <div class=" square_button_ltr">
+                <?php echo file_get_contents(ROOT_NAME . '/square_button_ltr.html'); ?>
+            </div>
+            <div class="samplead leaderboard_t"></div>
+            
+            <br /><br /><br /><br />
+            
+            <div style="display: inline-block;">
+                <div class="square_button_ltr">
+                    <?php echo file_get_contents(ROOT_NAME . '/square_button_ltr.html'); ?>
+                </div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            <div style="border: 1px solid #222; border-radius: 4px; width: 600px; height: 400px; line-height: 400px; 
+                 font-size: 64px; text-align: center; display: inline-block;">
+                <?php echo $this->translate('Paste Is Here'); ?>
+            </div>
+            <div style="display: inline-block;">
+                <div class="square_button_ltr">
+                    <?php echo file_get_contents(ROOT_NAME . '/square_button_ltr.html'); ?>
+                </div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            
+            <br /><br /><br /><br /><br />
+            
+            <div class="samplead square_button_b"></div>
+            <div class="samplead leaderboard_b"></div>
+        </div>
+        
+        <div class="tabbed-panel tab5 center-align">
+            <div class="samplead square_button_ltr"></div>
+            <div class="samplead leaderboard_t"></div>
+            
+            <br /><br /><br /><br />
+            
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            <div style="border: 1px solid #222; border-radius: 4px; width: 600px; height: 400px; line-height: 400px; 
+                 font-size: 64px; text-align: center; display: inline-block;">
+                <?php echo $this->translate('Paste Is Here'); ?>
+            </div>
+            <div style="display: inline-block;">
+                <div class="samplead square_button_ltr"></div>
+                <br />
+                <div class="samplead vertical_banner"></div>
+            </div>
+            
+            <br /><br /><br /><br /><br />
+            
+            <div class="square_button_b">
+                <?php echo file_get_contents(ROOT_NAME . '/square_button_b.html'); ?>
+            </div>
+            <div class="samplead leaderboard_b"></div>
+        </div>
+        
+        <div class="tabbed-panel tab6 center-align">
+            <div class="iframeadsample">
+                <h3>
+                    <?php 
+                        echo $this->translate('You website will be loaded here. Just as if the paste ' .
+                            'viewer visited your website.');
+                    ?>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>

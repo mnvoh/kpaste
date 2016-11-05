@@ -1,0 +1,112 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-campaign.phtml
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Edit Campaign');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_DATA_PROVIDED':
+                echo '<p>';
+                echo $this->translate('You provided invalid data in the form!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->error) && $this->error == false):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Campaign was edited successfully and it\'s awaiting approval from our staff.'); ?>
+            <br />
+            <a href="<?php echo $this->url('advertiser', 
+            array('lang'  => substr($this->layout()->language, 0, 2),'action' => 'Campaigns')); ?>">
+                <?php echo $this->translate('Continue'); ?>
+            </a>
+        </p>
+    </div>
+<?php
+endif;
+
+if(isset($this->form)):
+    $form = $this->form;
+
+    $form->setAttribute('action', $this->url('advertiser', array(
+        'lang'      => substr($this->layout()->language, 0, 2),
+        'action'    => 'EditCampaign', 
+        'param1'    => $this->campaignid
+    )));    
+    
+    $form->prepare();
+    
+?>
+    <div class="width60">
+        <h3><?php echo $title; ?></h3>
+<?php
+    echo $this->form()->openTag($form);
+?>
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate('Campaign Title'); ?>:</span>
+            <?php echo $this->formRow($form->get('campaign_title')); ?>
+        </label>
+    </div>
+
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate('Daily Credits Limit'); ?>:</span>
+            <?php echo $this->formRow($form->get('daily_credits')); ?>
+        </label>
+    </div>
+
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate('Campaign URL'); ?>:</span>
+            <?php echo $this->formRow($form->get('campaign_url')); ?>
+        </label>
+    </div>
+
+    <?php echo $this->formRow($form->get('csrf')); ?>
+    
+    <?php 
+    $form->get('submit')->setAttribute('value', $this->translate('Edit Campaign'));
+    echo $this->formRow($form->get('submit')); 
+    ?>
+
+<?php
+    echo $this->form()->closeTag();
+?>
+    </div>
+<?php
+endif;
+?>

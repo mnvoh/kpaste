@@ -1,0 +1,76 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    announcements.phtml
+ * @createdat   Aug 5, 2013 3:05:02 PM
+ */
+
+$title = $this->translate( 'Announcements' );
+$this->headTitle( $title );
+?>
+
+<h2 class="center-align"><?php echo $title; ?></h2>
+<?php if( $this->news ): ?>
+
+    <?php foreach( $this->news as $news ): ?>
+    <div class="announcement">
+        <?php 
+        $date = explode('-', KpasteCore\KDateTime\KDateTime::PrefDate($news->newsdate, 'Y-m-d'));
+        $year = intval($date[0]);
+        
+        $month = KpasteCore\KDateTime\KDateTime::PrefMonthName(intval($date[1]));
+        $day = intval($date[2]);
+        ?>
+        <h4>
+            <?php echo $this->escapeHtml( $news->title ); ?>
+        </h4>
+        <p>
+            <span class="announcement-date">
+                <span class="monthname"><?php echo $month; ?></span><br />
+                <span class="day"><?php echo (int)($day / 10); ?></span>
+                <span class="day"><?php echo $day % 10; ?></span><br />
+                <span class="year"><?php echo $year; ?></span>
+            </span>
+            <?php echo preg_replace('/\n/', '<br />', $this->escapeHtml( $news->news )); ?>
+        </p>
+        <?php if( $this->allowEdit ): ?>
+            <footer>
+                <a href='<?php echo $this->url( 'admin', array(
+                    'lang'          => substr($this->layout()->language, 0, 2),
+                    'controller'    => 'SystemSettings',
+                    'action'        => 'PublishAnnouncement',
+                    'param1'        => $news->newsid,
+                    )); ?>'><?php echo $this->translate( 'Edit' ); ?></a>
+                <a href='<?php echo $this->url( 'admin', array(
+                    'lang'          => substr($this->layout()->language, 0, 2),
+                    'controller'    => 'SystemSettings',
+                    'action'        => 'DeleteNews',
+                    'param1'        => $news->newsid,
+                    )); ?>'><?php echo $this->translate( 'Delete' ); ?></a>
+            </footer>
+        <?php endif; ?>
+        <div class="clear"></div>
+    </div>
+    <?php endforeach; ?>
+<br />
+<?php
+echo $this->paginationControl(
+    $this->news,
+    'sliding',
+    array( 'partial/paginator.phtml', 'KpasteCore' ),
+    array( 
+        'controller'    => 'Home',
+        'action'        => 'Announcements'
+    )
+);
+
+?>
+<?php else: ?>
+<h3 class='center-align'><?php echo $this->translate( 'No Announcements Found' ); ?></h3>
+<?php endif; ?>
+

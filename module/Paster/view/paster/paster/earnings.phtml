@@ -1,0 +1,147 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-paste-stats.phtml
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Earnings');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->checkouts)):
+    $totalEarnings = 0;
+    $balance = floor(($this->unpaidForViews / 1000) * $this->pricePerThousand);
+?>
+
+<h2 id="pasterAccountBalance" class="center-align"><?php echo $this->translate('Current account balance'); ?> (<?php echo $this->currency; ?>)</h2>
+<div class="center-align">
+    <script>
+        createFlipBoard('<?php echo $balance; ?>', 'big');
+    </script>
+</div>
+<?php
+if($balance > $this->minBalanceForCheckout):
+?>
+    <div class="center-align">
+        <a class="big-button" href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'checkout')); ?>">
+            <?php echo $this->translate('Checkout Now'); ?>
+        </a>
+    </div>
+<?php
+else:
+?>
+    <p class="center-align">
+        <span class="big-button">
+            <?php
+            $required = ($this->minBalanceForCheckout - $balance) . ' ' . $this->currency;
+            echo sprintf($this->translate('You need %s more to checkout'), $required);
+            ?>
+        </span>
+    </p>
+<?php
+endif;
+?>
+<table cellspacing='0' class='table' id='checkoutsTable'>
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Date Requested'); ?></th>
+            <th><?php echo $this->translate('Amount'); ?></th>
+            <th><?php echo $this->translate('Status'); ?></th>
+            <th><?php echo $this->translate('Transaction Tracking Code'); ?></th>
+            <th><?php echo $this->translate('Transaction Date and Time'); ?></th>
+            <th><?php echo $this->translate('Description'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php 
+    foreach($this->checkouts as $checkout): 
+        if($checkout->status == 'paid') $totalEarnings += $checkout->amount;
+    ?>
+    <tr>
+        <td><?php echo \KpasteCore\KDateTime\KDateTime::PrefDate($checkout->datetime_requested); ?></td>
+        <td><?php echo $checkout->amount; ?></td>
+        <td>
+            <?php 
+            if('pending' == $checkout->status)
+                echo $this->translate('Pending');
+            else if('paid' == $checkout->status)
+                echo $this->translate('Paid');
+            else if('denied' == $checkout->status)
+                echo $this->translate('Denied');
+            ?>
+        </td>
+        <td>
+            <?php 
+            if($checkout->transaction_tracking_code):
+                echo $checkout->transaction_tracking_code;
+            else:
+            ?>
+            <span class="sprite icn-cross" title="<?php echo $this->translate('No Transaction Tracking Code Is Available'); ?>"></span>
+            <?php
+            endif;
+            ?>
+        </td>
+        <td>
+            <?php 
+            if($checkout->transaction_datetime):
+                echo $checkout->transaction_datetime;
+            else:
+            ?>
+            <span class="sprite icn-cross" title="<?php echo $this->translate('No Transaction Date Is Available'); ?>"></span>
+            <?php
+            endif;
+            ?>
+        </td>
+        <td>
+            <?php 
+            if($checkout->description):
+                echo $checkout->description;
+            else:
+            ?>
+            <span class="sprite icn-cross" title="<?php echo $this->translate('No Description Is Available'); ?>"></span>
+            <?php
+            endif;
+            ?>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td><?php echo $this->translate('Total Income'); ?></td>
+            <td><?php echo $totalEarnings; ?></td>
+            <td colspan='4'></td>
+        </tr>
+    </tfoot>
+</table>
+<?php
+endif;

@@ -1,0 +1,152 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    extend-campaign.phtml
+ * @createdat   Jul 26, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Extend Campaign');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_CAMPAIGNID':
+                echo '<p>';
+                echo $this->translate('This campaign does not exist, or has been deleted.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'CAMPAIGN_IS_NOT_YOURS':
+                echo '<p>';
+                echo $this->translate('This is not your campaign and you don\'t have permission to view its stats.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'NOT_ENOUGH_BALANCE':
+                echo '<p>';
+                echo sprintf($this->translate('Sorry! But your balance is not enough to extend this ' .
+                    'campaign. Your balance is %s%s. You need %s%s to create this campaign.'), 
+                        $this->currency, $this->account_balance, $this->currency, $this->price);
+                echo '<a href="' . $this->url('advertiser', array('lang'=> substr($this->layout()->language, 0, 2),'action' => 'Recharge')) . '" target="_blank">';
+                echo $this->translate('You need to recharge first and then try again.') . '</a>';
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_EXTRA_CREDITS':
+                echo '<p>';
+                echo $this->translate('Invalid value entered for the extra credits field. A value between 1000 and 50000 is expected.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_STATUS':
+                echo '<p>';
+                echo $this->translate('Only active and finished campaigns can be extended.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+
+if(isset($this->error) && $this->error == false):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Campaign was extended successfully.'); ?>
+            <br />
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'Campaigns')); ?>">
+                <?php echo $this->translate('Continue'); ?>
+            </a>
+        </p>
+    </div>
+<?php
+endif;
+
+if(isset($this->campaignid)):
+    $formAction = $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'ExtendCampaign', 'param1' => $this->campaignid));    
+?>
+    <p><?php echo $this->translate('Please choose an amount to extend your campaign by it. Remember that you should have enough balance in your account.'); ?></p>
+    <div class="width60">
+        <form method='post' action='<?php echo $formAction; ?>'>
+            <div class="formRow">
+                <label>
+                    <span><?php echo $this->translate('Extra Credits'); ?>:</span>
+                    <select name="extraCredits" id='extraCredits'>
+                        <option value='1000'>1000</option>
+                        <option value='2000'>2000</option>
+                        <option value='3000'>3000</option>
+                        <option value='5000'>5000</option>
+                        <option value='10000'>10000</option>
+                        <option value='15000'>15000</option>
+                        <option value='20000'>20000</option>
+                        <option value='50000'>50000</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class='formRow'>
+                <table class="table" border='0'>
+                    <tr>
+                        <td><?php echo $this->translate('Total Price'); ?></td> 
+                        <td>
+                            <?php echo $this->currency; ?>
+                            <span id='totalPrice'>0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->translate('Total Price With Discount'); ?>&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <?php echo $this->currency; ?>
+                            <span id='totalPriceDiscounted'>0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->translate('Unit Price'); ?></td>
+                        <td>
+                            <?php echo $this->currency; ?>
+                            <span id='unitPrice'>0</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <input type='hidden' id='localPriceFactor' value='<?php echo $this->localPriceFactor; ?>' />
+            <input type='hidden' id='campaignPrice' value='<?php echo $this->campaignPrice; ?>' />
+            <input type='hidden' id='campaignScope' value='<?php echo $this->campaignScope; ?>' />
+            <input type='hidden' id='discountFactor' value='<?php echo $this->discountFactor; ?>' />
+
+            <input type='submit' value='<?php echo $this->translate('Extend Campaign'); ?>' />
+        </form>
+    </div>
+    <?php
+endif;
+?>
+
+<script src="/js/campaign.js"></script>
+<script>
+    updateExtraCreditsPrices();
+</script>

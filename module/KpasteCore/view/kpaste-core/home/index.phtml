@@ -1,0 +1,191 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    index.phtml
+ * @createdat   Aug 13, 2013 4:41:57 PM
+ */
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'INVALID_DATA_PROVIDED':
+                echo '<p>';
+                echo $this->translate('Invalid data provided. Please check again.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+elseif ( isset($this->error) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Paste was saved successfully.'); ?> 
+        </p>
+    </div>
+<?php
+endif;
+?>
+
+<div class="latestPastes">
+    <h4 class="center-align"><?php echo $this->translate('Latest Public Pastes'); ?></h4>
+    <table class="table" id="latestPastesTable">
+        <thead>
+            <tr style="max-width: 300px;">
+                <th><?php echo $this->translate('Paster'); ?></th>
+                <th><?php echo $this->translate('Paste'); ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach( $this->pastes as $paste ): ?>
+            <tr>
+                <td>
+                    <?php 
+                    if( $paste->userid ):
+                        $userUrl = $this->url('kpastecore', array(
+                            'lang'      => substr($this->layout()->language, 0, 2),
+                            'controller'=> 'ViewPaste',
+                            'action'    => 'user',
+                            'param1'    => $paste->userid,
+                        ));
+                    ?>
+                        <a href="<?php echo $userUrl; ?>" title="<?php echo $paste->username; ?>">
+                            <?php echo $paste->username; ?>
+                        </a>
+                    <?php
+                    else:
+                        echo $this->translate('Guest');
+                    endif;
+                    ?>
+                </td>
+                <td>
+                    <a href="<?php echo $this->url('kpastecore', array(
+                        'lang'          => substr($this->layout()->language, 0, 2),
+                        'controller'    => 'ViewPaste',
+                        'action'        => 'view',
+                        'param1'        => $paste->pasteid,
+                        )); ?>" title="<?php echo $paste->title; ?>" target="_blank">
+                        <?php echo $paste->title; ?>
+                    </a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+<?php
+if(isset($this->newPasteForm)):
+    $title = $this->translate('Compose new paste');
+
+?> 
+    <div class="anonComposePaste">
+        <h4><?php echo $title; ?></h4> 
+<?php
+        $form = $this->newPasteForm;
+        $form->setAttribute('action', $this->url('kpastecore', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'Home', 'action' => 'index')));
+        $form->prepare();
+        echo $this->form()->openTag($form);
+    ?>       
+        <div class="formRow">
+            <label>
+                <span><?php echo $this->translate('Paste title'); ?></span>
+                <?php echo $this->formRow(
+                        $form->get('title')->setValue($this->translate('--untitled--'))
+                ); ?>
+            </label>
+        </div>
+
+        <div class="formRow pasteFormRow">
+            <label>
+                <?php 
+                $form->get('paste')->setAttribute('placeholder', $this->translate('Input your paste here...'));
+                echo $this->formRow($form->get('paste')); 
+                ?>
+            </label>
+        </div>
+
+        <div class="formRow">
+            <label>
+                <span><?php echo $this->translate('Password (Optional)'); ?></span>
+                <?php 
+                    echo $this->formRow(
+                        $form->get('password')->setAttribute('autocomplete', 'off')
+                    ); 
+                ?>
+            </label>
+        </div>
+        <input type="hidden" name="exposure" value='public' />
+        <div class="formRow">
+            <label>
+                <span><?php echo $this->translate('Syntax'); ?></span>
+                <?php echo $this->formRow($form->get('syntax')); ?>
+            </label>
+        </div>
+
+        <?php 
+        echo $this->formRow($form->get('csrf')); 
+        ?>
+        <button type="submit" title="<?php echo $this->translate('Save Paste'); ?>">
+            <span class="sprite icn-save"></span>
+            <?php echo $this->translate('Save Paste'); ?>
+        </button>
+
+        <?php
+            echo $this->form()->closeTag();
+        ?>
+        
+        <div id="pastePreview" class="">
+        </div>
+
+        <script type="text/javascript" src="/synhl/scripts/shCore.js"></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPlain.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushAS3.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushBash.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushColdFusion.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCSharp.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCpp.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushCss.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushDelphi.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushDiff.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushErlang.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushGroovy.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJScript.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJava.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushJavaFX.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPerl.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPhp.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPowerShell.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushPython.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushRuby.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushScala.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushSql.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushVb.js'></script>
+        <script type="text/javascript" src='/synhl/scripts/shBrushXml.js'></script>
+
+        <script type="text/javascript" src='/js/paste.js'></script>
+
+        <script type="text/javascript">
+            updatePastePreview();
+        </script>
+        <link href="/synhl/styles/shCore.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/synhl/styles/shThemeDefault.css" media="screen" rel="stylesheet" type="text/css">
+    </div>
+<?php
+endif;
+?>
+<div class="clear"></div>

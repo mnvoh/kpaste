@@ -1,0 +1,176 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    new-paste.php
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+$title = $this->translate('Upload Banner');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'INVALID_DATA_PROVIDED':
+                echo '<p>';
+                echo $this->translate('Invalid data provided. Please check again.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'CAMPAIGN_ID_MISSING_OR_INVALID':
+                echo '<p>';
+                echo $this->translate('Either the campaign you are refering to doesn\'t ' .
+                    'exist or campaign ID has not been provided.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ILLEGAL_CAMPAIGN_ACCESS':
+                echo '<p>';
+                echo $this->translate( 'You don\'t have permission to access this campaign!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'CAMPAIGN_NOT_MODIFIABLE':
+                echo '<p>';
+                echo $this->translate( 'You don\'t have permission to modify this campaign!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'NO_BANNER_REQUIRED':
+                echo '<p>';
+                echo $this->translate( 'This is an iframe campaign and it doesn\'t need a banner.' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'UPLOAD_ERROR':
+                echo '<p>';
+                echo $this->translate( 'An error occured while uploading the file.' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate( 'Permission Denied! Please login to continue.' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'UPLOADED_FILE_IS_TOO_LARGE':
+                echo '<p>';
+                echo sprintf( $this->translate( 'The size of the uploaded file is too large. ' .
+                    'Maximum file size is %s KBs' ), $this->maxBannerSize );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_BANNER_TYPE':
+                echo '<p>';
+                echo $this->translate( 'This is not an allowed file type!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate( 'An unknown error has occured!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+elseif ( isset($this->error) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Banner was uploaded successfuly.'); ?><br />
+            
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'Campaigns')); ?>">
+                <?php echo $this->translate('Continue'); ?></a>
+            <a href="<?php echo $this->url('advertiser', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'UploadBanner', 'param1' => $this->campaignid)); ?>">
+                <?php echo $this->translate('Try Again'); ?></a>
+        </p>
+    </div>
+<?php
+endif;
+
+
+if(isset($this->form)):
+?>
+<h6 class="center-align">
+    <a class="big-button" href="http://kcoder.ir" title="<?php echo $this->translate('kCoder'); ?>" target="_blank">
+        <?php echo $this->translate('Order Your Banner Now'); ?>
+    </a>
+    <br />
+    <?php echo $this->translate('Please note that this is just for your conveniese and you can get your '. 
+            'banner from wherever you\'re most comfortable with.'); ?>
+</h6>
+
+<?php
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('advertiser', 
+            array('lang' => substr($this->layout()->language, 0, 2),'action' => 'UploadBanner', 'param1' => $this->campaignid)));
+    $form->prepare();
+    echo $this->form()->openTag($form);
+?>
+    <div class="width60">
+        <p><?php echo $this->translate( 'Maximum banner size:' ); ?> <?php echo $this->maxBannerSize / 1024; ?> KBs</p>
+        <?php if(isset($this->bannerDims) && $this->bannerDims): ?>
+        <p><?php echo $this->translate('Banner dimensions should be:'); ?> 
+            <?php echo $this->bannerDims['width']; ?>x<?php echo $this->bannerDims['height']; ?> px
+        </p>
+        <?php endif; ?>
+        <div class="formRow">
+            <label>
+                <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $this->maxBannerSize; ?>" />
+                <span><?php echo $this->translate('Choose banner to upload'); ?>:</span>
+                <?php echo $this->formRow($form->get('banner-file')); ?>
+            </label>
+        </div>
+
+        <input type="submit" value="<?php echo $this->translate('Upload Banner'); ?>" />
+
+        <?php
+        echo $this->form()->closeTag();
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->banner)):
+?>
+    <br />
+    <div class="current-banner center-align">
+        <span class="banner-preview">
+            <?php
+            if($this->banner):
+                echo $this->translate('Current Banner');
+                echo '<br />';
+                $extension = end(explode('.', $this->banner));
+                $banerUrl = $this->url('kpastecore', array(
+                        'lang'      => substr($this->layout()->language, 0, 2),
+                        'controller'=> 'ViewPaste',
+                        'action'    => 'banner',
+                        'param1'    => $this->campaignid,
+                    )); 
+                if($extension == 'swf'):
+                    echo \KpasteCore\Utilities::getFlashMarkup($banerUrl, $this->bannerDims);
+                else:
+                ?>
+                    <img src='<?php echo $banerUrl; ?>' 
+                         width='<?php echo $this->bannerDims['width']; ?>' height='<?php echo $this->bannerDims['height']; ?>'/>
+                <?php
+                endif;
+            else:
+                echo $this->translate('No Banner Uploaded Yet');
+            endif;
+            ?>
+        </span>
+    </div>
+<?php
+endif;

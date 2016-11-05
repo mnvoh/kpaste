@@ -1,0 +1,136 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    paginator.phtml
+ * @createdat    Jul 31, 2013 3:05:02 PM
+ */
+if($this->pageCount): 
+    $extraParams = '&count=' . $this->itemCountPerPage;
+    $url = null;
+    if( isset( $this->url ) )
+        $url = $this->url;
+    else if( isset( $this->controller ) && isset( $this->action )  && isset( $this->param1 ) )
+        $url = $this->url( $this->route, array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => $this->controller,
+            'action'        => $this->action,
+            'param1'        => $this->param1,
+        ));
+    else if( isset( $this->controller ) && isset( $this->action ) )
+        $url = $this->url( $this->route, array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => $this->controller,
+            'action'        => $this->action,
+        ));
+    else if( isset( $this->controller ) )
+        $url = $this->url( $this->route, array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => $this->controller,
+        ));
+    else if( isset( $this->action ) )
+        $url = $this->url( $this->route, array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'action'        => $this->action,
+        ));
+    else if( isset( $this->action )  && isset( $this->param1 ) )
+        $url = $this->url( $this->route, array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'action'        => $this->action,
+            'param1'        => $this->param1,
+        ));
+    
+    $queryParamName = isset( $this->queryParamName ) ? $this->queryParamName : 'page';
+    ?>
+    <div class="pagination">
+        <ul>
+            <!-- First page link -->
+            <?php if(1 != $this->current): ?>
+            <li>
+                <a href="<?php echo $url ?>?<?php echo $queryParamName; ?>=1<?php echo $extraParams; ?>">&lt;&lt;</a>
+            </li>
+            <?php else: ?>
+            <li class="disabled">
+                <span>&lt;&lt;</span>
+            </li>
+            <?php endif; ?>
+
+            <!-- Previous page link -->
+            <?php if(isset($this->previous)): ?>
+            <li>
+                <a href="<?php echo $url; ?>?<?php echo $queryParamName; ?>=<?php echo $this->previous; ?><?php echo $extraParams; ?>">
+                    &lt;
+                </a>
+            </li>
+            <?php else: ?>
+            <li class="disabled">
+                <span>&lt;</span>
+            </li>
+            <?php endif; ?>
+
+
+            <!-- Numbered page links -->
+            <?php foreach($this->pagesInRange as $page): ?>
+                <?php if($page != $this->current): ?>
+                    <li>
+                        <a href="<?php echo $url; ?>?<?php echo $queryParamName; ?>=<?php echo $page; echo $extraParams; ?>">
+                            <?php echo $page; ?>
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="disabled">
+                        <span><?php echo $page; ?></span>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Next Page Link -->
+            <?php if(isset($this->next)): ?>
+                <li>
+                    <a href="<?php echo $url; ?>?<?php echo $queryParamName; ?>=<?php echo $this->next; echo $extraParams; ?>">
+                        &gt;
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <span>&gt;</span>
+                </li>
+            <?php endif; ?>
+
+
+            <!-- Last page link -->
+            <?php if($this->pageCount != $this->current): ?>
+            <li>
+                <a href="<?php echo $url; ?>?<?php echo $queryParamName; ?>=<?php echo $this->pageCount; echo $extraParams; ?>">&gt;&gt;</a>
+            </li>
+            <?php else: ?>
+            <li class="disabled">
+                <span>&gt;&gt;</span>
+            </li>
+            <?php endif; ?>
+        </ul>
+        
+        <ul title='<?php echo $this->translate('Items count in each page'); ?>'>
+            <li>
+                <a href='<?php echo $url ?>?<?php echo $queryParamName; ?>=<?php echo $this->current; ?>&count=5'>5</a>
+            </li>
+            <li>
+                <a href='<?php echo $url ?>?<?php echo $queryParamName; ?>=<?php echo $this->current; ?>&count=10'>10</a>
+            </li>
+            <li>
+                <a href='<?php echo $url ?>?<?php echo $queryParamName; ?>=<?php echo $this->current; ?>&count=20'>20</a>
+            </li>
+            <li>
+                <a href='<?php echo $url ?>?<?php echo $queryParamName; ?>=<?php echo $this->current; ?>&count=50'>50</a>
+            </li>
+            <li>
+                <a href='<?php echo $url ?>?<?php echo $queryParamName; ?>=<?php echo $this->current; ?>&count=100'>100</a>
+            </li>
+        </ul>
+    </div>
+<?php endif; ?>
+

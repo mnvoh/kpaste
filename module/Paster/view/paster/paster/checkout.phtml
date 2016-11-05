@@ -1,0 +1,70 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-paste-stats.phtml
+ * @createdat   Jul 15, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Earnings');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'NOT_ENOUGH_BALANCE_TO_CHECKOUT':
+                echo '<p>';
+                echo sprintf($this->translate('Sorry! But your balance is not enought to checkout. Your balance is %s%s. You need at least %s%s to checkout.'), $this->currency, $this->balance, $this->currency, $this->min);
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ACCOUNT_NOT_VERIFIED':
+                echo '<p>';
+                echo $this->translate('Your account has not been verified yet. You need to verify your account using the link in the verification email sent to you.');
+                echo '<a href="'.$this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'ResendVerificationEmail')) .'">' . $this->translate('Resend Verification Email') . '</a>';
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->error) && $this->error == false):
+?>
+    <div class="notification">
+        <p>
+            <?php echo $this->translate('Your checkout request has been registered. Remember that your request may take 1 to 14 workdays to be processed, depending on the amount of requests.'); ?>
+            <a href="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'earnings')); ?>"><?php echo $this->translate('Continue'); ?></a>
+        </p>
+    </div>
+<?php
+elseif(isset($this->balance) && !isset($this->error)):
+?>
+    <h2><?php echo sprintf($this->translate('Do you want to checkout %s%s out of your account?'), $this->balance, $this->currency); ?></h2>
+    <form action="<?php echo $this->url('paster', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'checkout')); ?>" method="post">
+        <button type="submit" name="confirm" value="NO"><?php echo $this->translate('No'); ?></button>
+        <button type="submit" name="confirm" value="YES"><?php echo $this->translate('Yes'); ?></button>
+    </form>
+<?php
+endif;

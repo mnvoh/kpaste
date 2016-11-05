@@ -1,0 +1,412 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-tickets.phtml
+ * @createdat   Aug 07, 2013 6:50:05 PM
+ */
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ATTACHMENT_UPLOAD_FAILED':
+                echo '<p>';
+                echo $this->translate( 'Uploading attachment file failed!' );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_DATA_PROVIDED':
+                echo '<p>';
+                echo $this->translate('Please fill out the form correctly.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ATTACHMENT_SIZE_LIMIT_EXCEEDED':
+                $maxSize = $this->attachmentSize / 1024;
+                echo '<p>';
+                echo sprintf( $this->translate( 'The maximum size for attachments is %s KBs!' ), $maxSize );
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_ATTACHMENT_TYPE':
+                echo '<p>';
+                echo $this->translate('The attachment type is invalid!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch; 
+
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->ticket)): 
+?>
+<table class="table" id='ticketInfoTable'>
+    <thead>
+        <tr>
+            <th><?php echo $this->translate( 'Ticket Number' ); ?></th>
+            <th><?php echo $this->translate( 'Title' ); ?></th>
+            <th><?php echo $this->translate( 'Opend At' ); ?></th>
+            <th><?php echo $this->translate( 'Status' ); ?></th>
+            <th><?php echo $this->translate( 'Importance' ); ?></th>
+            <th><?php echo $this->translate( 'Department' ); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><?php echo $this->ticket->ticketid; ?></td>
+            <td><?php echo $this->escapeHtml( $this->ticket->title ); ?></td>
+            <td>
+                <?php echo KpasteCore\KDateTime\KDateTime::PrefDate($this->ticket->opened_at); ?>
+            </td>
+            <td>
+                <?php
+                switch( $this->ticket->status )
+                {
+                    case 'pending_admin':
+                        echo $this->translate( 'Pending Administrators\' Response' );
+                        break;
+                    case 'pending_user':
+                        echo $this->translate( 'Pending user\'s Response' );
+                        break;
+                    case 'closed':
+                        echo $this->translate( 'Closed' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                switch( $this->ticket->importance )
+                {
+                    case 'low':
+                        echo $this->translate( 'Low' );
+                        break;
+                    case 'medium':
+                        echo $this->translate( 'Medium' );
+                        break;
+                    case 'high':
+                        echo $this->translate( 'High' );
+                        break;
+                }
+                ?>
+            </td>
+            <td><?php echo $this->ticket->department; ?></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<div class="width700p auto-margin">
+    <?php
+    $usersInvolved = array();
+    foreach( $this->messages as $message ): 
+    ?>
+    <table class='message-table message-from-<?php echo $message->user_type; ?>' cellspacing="0">
+        <thead>
+            <tr>
+                <td><?php echo $this->translate( 'From' ) . ': ' . $message->firstname . ' ' 
+                        . $message->lastname; ?></td>
+                <td>
+                    <?php 
+                    echo $this->translate('At') . ' ' . KpasteCore\KDateTime\KDateTime::PrefDate( $message->msgdate );
+                    ?>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan='100' <?php echo ($message->status == 'unread') ? 'class="new-message"' : ''; ?>>
+                    <?php 
+                    $msg = $this->escapeHtml( $message->message );
+                    echo preg_replace("/\n/", '<br />', $msg); 
+                    ?>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="100" class="center-align">
+                    <?php
+                    if( $message->attachment ):
+                    ?>
+                    <a href='<?php echo $this->url( 'support', array( 
+                        'lang'   => substr($this->layout()->language, 0, 2),
+                        'action' => 'DownloadAttachment',
+                        'param1' => $message->tmsgid ) ); ?>' class='download-link'
+                        title='<?php echo $this->translate( 'Download Attachment' ); ?>'>
+                        <span class='sprite icn-download'></span>
+                        <?php echo $this->translate('Download'); ?> 
+                        '<?php echo $message->attachment_name; ?>'
+                    </a>
+                    <?php
+                    endif;
+                    ?>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="clear"></div>
+    <?php endforeach; ?>
+
+    <form action="<?php echo $this->url('support', array(
+                'lang'      => substr($this->layout()->language, 0, 2),
+                'action'    => 'ViewTickets',
+                'param1'    => $this->ticket->ticketid
+            )); ?>" method="post" enctype="multipart/form-data">
+        <textarea name="message" placeholder="<?php echo $this->translate( 'New Message' ); ?>"></textarea> <br />
+        <input type="file" name="attachment" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $this->attachmentSize; ?>" />
+        <br /><br />
+        <button type="submit" name="action" value="newmessage">
+            <?php echo $this->translate('Post Message'); ?>
+        </button>
+        <?php echo $this->translate( 'Or' ); ?>
+        <button type="submit" name="action" value="close">
+            <?php echo $this->translate('Close Ticket'); ?>
+        </button>
+    </form>
+</div>
+<?php
+elseif( isset( $this->tickets ) ):
+?>
+<div class="center-align">
+    <button type="button" onclick="document.location.href = 
+                '<?php echo $this->url('support', array(
+                    'lang'      => substr($this->layout()->language, 0, 2),
+                    'action'    => 'SubmitTicket',
+                    )); ?>'">
+        <span class='sprite icn-edit'></span>
+        <?php echo $this->translate('Submit New Ticket'); ?>
+    </button>
+</div>
+<br />
+<table class="table" id="ticketsTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th><?php echo $this->translate( 'Department' );    ?></th>
+            <th><?php echo $this->translate( 'Title' );         ?></th>
+            <th><?php echo $this->translate( 'Opened At' );     ?></th>
+            <th><?php echo $this->translate( 'Status' );        ?></th>
+            <th><?php echo $this->translate( 'Importance' );    ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach( $this->tickets as $ticket ): ?>
+        <tr>
+            <td><?php echo $ticket->ticketid; ?></td>
+            <td><?php echo $ticket->department; ?></td>
+            <td><a href="<?php echo $this->url('support',array(
+                'lang'      => substr($this->layout()->language, 0, 2),
+                'action'    => 'ViewTickets',
+                'param1'    => $ticket->ticketid,
+            )); ?>"><?php echo $this->escapeHtml( $ticket->title ); ?></a></td>
+            <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate($ticket->opened_at); ?></td>
+            <td>
+                <?php
+                switch( $ticket->status )
+                {
+                    case 'pending_admin':
+                        echo $this->translate( 'Pending Administrators\' Response' );
+                        break;
+                    case 'pending_user':
+                        echo $this->translate( 'Pending user\'s Response' );
+                        break;
+                    case 'closed':
+                        echo $this->translate( 'Closed' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                switch( $ticket->importance )
+                {
+                    case 'low':
+                        echo $this->translate( 'Low' );
+                        break;
+                    case 'medium':
+                        echo $this->translate( 'Medium' );
+                        break;
+                    case 'high':
+                        echo $this->translate( 'High' );
+                        break;
+                }
+                ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+echo $this->paginationControl( 
+    $this->tickets,
+    'sliding',
+    array( 'partial/paginator.phtml', 'Support' ),
+    array(
+        'route'     => 'support',
+        'action'    => 'ViewTickets'
+    )
+);
+elseif( isset( $this->pendingTickets ) && isset( $this->otherTickets ) ):
+?>
+<h3 class="center-align"><?php echo $this->translate('Tickets pending your response'); ?></h3>
+    <table class="table" id="pendingTicketsTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th><?php echo $this->translate( 'Department' );    ?></th>
+            <th><?php echo $this->translate( 'Title' );         ?></th>
+            <th><?php echo $this->translate( 'Opened At' );     ?></th>
+            <th><?php echo $this->translate( 'Status' );        ?></th>
+            <th><?php echo $this->translate( 'Importance' );    ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach( $this->pendingTickets as $ticket ): ?>
+        <tr>
+            <td><?php echo $ticket->ticketid; ?></td>
+            <td><?php echo $ticket->department; ?></td>
+            <td><a href="<?php echo $this->url('support',array(
+                'lang'      => substr($this->layout()->language, 0, 2),
+                'action'    => 'ViewTickets',
+                'param1'    => $ticket->ticketid,
+            )); ?>"><?php echo $this->escapeHtml( $ticket->title ); ?></a></td>
+            <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate($ticket->opened_at); ?></td>
+            <td>
+                <?php
+                switch( $ticket->status )
+                {
+                    case 'pending_admin':
+                        echo $this->translate( 'Pending Administrators\' Response' );
+                        break;
+                    case 'pending_user':
+                        echo $this->translate( 'Pending user\'s Response' );
+                        break;
+                    case 'closed':
+                        echo $this->translate( 'Closed' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                switch( $ticket->importance )
+                {
+                    case 'low':
+                        echo $this->translate( 'Low' );
+                        break;
+                    case 'medium':
+                        echo $this->translate( 'Medium' );
+                        break;
+                    case 'high':
+                        echo $this->translate( 'High' );
+                        break;
+                }
+                ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+    echo $this->paginationControl( 
+        $this->pendingTickets,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Support' ),
+        array(
+            'route'     => 'support',
+            'action'    => 'ViewTickets',
+            'queryParamName'=> 'ppage',
+        )
+    );
+?>
+<br /><br /><br />
+<h3 class="center-align"><?php echo $this->translate('Other Tickets'); ?></h3>
+<table class="table" id="otherTicketsTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th><?php echo $this->translate( 'Department' );    ?></th>
+            <th><?php echo $this->translate( 'Title' );         ?></th>
+            <th><?php echo $this->translate( 'Opened At' );     ?></th>
+            <th><?php echo $this->translate( 'Status' );        ?></th>
+            <th><?php echo $this->translate( 'Importance' );    ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach( $this->otherTickets as $ticket ): ?>
+        <tr>
+            <td><?php echo $ticket->ticketid; ?></td>
+            <td><?php echo $ticket->department; ?></td>
+            <td><a href="<?php echo $this->url('support',array(
+                'lang'      => substr($this->layout()->language, 0, 2),
+                'action'    => 'ViewTickets',
+                'param1'    => $ticket->ticketid,
+            )); ?>"><?php echo $this->escapeHtml( $ticket->title ); ?></a></td>
+            <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate($ticket->opened_at); ?></td>
+            <td>
+                <?php
+                switch( $ticket->status )
+                {
+                    case 'pending_admin':
+                        echo $this->translate( 'Pending Administrators\' Response' );
+                        break;
+                    case 'pending_user':
+                        echo $this->translate( 'Pending user\'s Response' );
+                        break;
+                    case 'closed':
+                        echo $this->translate( 'Closed' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php
+                switch( $ticket->importance )
+                {
+                    case 'low':
+                        echo $this->translate( 'Low' );
+                        break;
+                    case 'medium':
+                        echo $this->translate( 'Medium' );
+                        break;
+                    case 'high':
+                        echo $this->translate( 'High' );
+                        break;
+                }
+                ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+    echo $this->paginationControl( 
+        $this->otherTickets,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Support' ),
+        array(
+            'route'     => 'support',
+            'action'    => 'ViewTickets',
+            'queryParamName'=> 'opage',
+        )
+    );
+endif;

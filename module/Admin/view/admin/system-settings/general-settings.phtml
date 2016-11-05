@@ -1,0 +1,248 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    general-settings.phtml
+ * @createdat   sep 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('General Settings');
+$this->headTitle($title);
+$url = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemSettings',
+        'action'        => 'GeneralSettings',
+    ));
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_DATA_PROVIDED':
+                echo '<p>';
+                echo $this->translate('The provided data is invalid!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset($this->error) && !$this->error ):
+?>
+<div class='notification'>
+    <p>
+        <?php echo $this->translate( 'Settings successfully saved!' ); ?>
+        <a href="<?php echo $url; ?>"><?php echo $this->translate('Continue'); ?></a>
+    </p>
+</div>
+<?php
+endif;
+
+if( isset( $this->form ) ):
+?>
+<h3><?php echo $title; ?></h3>
+<div class="width70">
+<?php
+    $form = $this->form;
+    $form->setAttribute( 'action', $url );
+    $form->prepare();
+    
+    echo $this->form()->openTag( $form );
+?>
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Website Name' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'site-name' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Website URL' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'site-url' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Admin Email' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'admin-email' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Theme' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'theme' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Language' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'language' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Text Direction' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'direction' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Locale' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'locale' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Peyment Per Thousand' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'payment-per-thousand' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span title="<?php echo $this->translate( 'Left, Top and Right Square Button Price' ); ?>">
+                <?php echo $this->translate( 'Left, Top and Right Square Button Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-sqbtn-lrt' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Bottom Square Button Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-sqbtn-b' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Vertical Banner Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-verbnr' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Top Leaderboard Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-leaderboard-t' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Bottom Leaderboard Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-leaderboard-b' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Inline Frame Price' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'price-iframe' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Local Price Factor' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'local-price-factor' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Discount Factor' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'discount-factor' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span title="<?php echo $this->translate( 'Minimum Balance for Checkout' ); ?>">
+                <?php echo $this->translate( 'Minimum Balance for Checkout' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'min-balance-for-checkout' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Minimum Recharge Amount' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'min-recharge-amount' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Currency' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'currency' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Calendar' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'calendar' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Maximum Banner Size(KB)' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'max-banner-size' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Maximum Attachment Size(KB)' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'max-attachment-size' ) ); ?>
+        </label>
+    </div>
+    
+    <div class="formRow">
+        <label>
+            <span><?php echo $this->translate( 'Keep Activities for(days)' ); ?></span>
+            <?php echo $this->formRow( $form->get( 'max-activities-age' ) ); ?>
+        </label>
+    </div>
+    
+    
+    
+    <button type='submit'>
+        <?php echo $this->translate( 'Save These Settings' ); ?>
+    </button>
+    <button type="button" onclick="document.location.href='<?php echo $url; ?>';">
+        <?php echo $this->translate( 'Cancel Changes' ); ?>
+    </button>
+    <?php
+        echo $this->form()->closeTag();
+?>
+</div>
+<?php
+endif;

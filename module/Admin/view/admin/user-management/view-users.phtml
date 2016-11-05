@@ -1,0 +1,298 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-users.phtml
+ * @createdat   aug 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Users');
+$this->headTitle($title);
+
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INVALID_USER_ID':
+                echo '<p>';
+                echo $this->translate('Invalid user ID has been provided!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if( isset( $this->users ) ):
+    $route = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemLog',
+        'action'        => 'ViewCheckouts',
+    ));
+?>
+<h3 class="center-align"><?php echo $this->translate('List of all users'); ?></h3>
+<table class="table" id="usersTable">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate( 'User ID' ); ?></th>
+            <th><?php echo $this->translate( 'Username' ); ?></th>
+            <th><?php echo $this->translate( 'Email' ); ?></th>
+            <th><?php echo $this->translate( 'Full Name' ); ?></th>
+            <th><?php echo $this->translate( 'Reg. Date' ); ?></th>
+            <th><?php echo $this->translate( 'Status' ); ?></th>
+            <th><?php echo $this->translate( 'User Type' ); ?></th>
+            <th><?php echo $this->translate( 'Ticket' ); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+    foreach( $this->users as $user ):
+        $viewUserLink = $this->url( 'admin', array(
+            'lang'          => substr($this->layout()->language, 0, 2),
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'param1'        => $user->userid
+        ));
+?>
+        <tr class="cursor-pointer" onclick="window.open('<?php echo $viewUserLink; ?>');">
+            <td><?php echo $user->userid; ?></td>
+            <td><?php echo $user->username; ?></td>
+            <td><?php echo $user->email; ?></td>
+            <td><?php echo $user->firstname . ' ' . $user->lastname; ?></td>
+            <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $user->reg_date ); ?></td>
+            <td>
+                <?php 
+                switch( $user->account_status )
+                {
+                    case 'pending':
+                        echo $this->translate( 'Pending' );
+                        break;
+                    case 'verified':
+                        echo $this->translate( 'Verified' );
+                        break;
+                    case 'suspended':
+                        echo $this->translate( 'Suspended' );
+                        break;
+                    case 'deleted':
+                        echo $this->translate( 'Deleted' );
+                        break;
+                }
+                ?>
+            </td>
+            <td>
+                <?php 
+                if( $user->user_type == 'paster' )
+                    echo $this->translate( 'Paster' );
+                else 
+                    echo $this->translate( 'Advertiser' );
+                ?>
+            </td>
+            <td>
+                <form action="<?php 
+                    echo $this->url('support', array(
+                        'action'    => 'SubmitTicket',
+                        'param1'    => $user->userid,
+                    ));
+                    ?>" method="get" target="_blank" class="center-align">
+                    <button type="submit" class="padding5" onclick="stopPropagationOnEvent(event);">
+                        <span class="sprite icn-support"></span>
+                    </button>
+                </form>
+            </td>
+        </tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+<br />
+<?php
+    echo $this->paginationControl(
+        $this->users,
+        'sliding',
+        array( 'partial/paginator.phtml', 'Admin' ),
+        array( 
+            'route'         => 'admin', 
+            'controller'    => 'UserManagement',
+            'action'        => 'ViewUsers',
+            'queryParamName'=> 'page',
+        )
+    );
+elseif( isset( $this->user ) ):
+?>
+<table class='table' id='myAccountTable'>
+    <tr>
+        <td><?php echo $this->translate( 'User ID' ); ?></td>
+        <td><?php echo $this->user->userid; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Username' ); ?></td>
+        <td><?php echo $this->user->username; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Email' ); ?></td>
+        <td><?php echo $this->user->email; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'First Name' ); ?></td>
+        <td><?php echo $this->user->firstname; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Last Name' ); ?></td>
+        <td><?php echo $this->user->lastname; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Email Verification Code' ); ?></td>
+        <td><?php echo $this->user->email_verification_code; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Registration Date' ); ?></td>
+        <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $this->user->reg_date ); ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Account Status' ); ?></td>
+        <td><?php echo $this->user->account_status; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Cell Phone Number' ); ?></td>
+        <td><?php echo $this->user->cell_number; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Last Login Time' ); ?></td>
+        <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $this->user->last_login_time ); ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Last Ip Address' ); ?></td>
+        <td>
+            <?php 
+            $this->ipInfo->setIp( $this->user->last_ip_addr );
+            $flagPath = $this->ipInfo->getFlagPath();
+            $country = $this->ipInfo->getLongName();
+            ?>
+            <img src='<?php echo $flagPath; ?>' alt='<?php echo $country; ?>' 
+                 title='<?php echo $country; ?>' />
+            <?php echo $this->user->last_ip_addr ?>
+        </td>
+    </tr>
+    <?php if( $this->user->user_type == 'paster' ): ?>
+    <tr>
+        <td><?php echo $this->translate( 'Credit Card Number' ); ?></td>
+        <td>
+            <?php 
+            if( $this->user->credit_card_no ) echo $this->user->credit_card_no;
+            else echo $this->translate( 'N/A' );
+            ?>
+        </td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Zarinpal ID' ); ?></td>
+        <td>
+            <?php 
+            if( $this->user->zarinpalid ) echo $this->user->zarinpalid;
+            else echo $this->translate( 'N/A' );
+            ?>
+        </td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Total Pastes' ); ?></td>
+        <td><?php echo $this->user->total_pastes; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Total Views' ); ?></td>
+        <td><?php echo $this->user->total_views; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Unpaid Viewes' ); ?></td>
+        <td><?php echo $this->user->unpaid_for_views; ?></td>
+    </tr>
+    <?php elseif( $this->user->user_type == 'advertiser' ): ?>
+    <tr>
+        <td><?php echo $this->translate( 'Account Balance' ); ?></td>
+        <td><?php echo $this->user->account_balance; ?></td>
+    </tr>
+    <?php endif; ?>
+    <tr>
+        <td><?php echo $this->translate( 'Change Password' ); ?></td>
+        <td>
+            <?php
+                $passwordChangeUrl = $this->url('admin', array(
+                    'lang'      => substr($this->layout()->language, 0, 2),
+                    'controller'=> 'UserManagement',
+                    'action'    => 'ChangePassword',
+                ));
+            ?>
+            <form action='<?php echo $passwordChangeUrl; ?>' method='post'>
+                <input type='hidden' name='userid' value='<?php echo $this->user->userid; ?>' />
+                <input type='password' name='password' required="true" placeholder="password"/>
+                <input type='password' name='repassword' required="true" placeholder="Repeat"/>
+                <button type='submit' name='changePassword' value='changePassword'>
+                    <?php echo $this->translate( 'Change Password' ); ?>
+                </button>
+            </form>
+        </td>
+    </tr>
+    <?php if( 'verified' == $this->user->account_status ): ?>
+    <tr>
+        <td><?php echo $this->translate( 'Suspend User' ); ?></td>
+        <td>
+            <?php
+                $suspendUrl = $this->url('admin', array(
+                    'lang'      => substr($this->layout()->language, 0, 2),
+                    'controller'=> 'UserManagement',
+                    'action'    => 'ChangeStatus',
+                ));
+            ?>
+            <form action='<?php echo $suspendUrl; ?>' method='post'>
+                <input type='hidden' name='status' value='suspended' />
+                <input type='hidden' name='userid' value='<?php echo $this->user->userid; ?>' />
+                <input type='text' name='reason' placeholder='<?php echo $this->translate('Suspension Reason'); ?>' />
+                <button type='submit' name='suspendUser' value='suspendUser'>
+                    <?php echo $this->translate( 'Suspend User' ); ?>
+                </button>
+            </form>
+        </td>
+    </tr>
+    <?php elseif( 'suspended' == $this->user->account_status ): ?>
+    <tr>
+        <td><?php echo $this->translate( 'Remove Suspension' ); ?></td>
+        <td>
+            <?php
+                $suspendUrl = $this->url('admin', array(
+                    'lang'      => substr($this->layout()->language, 0, 2),
+                    'controller'=> 'UserManagement',
+                    'action'    => 'ChangeStatus',
+                ));
+            ?>
+            <form action='<?php echo $suspendUrl; ?>' method='post'>
+                <input type='hidden' name='status' value='verified' />
+                <input type='hidden' name='userid' value='<?php echo $this->user->userid; ?>' />
+                <button type='submit' name='removeSuspension' value='removeSuspension'>
+                    <?php echo $this->translate( 'Remove Suspension' ); ?>
+                </button>
+            </form>
+        </td>
+    </tr>
+    <?php endif; ?>
+</table>
+<?php
+endif;

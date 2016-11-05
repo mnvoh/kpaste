@@ -1,0 +1,226 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    header.phtml
+ * @createdat   Nov 09, 2013 4:28:02 PM
+ */
+$authData   = $this->authData;
+$settings   = $this->settings;
+$request    = $this->request;
+
+?>
+<div id="header">
+    <nav id="header-nav">
+        <?php
+        $homeUrl = $this->url('kpastecore', array('lang' => substr($this->language, 0, 2),));
+        $loginUrl = $this->url('user', array('lang' => substr($this->language, 0, 2),'action' => 'login'));
+        $signupUrl = $this->url('user', array('lang' => substr($this->language, 0, 2),'action' => 'signup'));
+        $qaaUrl = $this->url('kpastecore', array('lang' => substr($this->language, 0, 2),'controller' => 'home', 'action' => 'QuestionsAndAnswers'));
+        $supportUrl = $this->url('kpastecore', array('lang' => substr($this->language, 0, 2), 'controller' => 'Home', 'action' => 'ContactUs'));
+        $announcementsFeed = $this->url('kpastecore', array('lang' => substr($this->language, 0, 2),'controller' => 'RSS', 'action' => 'Announcements'));
+        $publicPastesFeed = $this->url('kpastecore', array('lang' => substr($this->language, 0, 2),'controller' => 'RSS', 'action' => 'LatestPublicPastes'));
+        ?>
+        <ul>
+            <li>
+                <a href="<?php echo $homeUrl; ?>" 
+                   class="headerMenuItem"
+                   title="<?php echo $this->translate('Home'); ?>">
+                    <span class="sprite-big icn-home">
+                        <span class="sprite-big-hover icn-home"></span>
+                    </span>
+                    <span class="headerMenuItemText">
+                        <?php echo $this->translate('Home'); ?>
+                    </span>
+                </a>
+            </li>    
+            <?php if(!$authData): ?>
+            <li>
+                <a href="<?php echo $loginUrl; ?>" 
+                   class="headerMenuItem" 
+                   title="<?php echo $this->translate('Login'); ?>"
+                   onclick="toggleLoginPopup(event, 'popupLogin'); return false;">
+                    <span class="sprite-big icn-login">
+                        <span class="sprite-big-hover icn-login"></span>
+                    </span>
+                    <span class="headerMenuItemText">
+                        <?php echo $this->translate('Login'); ?>
+                    </span>
+                </a>
+                <div id="popupLogin" class="" onclick="stopPropagationOnEvent(event);">
+                    <form action="<?php echo $this->url('user', array('lang' => substr($this->language, 0, 2),'action' => 'login', 'continue'  => urlencode($request->getRequestUri()))); ?>"
+                          method="post" name="LoginForm" id="LoginForm">
+                        <div class="formRow">
+                            <label>
+                                <span>
+                                    <?php echo $this->translate('Username'); ?>
+                                </span>
+                                <input type="text" name="username" />
+                            </label>
+                        </div>
+
+                        <div class="formRow">
+                            <label>
+                                <span>
+                                    <?php echo $this->translate('Password'); ?>
+                                </span>
+                                <input type="password" name="password" />
+                            </label>
+                        </div>
+                        <button type="submit" value="Login" style="width: 98%;">
+                            <span class="sprite icn-login"></span>
+                            <?php echo $this->translate('Login'); ?>
+                        </button>
+                        <br />
+                        <br />
+                        <label>
+                            <?php echo $this->translate('Remember Me'); ?>
+                            <input type="hidden" name="keepMeSignedIn" value="0">
+                            <input type="checkbox" name="keepMeSignedIn" value="1" />
+                        </label>
+                        <a href="<?php echo $this->url('user', array(
+                             'lang'          => substr($this->language, 0, 2),
+                             'action'        => 'changePassword',
+                             )); ?>" class="floatleft">
+                                 <?php echo $this->translate('Recover Password'); ?>
+                         </a>
+                    </form>
+                    
+                </div>
+            </li>
+            <li>
+                <a href="<?php echo $signupUrl; ?>" 
+                   class="headerMenuItem"
+                   title="<?php echo $this->translate('Register'); ?>">
+                    <span class="sprite-big icn-register">
+                        <span class="sprite-big-hover icn-register"></span>
+                    </span>
+                    <span class="headerMenuItemText">
+                        <?php echo $this->translate('Register'); ?>
+                    </span>
+                </a>
+            </li>
+            <?php endif; ?>
+            <li>
+                <a href="#" class="headerMenuItem" title=""
+                   onclick="stopPropagationOnEvent(event);
+                       $(this).siblings('.mainNavDropDown').slideToggle(200); return false;">
+                    <span class="sprite-big icn-subscribe">
+                        <span class="sprite-big-hover icn-subscribe"></span>
+                    </span>
+                    <span class="headerMenuItemText">
+                        <?php echo $this->translate('Subscribe'); ?>
+                    </span>
+                </a>
+                <div class="mainNavDropDown popup-noremove">
+                    <a href="<?php echo $announcementsFeed; ?>" target="_blank"
+                       title="<?php echo $this->translate('kPaste\'s Announcements'); ?>">
+                        <span class="sprite icn-rss"></span>
+                        <br/>
+                        <span class="headerMenuItemText">
+                            <?php echo $this->translate('Announcements'); ?>
+                        </span>
+                    </a>
+
+                    <a href="<?php echo $publicPastesFeed; ?>" target="_blank"
+                       title="<?php echo $this->translate('Latest Public Pastes'); ?>">
+                        <span class="sprite icn-rss"></span>
+                        <br/>
+                        <span class="headerMenuItemText">
+                            <?php echo $this->translate('Pastes'); ?>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="headerMenuItem" title=""
+                   onclick="stopPropagationOnEvent(event);
+                       $(this).siblings('.mainNavDropDown').slideToggle(200); return false;">
+                    <span class="sprite-big icn-language">
+                        <span class="sprite-big-hover icn-language"></span>
+                    </span>
+                    <span class="headerMenuItemText">
+                        <?php echo $this->translate('Language'); ?>
+                    </span>
+                </a>
+                <div class="mainNavDropDown popup-noremove">
+                    <?php
+                    $langs = explode('-', file_get_contents('module/KpasteCore/language/languages'));
+                    foreach($langs as $lang):
+                        $langShort = substr($lang, 0, 2);
+                        $langCode = substr($lang, 3, 2);
+                        $langName = substr($lang, 6);
+
+                    ?>
+
+                        <?php
+                        $routename = ($this->routename) ? $this->routename 
+                                : 'kpastecore';
+                        $currentController = ($this->currentController) ? 
+                                $this->currentController : 'Home';
+                        $currentAction = ($this->currentAction) ? 
+                                $this->currentAction : 'index';
+                        $currentParam1 = ($this->currentParam1) ? 
+                                $this->currentParam1 : null;
+
+                        $langurl = $this->url($routename, array(
+                            'lang'          => $langShort,
+                            'controller'    => $currentController,
+                            'action'        => $currentAction,
+                            'param1'        => $currentParam1,
+                        ), array(
+                            'force_canonical'   => true,
+                        ));
+
+                        ?>
+                        <a href="<?php echo $langurl; ?>" title="<?php echo $langName; ?>">
+                            <span class="inline-block" style="width: 47px; height: 32px; 
+                                background-image: url('/images/country-flags-32/<?php echo $langCode; ?>.png');
+                                background-repeat: no-repeat;
+                                background-position: center center;">
+                            </span>
+                        </a>
+                    <?php
+                    endforeach;
+                    ?>
+                </div>
+            </li>
+
+            <?php if($authData): ?>
+                <li>
+                    <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'MyAccount')); ?>"
+                       class="headerMenuItem"
+                       title="<?php echo $this->translate('My Account'); ?>">
+                            <span class="sprite-big icn-register">
+                                <span class="sprite-big-hover icn-register"></span>
+                            </span>
+                        <span class="headerMenuItemText">
+                                <?php echo $this->translate('My Account'); ?>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'logout')); ?>"
+                       class="headerMenuItem"
+                       title="<?php echo $this->translate( 'Log out' ); ?>">
+                        <span class="sprite-big icn-logout">
+                            <span class="sprite-big-hover icn-logout"></span>
+                        </span>
+                        <span class="headerMenuItemText">
+                            <?php echo $this->translate( 'Log out' ); ?>
+                        </span>
+                    </a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+
+    <a class="headerlogo" href="<?php echo $this->url('kpastecore', array('lang' => substr($this->language, 0, 2),'controller' => 'home')); ?>" title="">
+        <img src="/themes/<?php echo $settings['theme']; ?>/images/headerlogo.png" 
+             alt="<?php echo $settings['site-name']; ?>" />
+    </a>
+</div>

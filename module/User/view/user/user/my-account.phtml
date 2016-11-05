@@ -1,0 +1,115 @@
+<?php
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch; 
+        ?>
+    </div>
+<?php
+elseif ( isset($this->error) && !$this->error ):
+?>
+    <div class="notification">
+        <p>
+            <?php 
+            echo $this->translate( 'Account information successfully updated.' );
+            ?>
+        </p>
+    </div>
+<?php
+endif;
+
+if(isset($this->user)):
+    $route = $this->url( 'user', array('lang' => substr($this->layout()->language, 0, 2), 'action' => 'MyAccount' ) );
+?>
+<h2 class='center-align'><?php echo $this->translate('Account Overview'); ?></h2>
+<table class='table' id='myAccountTable'>
+    <tr>
+        <td><?php echo $this->translate( 'User ID' ); ?></td>
+        <td><?php echo $this->user->userid; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Username' ); ?></td>
+        <td><?php echo $this->user->username; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Email' ); ?></td>
+        <td><?php echo $this->user->email; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Password' ); ?></td>
+        <td>
+            <a href='<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'changePassword')); ?>'>
+                <?php echo $this->translate( 'Change Password' ); ?>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Registration Date' ); ?></td>
+        <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $this->user->reg_date ); ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Account Status' ); ?></td>
+        <td>
+            <?php 
+            switch($this->user->account_status)
+            {
+                case 'pending':
+                    echo $this->translate('Pending');
+                    break;
+                case 'verified':
+                    echo $this->translate('Verified');
+                    break;
+                case 'suspended':
+                    echo $this->translate('Suspended');
+                    break;
+            }
+            if( $this->user->account_status == 'pending' ):
+            ?>
+            <a href="<?php echo $this->url('user', array('lang' => substr($this->layout()->language, 0, 2),'action' => 'ResendVerificationEmail')); ?>">
+                <?php echo $this->translate('Resend Verification Email'); ?>
+            </a>
+            <?php endif; ?>
+        </td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Last Login Time' ); ?></td>
+        <td><?php echo KpasteCore\KDateTime\KDateTime::PrefDate( $this->user->last_login_time ); ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Last Ip Address' ); ?></td>
+        <td>
+            <?php 
+            $this->ipInfo->setIp( $this->user->last_ip_addr );
+            $flagPath = $this->ipInfo->getFlagPath();
+            $country = $this->ipInfo->getLongName();
+            ?>
+            <img src='<?php echo $flagPath; ?>' alt='<?php echo $country; ?>' 
+                 title='<?php echo $country; ?>' />
+            <?php echo $this->user->last_ip_addr ?>
+        </td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Total Pastes' ); ?></td>
+        <td><?php echo $this->user->total_pastes; ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $this->translate( 'Total Views' ); ?></td>
+        <td><?php echo $this->user->total_views; ?></td>
+    </tr>
+</table>
+<?php
+endif;

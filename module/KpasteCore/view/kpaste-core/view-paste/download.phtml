@@ -1,0 +1,65 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view.php
+ * @createdat    Jul 16, 2013 11:40:22 AM
+ */
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'INVALID_PASTE_ID':
+                echo '<p>';
+                echo $this->translate('The provided paste ID is incorrect!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            case 'INCORRECT_PASSWORD':
+                echo '<p>';
+                echo $this->translate('The provided password is incorrect!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->passwordForm) && $this->passwordForm):
+    $form = $this->passwordForm;
+    $form->setAttribute('action', $this->url('kpastecore', array(
+        'lang'              => substr($this->layout()->language, 0, 2),
+        'controller'        => 'ViewPaste',
+        'action'            => 'download',
+        'param1'            => $this->pasteid,
+    )));
+    $form->prepare();
+    echo $this->form()->openTag($form);
+?>
+    <div class='formRow width300p inline-block'>
+        <label>
+            <span><?php echo $this->translate('Password'); ?>:</span>
+            <?php echo $this->formRow($form->get('password')); ?>
+        </label>
+    </div>
+
+<?php 
+    echo $this->formRow($form->get('csrf')); 
+    $form->get('submit')->setAttribute('value', $this->translate('Confirm'));
+    echo $this->formRow($form->get('submit'));
+    echo $this->form()->closeTag();
+endif;

@@ -1,0 +1,156 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    change-ads-layout.phtml
+ * @createdat   sep 2, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Ads Layout');
+$this->headTitle($title);
+$url = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemSettings',
+        'action'        => 'ChangeAdsLayout',
+    ));
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+?>
+
+<h3 class="center-align"><?php echo $title; ?></h3>
+
+<div id="adsLayout">
+    <span class="floatleft">
+        <label>
+            <input type="checkbox" id="iframe" <?php if($this->iframe) { echo 'checked="checked"'; } ?> />
+            <?php echo $this->translate('Inline Frame Ads'); ?>
+        </label>
+    </span>
+    <span class="floatright">
+        <button type="button" onclick="saveLayout('<?php echo $url; ?>', 
+                '<?php echo $this->translate('Layout saved successfully.'); ?>',
+            '<?php echo $this->translate('There was an error saving your layout!'); ?>');">
+            <?php echo $this->translate('Save Layout'); ?>
+        </button>
+    </span>
+    <table>
+        <tbody>
+            <tr>
+                <td></td>
+                <td class="ad-container" id="top">
+                    <?php foreach($this->top as $ad): ?>
+                    <div class="ad <?php echo $ad; ?>">
+                        <span class="sprite icn-trash"></span>
+                    </div>
+                    <?php endforeach; ?>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="ad-container" id="left">
+                    <?php foreach($this->left as $ad): ?>
+                    <div class="ad <?php echo $ad; ?>">
+                        <span class="sprite icn-trash"></span>
+                    </div>
+                    <?php endforeach; ?>
+                </td>
+                <td>
+                    <table id="adsLayoutControls">
+                        <tbody>
+                            <tr>
+                                <td colspan="100">
+                                    <button type="button" onclick="addAd('top');">
+                                        <span class="sprite icn-uparrow"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" onclick="addAd('left');">
+                                        <span class="sprite icn-leftarrow"></span>
+                                    </button>
+                                </td>
+                                <td class='adsLayoutAdTypes'>
+                                    <label>
+                                        <input type="radio" name="adType" value="squarebutton" checked="checked" />
+                                        <?php echo $this->translate('Square Button'); ?>
+                                    </label>
+                                    <br />
+                                    <label>
+                                        <input type="radio" name="adType" value="verticalbanner" />
+                                        <?php echo $this->translate('Vertical Banner'); ?>
+                                    </label>
+                                    <br />
+                                    <label>
+                                        <input type="radio" name="adType" value="leaderboard" />
+                                        <?php echo $this->translate('Leaderboard'); ?>
+                                    </label>
+                                </td>
+                                <td>
+                                    <button type="button" onclick="addAd('right');">
+                                        <span class="sprite icn-rightarrow"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="100">
+                                    <button type="button" onclick="addAd('bottom');">
+                                        <span class="sprite icn-downarrow"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class="ad-container" id="right">
+                    <?php foreach($this->right as $ad): ?>
+                    <div class="ad <?php echo $ad; ?>">
+                        <span class="sprite icn-trash"></span>
+                    </div>
+                    <?php endforeach; ?>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="ad-container" id="bottom">
+                    <?php foreach($this->bottom as $ad): ?>
+                    <div class="ad <?php echo $ad; ?>">
+                        <span class="sprite icn-trash"></span>
+                    </div>
+                    <?php endforeach; ?>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $('div.ad span').click(function() {
+            $(this).parent().remove();
+        });
+    </script>
+</div>

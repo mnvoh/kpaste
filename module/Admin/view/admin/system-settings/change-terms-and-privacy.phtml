@@ -1,0 +1,76 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    change-terms-and-privacy.phtml
+ * @createdat   sep 3, 2013 4:41:57 PM
+ */
+
+
+$title = $this->translate('Terms and Privacy Policy');
+$this->headTitle($title);
+$url = $this->url( 'admin', array(
+        'lang'          => substr($this->layout()->language, 0, 2),
+        'controller'    => 'SystemSettings',
+        'action'        => 'ChangeTermsAndPrivacy',
+    ));
+if(isset($this->error) && $this->error ):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('Access denied! You don\'t have permission to access this area.');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(!isset($this->error) || !$this->error ):
+?>
+<h3><?php echo $title; ?></h3>
+
+<div class="width70">
+    <form action="<?php echo $url; ?>" method="post">
+        <h4 class="center-align"><?php echo $this->translate('Terms'); ?></h4>
+        <textarea name="terms" id="terms" onkeyup="updateTermsPreview($(this).val());"><?php if(isset($this->terms)) echo $this->terms; ?>
+        </textarea>
+        <br /><br />
+        
+        <h4 class="center-align"><?php echo $this->translate('Privacy Policy'); ?></h4>
+        <textarea name="privacy" id="privacy" onkeyup="updateTermsPreview($(this).val());"><?php if(isset($this->privacy)) echo $this->privacy; ?>
+        </textarea>
+        
+        <br /><br />
+        
+        <h4 class="center-align"><?php echo $this->translate('Quetions & Answers'); ?></h4>
+        <textarea name="qaa" id="qaa" onkeyup="updateTermsPreview($(this).val());"><?php if(isset($this->qaa)) echo $this->qaa; ?>
+        </textarea>
+        
+        <br /><br />
+        
+        <button type="submit">
+            <?php echo $this->translate('Save'); ?>
+        </button>
+    </form>
+    
+    <div id="preview" class="width80 auto-margin border padding20">
+
+    </div>
+</div>
+<?php endif; ?>

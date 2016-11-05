@@ -1,0 +1,94 @@
+<?php
+/**
+ * kPaste   -   kpaste.ir - kcoder.ir
+ * 
+ * @link        http://kcoder.ir/kpaste
+ * @copyright   (c) 2013, kcoder.ir
+ * @license     Proprietary
+ * 
+ * @filename    view-my-pastes.phtml
+ * @createdat    Jul 16, 2013 7:28:58 PM
+ */
+
+$title = $this->translate('Recent Transactions');
+$this->headTitle($title);
+
+
+if(isset($this->error) && $this->error):
+?>
+    <div class="error">
+        <?php 
+        switch($this->result):
+            case 'ACCESS_DENIED':
+                echo '<p>';
+                echo $this->translate('You don\'t have permission to access this area. Please log in to continue!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+            default:
+                echo '<p>';
+                echo $this->translate('An unknown error has occured!');
+                echo '</p>';
+                echo '<footer class="error-code">' . $this->result . '</footer>';
+                break;
+        endswitch;
+        ?>
+    </div>
+<?php
+endif;
+
+if(isset($this->transactions)):
+?>
+<h3 class="center-align"><?php echo $title; ?></h3>
+<table cellspacing="0" border="0" class="table" id="recentTransactionsTable">
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Transaction ID'); ?></th>
+            <th><?php echo sprintf($this->translate('Amount(%s)'), $this->currency); ?></th>
+            <th><?php echo $this->translate('Status'); ?></th>
+            <th><?php echo $this->translate('Transaction Tracking Code'); ?></th>
+            <th><?php echo $this->translate('Receipt'); ?></th>
+            <th><?php echo $this->translate('Invoice Creation Time'); ?></th>
+            <th><?php echo $this->translate('Payment Time'); ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($this->transactions as $transaction): ?>
+        <tr>    
+            <td><?php echo $transaction->transactionid; ?></td>
+            <td><?php echo $transaction->amount; ?></td>
+            <td>
+                <?php echo ($transaction->status == 'pending') ? $this->translate('Invoice Created') :
+                            $this->translate('Paid'); ?>
+            </td>
+            <td><?php echo $transaction->au; ?></td>
+            <td><?php echo $transaction->receipt; ?></td>
+            <td>
+            <?php 
+            echo \KpasteCore\KDateTime\KDateTime::PrefDate($transaction->requested_datetime); 
+            ?>
+            </td>
+            <td>
+            <?php 
+            echo \KpasteCore\KDateTime\KDateTime::PrefDate($transaction->completed_datetime); 
+            ?>    
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<br />
+<?php
+echo $this->paginationControl(
+    $this->transactions,
+    'sliding',
+    array( 'partial/paginator.phtml', 'Admin' ),
+    array( 
+        'route'         => 'advertiser', 
+        'action'        => 'transactions',
+    )
+);
+?>
+<script src="/js/contextmenu.js"></script>
+<?php
+endif;
