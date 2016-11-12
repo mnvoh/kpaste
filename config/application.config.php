@@ -13,9 +13,7 @@ return array(
         'KpasteCore',
         'User',
         'Paster',
-        'Advertiser',
         'Admin',
-        'Support',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

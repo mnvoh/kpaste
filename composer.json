@@ -1,0 +1,30 @@
+{
+    "name": "zendframework/skeleton-application",
+    "description": "Skeleton Application for ZF2",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Milad Nozari",
+            "email": "mnvoh@yahoo.com"
+        }
+    ],
+    "keywords": [
+        "framework",
+        "zf2",
+        "zf3"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "php"                                 : ">=5.4",
+        "zendframework/zendframework"         : "2.*"
+    },
+    "suggest": {
+        "zendframework/zend-ldap": "zend-ldap component ^2.7.1, if you need LDAP features"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev",
+            "dev-develop": "3.1-dev"
+        }
+    }
+}

@@ -170,11 +170,6 @@ echo $this->doctype();
                             <?php echo $this->translate('Announcements'); ?>
                         </a>
                     </span>
-                    <span>
-                        <a href="<?php echo $this->url('support', array('lang' => substr($this->language, 0, 2), 'action' => 'SubmitTicket')); ?>">
-                            <?php echo $this->translate('Report Bugs'); ?>
-                        </a>
-                    </span>
                 </div>
                 <p class="center-align">
                     <?php
@@ -196,10 +191,6 @@ echo $this->doctype();
                     version <?php echo file_get_contents('kpastever'); ?>
                 </p>
             </footer>
-            <?php $ticketUrl = $this->url('support', array(
-                'lang'      => substr($this->language, 0, 2),
-                'action'    => 'SubmitTicket',
-                )); ?>            
             <?php echo $this->inlineScript(); ?>
         </div>
         

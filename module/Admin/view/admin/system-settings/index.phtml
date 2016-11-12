@@ -95,38 +95,6 @@ if( isset($this->error) && !$this->error ):
     
     <div class="user-panel-items">
         <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/transaction.png" 
-                 alt="<?php echo $this->translate('Transactions'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('admin', array(
-                'lang'      => $lang,
-                'controller'=> 'SystemLog',
-                'action'    => 'ViewTransactions',
-            )); ?>">
-                <?php echo $this->translate('Transactions'); ?>
-            </a>
-        </div>
-    </div>
-    
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/money.png" 
-                 alt="<?php echo $this->translate('Checkouts'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('admin', array(
-                'lang'      => $lang,
-                'controller'=> 'SystemLog',
-                'action'    => 'ViewCheckouts',
-            )); ?>">
-                <?php echo $this->translate('Checkouts'); ?>
-            </a>
-        </div>
-    </div>
-    
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
             <img src="/themes/<?php echo $this->theme; ?>/images/paste.png" 
                  alt="<?php echo $this->translate('Pastes'); ?>" width="128" height="128" />
         </div>
@@ -156,38 +124,7 @@ if( isset($this->error) && !$this->error ):
             </a>
         </div>
     </div>
-    
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/campaign.png" 
-                 alt="<?php echo $this->translate('Ad Campaigns'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('admin', array(
-                'lang'      => $lang,
-                'controller'=> 'SystemLog',
-                'action'    => 'ViewAdCampaigns',
-            )); ?>">
-                <?php echo $this->translate('Ad Campaigns'); ?>
-            </a>
-        </div>
-    </div>
-    
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/coupon.png" 
-                 alt="<?php echo $this->translate('Coupons'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('admin', array(
-                'lang'      => $lang,
-                'controller'=> 'MasterAdmin',
-                'action'    => 'coupons',
-            )); ?>">
-                <?php echo $this->translate('Coupons'); ?>
-            </a>
-        </div>
-    </div>
+
     
     <div class="user-panel-items">
         <div class="user-panel-item-image">
@@ -223,22 +160,6 @@ if( isset($this->error) && !$this->error ):
     
     <div class="user-panel-items">
         <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/layout.png" 
-                 alt="<?php echo $this->translate('Ads Layout'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('admin', array(
-                'controller'=> 'SystemSettings',
-                'lang'      => $lang,
-                'action'    => 'ChangeAdsLayout',
-            )); ?>">
-                <?php echo $this->translate('Ads Layout'); ?>
-            </a>
-        </div>
-    </div>
-    
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
             <img src="/themes/<?php echo $this->theme; ?>/images/terms.png" 
                  alt="<?php echo $this->translate('Terms and Privacy Policy'); ?>" width="128" height="128" />
         </div>
@@ -267,21 +188,6 @@ if( isset($this->error) && !$this->error ):
                 'action'    => 'Announcements',
             )); ?>">
                 <?php echo $this->translate('Announcements'); ?>
-            </a>
-        </div>
-    </div>
-
-    <div class="user-panel-items">
-        <div class="user-panel-item-image">
-            <img src="/themes/<?php echo $this->theme; ?>/images/support.png" 
-                 alt="<?php echo $this->translate('Support'); ?>" width="128" height="128" />
-        </div>
-        <div class="user-panel-item-text">
-            <a href="<?php echo $this->url('support', array(
-                'lang'      => $lang,
-                'action'    => 'index',
-            )); ?>">
-                <?php echo $this->translate('Support'); ?>
             </a>
         </div>
     </div>

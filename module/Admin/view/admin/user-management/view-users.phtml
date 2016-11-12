@@ -107,18 +107,6 @@ if( isset( $this->users ) ):
                     echo $this->translate( 'Advertiser' );
                 ?>
             </td>
-            <td>
-                <form action="<?php 
-                    echo $this->url('support', array(
-                        'action'    => 'SubmitTicket',
-                        'param1'    => $user->userid,
-                    ));
-                    ?>" method="get" target="_blank" class="center-align">
-                    <button type="submit" class="padding5" onclick="stopPropagationOnEvent(event);">
-                        <span class="sprite icn-support"></span>
-                    </button>
-                </form>
-            </td>
         </tr>
 <?php
     endforeach;

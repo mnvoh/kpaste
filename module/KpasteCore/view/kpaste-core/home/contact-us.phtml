@@ -12,23 +12,7 @@
 
 $title = $this->translate( 'Contact Us' );
 $this->headTitle( $title );
-if($this->loggedin)
-    $support = $this->url('support', array(
-        'lang'          => substr($this->layout()->language, 0, 2),
-        'action'        => 'index'
-    ));
-else
-    $support = $this->url('support', array(
-        'lang'          => substr($this->layout()->language, 0, 2),
-        'action'        => 'SubmitTicket'
-    ));
 ?>
-
-<div class="center-align">
-    <a class="big-button" href="<?php echo $support; ?>" title="<?php echo $this->translate('Contact Support'); ?>">
-        <?php echo $this->translate('Contact Our Support Team'); ?>
-    </a>
-</div>
 
 <h4 class="center-align">
     <?php echo $this->translate('Contact Info'); ?>
@@ -40,35 +24,5 @@ else
             support [at] kpaste.ir
         </td>
     </tr>
-    <tr>
-        <td><?php echo $this->translate('SMS Number'); ?></td>
-        
-        <td>
-            <span style="font-family: monospace; font-size: 1.5em; position: relative; ">
-                30005366526337
-                <span style="font-family: monospace; background-color: #fff; position: absolute; left: 0; top: 0; display: none;" id="mnkcoder">
-                    30005366KCODER
-                </span>
-            </span>
-        </td>
-    </tr>
-    <tr>
-        <td><?php echo $this->translate('Telephone Number'); ?></td>
-        <td>
-            <span style="font-family: monospace; font-size: 1.5em;">
-            98-871-727-7230
-            </span>
-            <br />
-            <?php echo sprintf($this->translate('Only for advertiser\'s support. Workdays from %s to %s.')
-                    , '10', '14'); ?>
-        </td>
-    </tr>
 </table>
-    <script>
-        setInterval( function() {
-        $('#mnkcoder').toggle();
-        }, 2000);
-    </script>
-    
-<!--    30005366526337-->
 </p>

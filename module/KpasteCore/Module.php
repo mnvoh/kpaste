@@ -70,16 +70,6 @@ class Module
             $viewModel->currentController = substr($viewModel->currentController, 
                 strrpos($viewModel->currentController, '\\') + 1);
             $viewModel->currentParam1 = $e->getRouteMatch()->getParam('param1');
-            
-            $translator = new \Zend\Mvc\I18n\Translator();
-            $translator->setLocale($language);
-            $translator->addTranslationFile(
-                'phpArray', 
-                'vendor/zendframework/zendframework/resources/languages/fa_IR/Zend_Validate.php',
-                'default',
-                'fa_IR'
-            );
-            \Zend\Validator\AbstractValidator::setDefaultTranslator($translator);
         };
         
         $eventManager->attach(\Zend\Mvc\MvcEvent::EVENT_ROUTE, $routeCallback);

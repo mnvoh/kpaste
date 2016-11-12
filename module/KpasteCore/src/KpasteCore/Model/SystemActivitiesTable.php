@@ -51,13 +51,13 @@ class SystemActivitiesTable
     {
         $sql        = new Sql( $this->adapter );
         $insert     = $sql->insert( 'system_activities' );
-        $insert     ->values( array(
+        $insert     ->values(array(
             NULL,
             $activity,
             $userid,
             $userip,
             $datetime,
-        ) );
+        ));
         
         $query = $sql->getSqlStringForSqlObject( $insert );
         return $this->adapter->query( $query, Adapter::QUERY_MODE_EXECUTE );

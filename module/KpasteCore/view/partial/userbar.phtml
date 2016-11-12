@@ -10,15 +10,17 @@
  * @createdat    Aug 12, 2013 3:05:02 PM
  */
 
-function isAllowed($permission, $acl)
-{
-    if( !$acl || !is_array( $acl ) )
-        return false;
-    if( ($key = array_search( $permission, $acl)) === FALSE )
+if(!function_exists("isAllowed")) {
+    function isAllowed($permission, $acl)
     {
-        return false;
+        if (!$acl || !is_array($acl))
+            return false;
+        if (($key = array_search($permission, $acl)) === FALSE) {
+            return false;
+        }
+
+        return true;
     }
-    return true;
 }
 if( $this->userType != 'guest' ):
 ?>
@@ -101,19 +103,6 @@ if( $this->userType != 'guest' ):
                 </a>
             </li>  
 
-            <?php endif; ?>
-
-            <?php if(isAllowed( 'VIEW_CHECKOUT_REQUESTS', $this->acl )): ?>
-            
-
-            <li>
-                <a href="<?php echo $this->url('admin', array('lang' => substr($this->layout()->language, 0, 2),'controller' => 'SystemLog', 'action' => 'ViewCheckouts')); ?>" 
-                   title="<?php echo $this->translate( 'Checkouts' ); ?>">
-                    <span class='sprite sprite-light icn-checkouts'>
-                        
-                    </span>
-                </a>
-            </li>  
             <?php endif; ?>
 
             <?php if(isAllowed( 'VIEW_PASTES', $this->acl )): ?>
