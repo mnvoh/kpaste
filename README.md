@@ -1,11 +1,15 @@
 kPaste 
 ======
-###Free and Open Source Paste Bin Platform
+###Free and Open Source Paste Bin Platform Based on ZF2
 
 -----
 
 Create a database for this project in MySQL, import `kpaste.sql` and then
 set the appropriate configs in `config/autoload/global.php` and `local.php`.
+
+**Default Master Admin Account:**
+username: admin
+password: adminadmin
 
 
 ###Notice

@@ -1,6 +1,6 @@
 {
   "site-name": "kPaste",
-  "site-url": "http:\/\/kpaste.lcom",
+  "site-url": "http:\/\/kpaste.ir",
   "admin-email": "mnvoh90@gmail.com",
   "theme": "kpaste-newfont",
   "language": "en_US",
@@ -18,7 +18,7 @@
   "min-balance-for-checkout": "25000",
   "min-recharge-amount": "1000",
   "currency": "\u062a\u0648\u0645\u0627\u0646",
-  "calendar": "S",
+  "calendar": "G",
   "max-banner-size": "102400",
   "max-attachment-size": "1024000",
   "max-activities-age": "30",
