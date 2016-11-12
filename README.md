@@ -4,6 +4,22 @@ kPaste
 
 -----
 
+###Installation Guide
+
+#####1. Clone the repository
+
+Clone the repository into the document root of your web server or virtualhost:
+`git clone https://github.com/mnvoh/kpaste.git`
+
+
+#####2. Install the dependencies
+
+Run `composer install` in the root directory of the project to install the dependencies.
+
+
+#####3. Database
+
+
 Create a database for this project in MySQL, import `kpaste.sql` and then
 set the appropriate configs in `config/autoload/global.php` and `local.php`.
 
